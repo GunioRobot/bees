@@ -1,0 +1,54 @@
+/* Common Elements
+------------------------------------ */
+
+    html {
+        height: 100%;
+    }
+    body {
+        height: 100%;
+    }
+
+/* Page Structure
+------------------------------------ */
+
+    #main, #header, #footer {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+    .content {
+        display: table-row;
+    }
+    #header, #footer {
+        position: fixed;
+        height: 150px;
+    }
+    #header {
+        top: 0;
+    }
+    #footer {
+        bottom: 0;
+    }
+    #header div.cell:nth-child(2), #main div.cell:nth-child(2), #footer div.cell:nth-child(2) {
+        min-width: 300px;
+    }
+    #header div.cell:first-child, #main div.cell:first-child, #footer div.cell:first-child {
+        min-width: 300px;
+        width: 300px;
+    }
+    #header div.cell:last-child, #main div.cell:last-child, #footer div.cell:last-child {
+        min-width: 300px;
+        width: 300px;
+    }
+    #main .content:first-child div.cell {
+        padding-top: 150px;
+    }
+    #main .content:last-child div.cell {
+        padding-bottom: 150px;
+    }
+
+/* Scratch */
+
+    .cell {
+        border: 1px solid gray;
+    }
