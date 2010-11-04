@@ -29,7 +29,7 @@
 
     /* css3 box shadows :: FF3.5+ SF3+ CH3+ */
 
-    div.glow {
+    div.glow, div.pad { /* divs that don't glow still need to line up with glowing ones */
         margin: 10px;
     }
     div.glow.green {
