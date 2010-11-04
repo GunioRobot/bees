@@ -85,3 +85,6 @@
     .cell {
         border: 0 none;
     }
+    #main .content:last-child .cell p {
+        margin: 16px;
+    }
