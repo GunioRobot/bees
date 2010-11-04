@@ -16,21 +16,20 @@
         width: 100%;
         height: 100%;
     }
-    #header, #footer {
+    #header, #footer, #main {
         display: table-row;
+    }
+    #header, #footer {
         height: 150px;
     }
-    #content {
-        display: table-row;
-    }
-    #header div.cell:nth-child(2), #content div.cell:nth-child(2), #footer div.cell:nth-child(2) {
+    #header div.cell:nth-child(2), #main div.cell:nth-child(2), #footer div.cell:nth-child(2) {
         min-width: 300px;
     }
-    #header div.cell:first-child, #content div.cell:first-child, #footer div.cell:first-child {
+    #header div.cell:first-child, #main div.cell:first-child, #footer div.cell:first-child {
         min-width: 300px;
         width: 300px;
     }
-    #header div.cell:last-child, #content div.cell:last-child, #footer div.cell:last-child {
+    #header div.cell:last-child, #main div.cell:last-child, #footer div.cell:last-child {
         min-width: 300px;
         width: 300px;
     }
