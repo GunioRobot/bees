@@ -1,0 +1,116 @@
+/* Common Elements
+------------------------------------ */
+
+    body {
+        color: #f2f2f2; /* 95% :: light gray */
+        background-color: #0d0d0d; /* 5% :: dark gray */
+    }
+    p {
+        margin: 16px 0;
+    }
+    a, a:link, a:visited {
+        color: #80994c; /* bright green */
+        text-decoration: underline;
+    }
+    a:hover, a:active, a:focus {
+        color: #80994c; /* bright green */
+        text-decoration: none;
+    }
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+    }
+    td {
+        padding: 0;
+        vertical-align: top;
+    }
+    form {
+        display: inline;
+    }
+
+/* Layout Elements
+------------------------------------ */
+
+    /* css2 tables :: FF3+ SF3+ CH3+ IE8+ */
+
+    div.table {
+        display: table;
+    }
+    div.row {
+        display: table-row;
+    }
+    div.cell {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    /* css2 table cells :: horizontal alignment */
+
+    div.cell.left {
+        text-align: left;
+    }
+    div.cell.center {
+        text-align: center;
+    }
+    div.cell.right {
+        text-align: right;
+    }
+
+    /* css2 table cells :: vertical alignment */
+
+    div.cell.top {
+        vertical-align: top;
+    }
+    div.cell.middle {
+        vertical-align: middle;
+    }
+    div.cell.bottom {
+        vertical-align: bottom;
+    }
+
+    /* css2 display inline blocks :: FF3+ SF3+ CH3+ IE8+ */
+
+    .block div {
+        display: inline-block;
+        vertical-align: middle;
+        /* todo: assume middle? */
+    }
+
+    /* css3 rounded corners :: FF3+ SF3+ CH4+ IE9+ */
+
+    .round5 {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    .round10 {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    .round20 {
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+    }
+
+/* Internet Explorer */
+
+    /* Layout Elements */
+
+    .ie7 .table, .ie7 .row, .ie7 .cell, .ie6 .table, .ie6 .row, .ie6 .cell {
+        display: block;
+    }
+    .ie7 .block div, .ie6 .block div {
+        display: inline;
+    }
+
+    /* Lightshow Magic */
+    
+    .ie6 .p7LSM_wrapper, .ie6 .p7LSM_trigs a, .ie7 .p7LSM_wrapper, .ie7 .p7LSM_trigs a {
+        zoom: 1;
+    }
+    .ie6 #p7LSM_toolbar a {
+        margin-top: -1px;
+    }

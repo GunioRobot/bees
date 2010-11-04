@@ -1,0 +1,34 @@
+/* css3 transforms :: FF3.5+ SF3+ CH3+ */
+/* css3 transitions :: FF4+ SF3+ CH3+ */
+/* css3 animations :: SF4+ CH4+ */
+/* css3 3d transforms :: SF5+ */
+
+/* slideshow photo spins */
+
+.card {
+	position: relative;
+	-webkit-perspective: 1000;
+}
+.card .face {
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: 0.75s;
+}
+.card .front {
+	z-index: 5;
+}
+.card:hover .front {
+	z-index: 5;
+	-webkit-transform: rotateY(180deg);
+}
+.card .back {
+	z-index: 0;
+	-webkit-transform: rotateY(-180deg);
+}
+.card:hover .back {
+	z-index: 10;
+	-webkit-transform: rotateY(0deg);
+}
