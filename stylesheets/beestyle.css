@@ -109,6 +109,11 @@
         -moz-border-radius: 10px;
         border-radius: 10px;
     }
+    .round15 {
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+    }
     .round20 {
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
