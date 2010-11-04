@@ -104,7 +104,7 @@ body, select, input, textarea {
 h1,h2,h3,h4,h5,h6 { font-weight: bold; }
 
 /* always force a scrollbar in non-IE */ 
-/* html { overflow-y: scroll; } IMB :: todo :: why? */
+html { overflow-y: scroll; }
 
  
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
@@ -168,12 +168,13 @@ input:invalid, textarea:invalid {
 
 
 /* These selection declarations have to be separate.
-   No text-shadow: twitter.com/miketaylr/status/12228805301 */
-::-moz-selection { background: rgba(0,0,230,0.6); color: #0d0d0d; text-shadow: none; }
-::selection { background: rgba(0,0,230,0.6); color: #0d0d0d; text-shadow: none; } 
+   No text-shadow: twitter.com/miketaylr/status/12228805301 
+   Also: hot pink. */
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
 
 /*  j.mp/webkit-tap-highlight-color */
-a:link { -webkit-tap-highlight-color: rgba(0,0,230,0.6); } 
+a:link { -webkit-tap-highlight-color: #FF5E99; } 
 
 /* make buttons play nice in IE:    
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
@@ -213,6 +214,27 @@ button {  width: auto; overflow: visible; }
 .clearfix:after { clear: both; }
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 .clearfix { zoom: 1; }
+
+
+
+
+
+
+ /* Primary Styles
+    Author: 
+ */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

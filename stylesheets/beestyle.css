@@ -1,3 +1,23 @@
+/* HTML5 Boilerplate Resets
+------------------------------------ */
+
+    html {
+        overflow-y: visible;
+    }
+    ::-moz-selection {
+        background: rgba(128,102,255,0.6); /* indigo */
+        color: #0d0d0d;
+        text-shadow: none;
+    }
+    ::selection {
+        background: rgba(128,102,255,0.6); /* indigo */
+        color: #0d0d0d;
+        text-shadow: none;
+    }
+    a:link {
+        -webkit-tap-highlight-color: rgba(128,102,255,0.6); /* indigo */
+    }
+
 /* Common Elements
 ------------------------------------ */
 
