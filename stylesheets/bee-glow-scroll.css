@@ -249,11 +249,11 @@
     /* Vertical Scrollbar Styles */
 
     ::-webkit-scrollbar:vertical {
-        /* -webkit-border-image: url(../images/scroll/vertical-button.png) 2 0 2 0; */
+        /* -webkit-border-image: url(../images/scroll/vertical-button.png) 2 0 2 0;
         border-color: transparent;
         border-width: 2px 0;
-        /* background-image: url(../images/scroll/vertical-button-background.png); */
-        background-repeat: repeat-y;
+        background-image: url(../images/scroll/vertical-button-background.png);
+        background-repeat: repeat-y; */
     }
 
     ::-webkit-scrollbar:vertical:corner-present {
@@ -270,15 +270,15 @@
     }
 
     ::-webkit-scrollbar-thumb:vertical {
-        /* -webkit-border-image: url(../images/scroll/vertical-thumb.png) 13 0 13 0; */
+        /* -webkit-border-image: url(../images/scroll/vertical-thumb.png) 13 0 13 0;
         border-color: transparent;
-        border-width: 13px 0;
+        border-width: 13px 0; */
         min-height: 20px;
         /* imb */
-        border: 1px solid #4c5499;
-        -webkit-box-shadow: 0 0 10px #4c5499;
-        -moz-box-shadow: 0 0 10px #4c5499;
-        box-shadow: 0 0 10px #4c5499;
+        border: 1px solid #999;
+        -webkit-box-shadow: 0 0 10px #999;
+        -moz-box-shadow: 0 0 10px #999;
+        box-shadow: 0 0 10px #999;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
@@ -296,10 +296,10 @@
     ::-webkit-scrollbar-thumb:vertical:active {
         /* -webkit-border-image: url(../images/scroll/vertical-thumb-active.png) 13 0 13 0; */
         /* imb */
-        border: 1px solid #990f0f;
-        -webkit-box-shadow: 0 0 10px #990f0f;
-        -moz-box-shadow: 0 0 10px #990f0f;
-        box-shadow: 0 0 10px #990f0f;
+        border: 1px solid #80994c;
+        -webkit-box-shadow: 0 0 10px #80994c;
+        -moz-box-shadow: 0 0 10px #80994c;
+        box-shadow: 0 0 10px #80994c;
     }
 
     ::-webkit-scrollbar-thumb:vertical:window-inactive {
@@ -314,13 +314,15 @@
     ::-webkit-scrollbar-track-piece:vertical:start:no-button,
     .double-end::-webkit-scrollbar-track-piece:vertical:start,
     .none::-webkit-scrollbar-track-piece:vertical:start {
-        margin-top: 6px;
+        /* margin-top: 6px; */
+        /* imb */ margin-top: 0;
     }
 
     ::-webkit-scrollbar-track-piece:vertical:end:no-button,
     .double-start::-webkit-scrollbar-track-piece:vertical:end,
     .none::-webkit-scrollbar-track-piece:vertical:end {
-        margin-bottom: 6px;
+        /* margin-bottom: 6px; */
+        /* imb */ margin-bottom: 0;
     }
 
     ::-webkit-scrollbar-track-piece:vertical:end:no-button:corner-present,
@@ -334,7 +336,8 @@
     .single::-webkit-scrollbar-track-piece:vertical:start,
     .double-start::-webkit-scrollbar-track-piece:vertical:start,
     .double-both::-webkit-scrollbar-track-piece:vertical:start {
-        margin-top: -6px;
+        /* margin-top: -6px; */
+        /* imb */ margin-top: 0;
     }
 
     :not(.none):not(.double-start)::-webkit-scrollbar-track-piece:vertical:end:single-button,
@@ -342,19 +345,20 @@
     .single::-webkit-scrollbar-track-piece:vertical:end,
     .double-end::-webkit-scrollbar-track-piece:vertical:end,
     .double-both::-webkit-scrollbar-track-piece:vertical:end {
-        margin-bottom: -6px;
+        /* margin-bottom: -6px; */
+        /* imb */ margin-bottom: 0;
     }
 
     ::-webkit-scrollbar-track:vertical:disabled {
-        /* -webkit-border-image: url(../images/scroll/vertical-track-disabled.png) 13 0 13 0; */
+        /* -webkit-border-image: url(../images/scroll/vertical-track-disabled.png) 13 0 13 0;
         border-color: transparent;
-        border-width: 13px 0;
+        border-width: 13px 0; */
     }
 
     ::-webkit-scrollbar-track-piece:vertical:decrement {
-        /* -webkit-border-image: url(../images/scroll/vertical-track.png) 13 0 13 0; */
+        /* -webkit-border-image: url(../images/scroll/vertical-track.png) 13 0 13 0;
         border-color: transparent;
-        border-width: 13px 0 0 0;
+        border-width: 13px 0 0 0; */
     }
 
     ::-webkit-scrollbar-track-piece:vertical:decrement:hover {
@@ -366,9 +370,9 @@
     }
 
     ::-webkit-scrollbar-track-piece:vertical:increment {
-        /* -webkit-border-image: url(../images/scroll/vertical-track.png) 13 0 13 0; */
+        /* -webkit-border-image: url(../images/scroll/vertical-track.png) 13 0 13 0;
         border-color: transparent;
-        border-width: 0 0 13px 0;
+        border-width: 0 0 13px 0; */
     }
 
     ::-webkit-scrollbar-track-piece:vertical:increment:hover {
@@ -381,15 +385,19 @@
 
     ::-webkit-scrollbar-button:vertical {
         height: 20px;
-        /* -webkit-border-image: url(../images/scroll/vertical-button.png) 2 0 2 0; */
+        /* -webkit-border-image: url(../images/scroll/vertical-button.png) 2 0 2 0;
         border-color: transparent;
-        border-width: 2px 0;
+        border-width: 2px 0; */
     }
 
     ::-webkit-scrollbar-button:vertical:decrement {
-        /* background-image: url(../images/scroll/vertical-decrement-arrow.png), url(../images/scroll/vertical-button-background.png); */
+        /* background-image: url(../images/scroll/vertical-decrement-arrow.png), url(../images/scroll/vertical-button-background.png);
         background-repeat: no-repeat, repeat-y;
-        background-position: 3px 3px, 0 0;
+        background-position: 3px 3px, 0 0; */
+        /* imb */
+        background-image: url(../images/scroll/up.png);
+        background-repeat: no-repeat;
+        background-position: 0 9px;
     }
 
     ::-webkit-scrollbar-button:vertical:decrement:hover {
@@ -411,6 +419,10 @@
         /* background-image: url(../images/scroll/vertical-increment-arrow.png), url(../images/scroll/vertical-button-background.png);
         background-repeat: no-repeat, repeat-y;
         background-position: 3px 8px, 0 0; */
+        /* imb */
+        background-image: url(../images/scroll/down.png);
+        background-repeat: no-repeat;
+        background-position: 0 5px;
     }
 
     ::-webkit-scrollbar-button:vertical:increment:hover {
