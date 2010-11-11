@@ -16,12 +16,12 @@ var Overflow2 = {
     }
 }
 document.observe('dom:loaded', function() {
-    if (!(BrowserDetect.OS=="iPhone") || !(BrowserDetect.OS=="iPad")) {
+    if (!(BrowserDetect.OS=="iPhone/iPod") && !(BrowserDetect.OS=="iPad")) {
         Overflow2.setup();
     }
 });
 Event.observe(window, 'resize', function() {
-    if (!(BrowserDetect.OS=="iPhone") || !(BrowserDetect.OS=="iPad")) {
+    if (!(BrowserDetect.OS=="iPhone/iPod") && !(BrowserDetect.OS=="iPad")) {
         Overflow2.setup();
     }
 });

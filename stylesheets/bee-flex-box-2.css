@@ -16,7 +16,7 @@
      #main,
      header,
      footer { 
-         min-width: 600px; /* prevents overflow */
+         min-width: 320px; /* prevents overflow */
      }
     
 /* Page Structure
@@ -47,7 +47,7 @@
 
     #box-1 {
         height: auto;
-        min-width: 300px; /* prevents overflow */
+        min-width: 120px; /* prevents overflow */
         -moz-box-orient: vertical;
         -webkit-box-orient: vertical;
         box-orient: vertical;
@@ -60,7 +60,7 @@
     }
     #box-2 {
         height: auto;
-        min-width: 150px;
+        min-width: 100px;
         -moz-box-orient: vertical;
         -webkit-box-orient: vertical;
         box-orient: vertical;
@@ -73,7 +73,7 @@
     }
     #box-3 {
         height: auto;
-        min-width: 150px;
+        min-width: 100px;
         -moz-box-orient: vertical;
         -webkit-box-orient: vertical;
         box-orient: vertical;
