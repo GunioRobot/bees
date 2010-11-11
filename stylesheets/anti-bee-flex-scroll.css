@@ -1,0 +1,8 @@
+/* Layout Elements
+------------------------------------ */
+
+    div.scroll {
+        height: auto;
+        overflow-y: visible;
+    }
+    

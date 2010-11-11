@@ -16,8 +16,12 @@ var Overflow2 = {
     }
 }
 document.observe('dom:loaded', function() {
-    Overflow2.setup();
+    if (!(BrowserDetect.OS=="iPhone") || !(BrowserDetect.OS=="iPad")) {
+        Overflow2.setup();
+    }
 });
 Event.observe(window, 'resize', function() {
-    Overflow2.setup();
+    if (!(BrowserDetect.OS=="iPhone") || !(BrowserDetect.OS=="iPad")) {
+        Overflow2.setup();
+    }
 });
