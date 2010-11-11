@@ -16,6 +16,8 @@ var Overflow = {
 document.observe('dom:loaded', function() {
     if (BrowserDetect.browser=="Firefox") {
         Overflow.setup();
+        $('box-2').setStyle('min-width: 300px;');
+        $('box-3').setStyle('min-width: 300px;');
     }
 });
 Event.observe(window, 'resize', function() {
