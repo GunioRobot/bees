@@ -6,7 +6,6 @@
         width: auto;
     }
     .flexbox {
-        margin: 10px;
         padding: 10px;
         text-align: center;
         display:-moz-box;
@@ -41,11 +40,9 @@
     #main {
         border: 1px dotted #80994c;
     }
-    header {
+    header, footer {
         border: 1px dotted #80994c;
-    }
-    footer {
-        border: 1px dotted #80994c;
+        padding: 10px;
     }
 
     #box-1 {
