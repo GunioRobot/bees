@@ -20,3 +20,7 @@ projects on which this builds include:
 [https://github.com/280north/aristo](https://github.com/280north/aristo)
 
 [https://github.com/yui/yuicompressor](https://github.com/yui/yuicompressor)
+
+[http://infrequently.org/2009/08/css-3-progress](http://infrequently.org/2009/08/css-3-progress)
+
+[http://www.quirksmode.org/js/detect.html](http://www.quirksmode.org/js/detect.html)
