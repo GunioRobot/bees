@@ -3,6 +3,8 @@ BeeStyle
 
 ### a modular css and javascript layout
 
+current layout modules include: fixed, fluid, fluid sticky, flex-box
+
 current modules include: button, animation, glow, scroll
 
 projects on which this builds include:
