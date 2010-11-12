@@ -1,7 +1,7 @@
 BeeStyle
 =========
 
-### a modular css and javascript layout
+### a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
 
 current layout modules include: fixed, fluid, fluid sticky, flex-box
 
