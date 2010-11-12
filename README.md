@@ -5,9 +5,9 @@ BeeStyle
 
 current layout modules include: fixed, fluid, fluid sticky, flex-box
 
-current modules include: button, animation, glow, scroll
+current modules include: animation, button, glow, scroll
 
-projects on which this builds include:
+projects/scripts on which this builds include:
 
 [https://github.com/paulirish/html5-boilerplate](https://github.com/paulirish/html5-boilerplate)
 
