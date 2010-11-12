@@ -29,40 +29,40 @@
 
     /* css3 box shadows :: FF3.5+ SF3+ CH3+ */
 
-    div.glow, div.pad { /* divs that don't glow still need to line up with glowing ones */
+    div.glow, div.pad, section.glow, section.pad { /* divs that don't glow still need to line up with glowing ones */
         margin: 10px;
     }
-    div.glow.green {
+    div.glow.green, section.glow.green {
         border: 1px solid #80994c;
         -webkit-box-shadow: 0 0 10px #80994c;
         -moz-box-shadow: 0 0 10px #80994c;
         box-shadow: 0 0 10px #80994c;
     }
-    div.glow.purple {
+    div.glow.purple, section.glow.purple {
         border: 1px solid #4c5499;
         -webkit-box-shadow: 0 0 10px #4c5499;
         -moz-box-shadow: 0 0 10px #4c5499;
         box-shadow: 0 0 10px #4c5499;
     }
-    div.glow.gray {
+    div.glow.gray, section.glow.gray {
         border: 1px solid #999;
         -webkit-box-shadow: 0 0 10px #999;
         -moz-box-shadow: 0 0 10px #999;
         box-shadow: 0 0 10px #999;
     }
-    div.glow.red {
+    div.glow.red, section.glow.red {
         border: 1px solid #990f0f;
         -webkit-box-shadow: 0 0 10px #990f0f;
         -moz-box-shadow: 0 0 10px #990f0f;
         box-shadow: 0 0 10px #990f0f;
     }
-    div.glow.amber {
+    div.glow.amber, section.glow.amber {
         border: 1px solid #bf7a0a;
         -webkit-box-shadow: 0 0 10px #bf7a0a;
         -moz-box-shadow: 0 0 10px #bf7a0a;
         box-shadow: 0 0 10px #bf7a0a;
     }
-    div.glow.green, div.glow.purple, div.glow.gray, div.glow.red, div.glow.amber {
+    div.glow.green, div.glow.purple, div.glow.gray, div.glow.red, div.glow.amber, section.glow.green, section.glow.purple, section.glow.gray, section.glow.red, section.glow.amber {
         color: #f2f2f2; /* reset */
         text-shadow: none; /* reset */
     }

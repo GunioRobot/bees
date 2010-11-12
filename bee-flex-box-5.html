@@ -9,7 +9,7 @@
         <!--[if gte IE 8]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <!-- optimize mobile viewport viewing -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bee Flex-Box</title>
+        <title>Bee Flex-Box 5</title>
     <!-- html5-boilerplate http://github.com/paulirish/html5-boilerplate -->
         <link rel="stylesheet" href="stylesheets/reset.css" />
     <!-- font face fonts http://www.fontsquirrel.com/fontface -->
@@ -20,6 +20,8 @@
         <link rel="stylesheet" href="stylesheets/animation.css" />
     <!-- beestyle theme -->
         <link rel="stylesheet" href="stylesheets/beestyle.css" />
+    <!-- flex box -->
+        <link rel="stylesheet" href="stylesheets/flex-box.css" />
     <!-- bee flex box -->
         <link rel="stylesheet" href="stylesheets/bee-flex-box.css" />
     <!-- bee flex box scroll -->
@@ -46,10 +48,29 @@
         <script src="javascripts/beestyle.js"></script>
     </head>
     <body>
-        <header>
-            <h1>Header</h1>
+        <header id="header" class="hbox" style="border: 0 none;">
+            <section class="boxFlex1">
+                <h1>Header</h1>
+            </section>
+            <section class="boxFlex3" style="text-align: center;">
+                <h1>Header</h1>
+            </section>
+            <section class="boxFlex1" style="text-align: right;">
+                <h1>Header</h1>
+            </section>
         </header>
-        <section id="main" class="flexbox">
+        <aside id="extra" class="hbox" style="border: 0 none; height: 100px;">
+            <section class="boxFlex1" style="padding: 10px; text-align: right;">
+                <h1>Optional</h1>
+            </section>
+            <section class="boxFlex3" style="padding: 10px; border: 1px dotted #80994c; text-align: center;">
+                <h1>Optional</h1>
+            </section>
+            <section class="boxFlex1" style="padding: 10px;">
+                <h1>Optional</h1>
+            </section>
+        </aside>
+        <section id="main" class="flexbox" style="border: 0 none;">
             <section id="box-1" class="flexbox">
                 <div class="scroll">
                     <h1>Main Content</h1>
@@ -58,21 +79,29 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </section>
-            <aside id="box-2" class="flexbox">
+            <aside id="box-2" class="flexbox" style="margin-left: 10px;">
                 <div class="scroll">
                     <h1>Right Sidebar</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </div>
             </aside>
-            <aside id="box-3" class="flexbox">
+            <aside id="box-3" class="flexbox" style="margin-right: 10px;">
                 <div class="scroll">
                     <h1>Left Sidebar</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </div>
             </aside>
         </section>
-        <footer>
-            <h1>Footer</h1>
+        <footer id="footer" class="hbox" style="border: 0 none;">
+            <section class="boxFlex1" style="padding: 10px; border-top: 1px dotted #80994c; border-bottom: 1px dotted #80994c; border-left: 1px dotted #80994c;">
+                <h1>Footer</h1>
+            </section>
+            <section class="boxFlex3" style="padding: 10px; border-top: 1px dotted #80994c; border-bottom: 1px dotted #80994c; text-align: center;">
+                <h1>Footer</h1>
+            </section>
+            <section class="boxFlex1" style="padding: 10px; border-top: 1px dotted #80994c; border-bottom: 1px dotted #80994c; border-right: 1px dotted #80994c;text-align: right;">
+                <h1>Footer</h1>
+            </section>
         </footer>
     </body>
 </html>
