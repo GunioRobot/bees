@@ -34,7 +34,7 @@
     #main {
         border: 1px dotted #80994c;
     }
-    header, footer {
+    header, footer, #extra {
         border: 1px dotted #80994c;
         padding: 10px;
     }
