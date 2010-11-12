@@ -113,7 +113,7 @@ AddType application/octet-stream       safariextz
 
 # these are pretty far-future expires headers
 # they assume you control versioning with cachebusting query params like
-#   <script src="application.js?20100608">
+#   <script src="../application.js?20100608">
 # additionally, consider that outdated proxies may miscache 
 #   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
 
