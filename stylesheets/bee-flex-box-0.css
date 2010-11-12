@@ -1,0 +1,15 @@
+/* Common Elements
+------------------------------------ */
+
+    html {
+        height: 100%;
+    }
+    body {
+        height: 100%;
+    }
+
+/* Scratch */
+
+    div {
+        border: 1px dotted gray;
+    }
