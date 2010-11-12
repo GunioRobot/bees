@@ -9,7 +9,7 @@
         <!--[if gte IE 8]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <!-- optimize mobile viewport viewing -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bee Flex-Box 2</title>
+        <title>Bee Flex-Box 3</title>
     <!-- html5-boilerplate http://github.com/paulirish/html5-boilerplate -->
         <link rel="stylesheet" href="stylesheets/reset.css" />
     <!-- font face fonts http://www.fontsquirrel.com/fontface -->
@@ -20,6 +20,8 @@
         <link rel="stylesheet" href="stylesheets/animation.css" />
     <!-- beestyle theme -->
         <link rel="stylesheet" href="stylesheets/beestyle.css" />
+    <!-- flex box -->
+        <link rel="stylesheet" href="stylesheets/flex-box.css" />
     <!-- bee flex box -->
         <link rel="stylesheet" href="stylesheets/bee-flex-box.css" />
     <!-- bee flex box scroll -->
@@ -46,11 +48,27 @@
         <script src="javascripts/beestyle.js"></script>
     </head>
     <body>
-        <header>
-            <h1>Header</h1>
+        <header id="header" class="hbox">
+            <section style="-moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; border: 1px dotted #80994c;">
+                <h1>Header</h1>
+            </section>
+            <section style="-moz-box-flex: 3; -webkit-box-flex: 3; box-flex: 3; border: 1px dotted #80994c; text-align: center;">
+                <h1>Header</h1>
+            </section>
+            <section style="-moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; border: 1px dotted #80994c; text-align: right;">
+                <h1>Header</h1>
+            </section>
         </header>
-        <aside id="extra">
-            <h1>Optional</h1>
+        <aside id="extra" class="hbox">
+            <section style="-moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; border: 1px dotted #80994c; text-align: right;">
+                <h1>Optional</h1>
+            </section>
+            <section style="-moz-box-flex: 3; -webkit-box-flex: 3; box-flex: 3; border: 1px dotted #80994c; text-align: center;">
+                <h1>Optional</h1>
+            </section>
+            <section style="-moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; border: 1px dotted #80994c;">
+                <h1>Optional</h1>
+            </section>
         </aside>
         <section id="main" class="flexbox">
             <section id="box-1" class="flexbox">
@@ -74,8 +92,16 @@
                 </div>
             </nav>
         </section>
-        <footer>
-            <h1>Footer</h1>
+        <footer id="footer" class="hbox">
+            <section class="boxFlex1" style="border: 1px dotted #80994c;">
+                <h1>Footer</h1>
+            </section>
+            <section class="boxFlex3" style="border: 1px dotted #80994c; text-align: center;">
+                <h1>Footer</h1>
+            </section>
+            <section class="boxFlex1" style="border: 1px dotted #80994c; text-align: right;">
+                <h1>Footer</h1>
+            </section>
         </footer>
     </body>
 </html>

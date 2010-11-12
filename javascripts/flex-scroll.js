@@ -13,6 +13,15 @@ var Overflow = {
     setup: function() {
         /* Overflow.setWidth($('box-1')); */
         Overflow.setWidth($('main'));
+        if ($('header')) {
+            Overflow.setWidth($('header'));
+        }
+        if ($('footer')) {
+            Overflow.setWidth($('footer'));
+        }
+        if ($('extra')) {
+            Overflow.setWidth($('extra'));
+        }
     }
 }
 document.observe('dom:loaded', function() {
