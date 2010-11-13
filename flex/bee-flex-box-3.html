@@ -20,8 +20,6 @@
         <link rel="stylesheet" href="../stylesheets/animation.css" />
     <!-- beestyle theme -->
         <link rel="stylesheet" href="../stylesheets/beestyle.css" />
-    <!-- alex russell flex box http://infrequently.org/2009/08/css-3-progress -->
-        <link rel="stylesheet" href="../stylesheets/flex-box.css" />
     <!-- bee flex box -->
         <link rel="stylesheet" href="../stylesheets/bee-flex-box.css" />
     <!-- bee flex box scroll -->
@@ -47,59 +45,77 @@
         <script src="../javascripts/beestyle.js"></script>
     </head>
     <body>
-        <header id="header" class="hbox">
-            <section class="boxFlex1" style="border: 1px dotted #80994c;">
-                <h1>Header</h1>
+        <header id="header" class="flexbox">
+            <section class="flexbox center">
+                <div class="center">
+                    <h1>Header 2</h1>
+                </div>
             </section>
-            <section class="boxFlex3" style="border: 1px dotted #80994c; text-align: center;">
-                <h1>Header</h1>
+            <section class="flexbox right">
+                <div class="right">
+                    <h1>Header 3</h1>
+                </div>
             </section>
-            <section class="boxFlex1" style="border: 1px dotted #80994c; text-align: right;">
-                <h1>Header</h1>
+            <section class="flexbox left">
+                <div class="left">
+                    <h1>Header 1</h1>
+                </div>
             </section>
         </header>
-        <aside id="extra" class="hbox">
-            <section class="boxFlex1" style="border: 1px dotted #80994c; text-align: right;">
-                <h1>Optional</h1>
+        <aside id="extra" class="flexbox">
+            <section class="flexbox center">
+                <div class="center">
+                    <h1>Optional 2</h1>
+                </div>
             </section>
-            <section class="boxFlex3" style="border: 1px dotted #80994c; text-align: center;">
-                <h1>Optional</h1>
+            <section class="flexbox right">
+                <div class="left">
+                    <h1>Optional 3</h1>
+                </div>
             </section>
-            <section class="boxFlex1" style="border: 1px dotted #80994c;">
-                <h1>Optional</h1>
+            <section class="flexbox left">
+                <div class="right">
+                    <h1>Optional 1</h1>
+                </div>
             </section>
         </aside>
         <section id="main" class="flexbox">
-            <section id="box-1" class="flexbox">
-                <div class="scroll">
+            <section class="flexbox center">
+                <div class="scroll left">
                     <h1>Main Content</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </section>
-            <aside id="box-2" class="flexbox">
-                <div class="scroll">
+            <aside class="flexbox right">
+                <div class="scroll left">
                     <h1>Right Sidebar</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </div>
             </aside>
-            <aside id="box-3" class="flexbox">
-                <div class="scroll">
+            <aside class="flexbox left">
+                <div class="scroll left">
                     <h1>Left Sidebar</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </div>
             </aside>
         </section>
-        <footer id="footer" class="hbox">
-            <section class="boxFlex1" style="border: 1px dotted #80994c;">
-                <h1>Footer</h1>
+        <footer id="footer" class="flexbox">
+            <section class="flexbox center">
+                <div class="center">
+                    <h1>Footer 2</h1>
+                </div>
             </section>
-            <section class="boxFlex3" style="border: 1px dotted #80994c; text-align: center;">
-                <h1>Footer</h1>
+            <section class="flexbox right">
+                <div class="right">
+                    <h1>Footer 3</h1>
+                </div>
             </section>
-            <section class="boxFlex1" style="border: 1px dotted #80994c; text-align: right;">
-                <h1>Footer</h1>
+            <section class="flexbox left">
+                <div class="left">
+                    <h1>Footer 1</h1>
+                </div>
             </section>
         </footer>
     </body>

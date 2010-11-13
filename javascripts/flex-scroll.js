@@ -42,19 +42,19 @@ var BeeStyle = {
 }
 // set height (for non iphone/ipodtouch/ipad devices) and width (for firefox) on domload
 document.observe('dom:loaded', function() {
-    if (!(BrowserDetect.OS=="iPhone/iPod") && !(BrowserDetect.OS=="iPad")) {
-        BeeStyle.scrollHeight();
-    }
     if (BrowserDetect.browser=="Firefox") {
         BeeStyle.scrollWidth();
+    }
+    if (!(BrowserDetect.OS=="iPhone/iPod") && !(BrowserDetect.OS=="iPad")) {
+        BeeStyle.scrollHeight();
     }
 });
 // set height (for non iphone/ipodtouch/ipad devices) and width (for firefox) on resize
 Event.observe(window, 'resize', function() {
-    if (!(BrowserDetect.OS=="iPhone/iPod") && !(BrowserDetect.OS=="iPad")) {
-        BeeStyle.scrollHeight();
-    }
     if (BrowserDetect.browser=="Firefox") {
         BeeStyle.scrollWidth();
+    }
+    if (!(BrowserDetect.OS=="iPhone/iPod") && !(BrowserDetect.OS=="iPad")) {
+        BeeStyle.scrollHeight();
     }
 });
