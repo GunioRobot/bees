@@ -231,7 +231,7 @@ FileETag None
 # turn on directory Indexes for easy localhost navigation
 # on live server this should be:
 # Options +MultiViews -Indexes
-Options +MultiViews +Indexes
+Options +MultiViews -Indexes
 # setup MultiViews handler priorities per extension
 MultiviewsMatch Handlers
 # extension content type; priority; extension
