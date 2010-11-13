@@ -1,0 +1,58 @@
+/* Common Elements
+------------------------------------ */
+
+    div.center {
+        text-align: center;
+    }
+    div.right {
+        text-align: right;
+    }
+    div.left {
+        text-align: left;
+    }
+
+/* Page Structure
+------------------------------------ */
+
+    .flexbox {
+        padding: 10px;
+        display: -moz-box;
+        display: -webkit-box;
+        display: box;
+        -moz-box-orient: horizontal; 
+        -webkit-box-orient: horizontal;
+        box-orient: horizontal;
+     }
+    .flexbox.center, .flexbox.right, .flexbox.left {
+        width: 100px;
+        display: -moz-box;
+        display: -webkit-box;
+        display: box;
+        -moz-box-orient: vertical;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+    }
+    .flexbox.center {
+        -moz-box-flex: 3;
+        -webkit-box-flex: 3;
+        box-flex: 3;
+        -moz-box-ordinal-group: 2;
+        -webkit-box-ordinal-group: 2;
+        box-ordinal-group: 2;
+    }
+    .flexbox.right {
+        box-flex: 1;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-ordinal-group: 3;
+        -webkit-box-ordinal-group: 3;
+        -moz-box-ordinal-group: 3;
+    }
+    .flexbox.left {
+        box-flex: 1;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-ordinal-group: 1;
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1; 
+    }
