@@ -7,6 +7,8 @@ current layout modules include: fixed, fluid, fluid sticky, flex-box
 
 current modules include: animation, button, glow, scroll
 
+demo located at: [http://beemuse.net](http://beemuse.net)
+
 projects/scripts on which this builds include:
 
 [https://github.com/paulirish/html5-boilerplate](https://github.com/paulirish/html5-boilerplate)
