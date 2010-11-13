@@ -28,13 +28,9 @@ var BeeStyle = {
         });
     },
     scrollWidth: function() {
+        BeeStyle.setWidth($('header'));
+        BeeStyle.setWidth($('footer'));
         BeeStyle.setWidth($('main'));
-        if ($('header')) {
-            BeeStyle.setWidth($('header'));
-        }
-        if ($('footer')) {
-            BeeStyle.setWidth($('footer'));
-        }
         if ($('extra')) {
             BeeStyle.setWidth($('extra'));
         }
