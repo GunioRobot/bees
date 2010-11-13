@@ -15,7 +15,7 @@
 ------------------------------------ */
 
     .flexbox {
-        padding: 10px;
+        padding: 10px; /* optional */
         display: -moz-box;
         display: -webkit-box;
         display: box;
@@ -24,7 +24,7 @@
         box-orient: horizontal;
      }
     .flexbox.center, .flexbox.right, .flexbox.left {
-        width: 100px;
+        width: 100px; /* width reset by flex-box flex properties and flex-scroll js */
         display: -moz-box;
         display: -webkit-box;
         display: box;

@@ -137,7 +137,7 @@
     }
 
     ::-webkit-scrollbar-button:horizontal:decrement {
-        background-image: url(../images/scroll/up.png); /* todo */
+        background-image: url(../images/scroll/right.png);
         background-repeat: no-repeat;
         background-position: 0 9px;
     }
@@ -152,7 +152,7 @@
     }
 
     ::-webkit-scrollbar-button:horizontal:increment {
-        background-image: url(../images/scroll/down.png); /* todo */
+        background-image: url(../images/scroll/left.png);
         background-repeat: no-repeat;
         background-position: 0 5px;
     }

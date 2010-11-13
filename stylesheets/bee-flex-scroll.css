@@ -2,7 +2,6 @@
 ------------------------------------ */
 
     div.scroll {
-        height: 450px;
+        height: 450px; /* height reset by flex-scroll js */
         overflow-y: auto;
     }
-    
