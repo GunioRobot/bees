@@ -24,3 +24,9 @@ projects/scripts on which this builds include:
 [https://github.com/yui/yuicompressor](https://github.com/yui/yuicompressor)
 
 [http://www.quirksmode.org/js/detect.html](http://www.quirksmode.org/js/detect.html)
+
+planned projects/scripts to build in include:
+
+[https://github.com/sgruhier/scripty2-carousel](https://github.com/sgruhier/scripty2-carousel)
+
+[https://github.com/moxiecode/plupload](https://github.com/moxiecode/plupload)
