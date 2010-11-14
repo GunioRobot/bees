@@ -1,0 +1,66 @@
+/* Common Elements
+------------------------------------ */
+
+    /* css3 text shadows :: FF3.5+ SF4+ CH3+ */
+
+    .glow.green {
+        color: #80994c;
+        text-shadow: 0 0 2px #1a1a1a, 0 0 4px #80994c;
+    }
+    .glow.purple {
+        color: #4c5499;
+        text-shadow: 0 0 2px #1a1a1a, 0 0 4px #4c5499;
+    }
+    .glow.gray {
+        color: #999;
+        text-shadow: 0 0 2px #1a1a1a, 0 0 4px #999;
+    }
+    .glow.red {
+        color: #990f0f;
+        text-shadow: 0 0 2px #1a1a1a, 0 0 4px #990f0f;
+    }
+    .glow.amber {
+        color: #bf7a0a;
+        text-shadow: 0 0 2px #1a1a1a, 0 0 4px #bf7a0a;
+    }
+
+/* Layout Elements
+------------------------------------ */
+
+    /* css3 box shadows :: FF3.5+ SF3+ CH3+ */
+
+    section.glow.green, aside.glow.green {
+        border: 1px solid #80994c;
+        -webkit-box-shadow: 0 0 10px #80994c;
+        -moz-box-shadow: 0 0 10px #80994c;
+        box-shadow: 0 0 10px #80994c;
+    }
+    section.glow.purple, aside.glow.purple {
+        border: 1px solid #4c5499;
+        -webkit-box-shadow: 0 0 10px #4c5499;
+        -moz-box-shadow: 0 0 10px #4c5499;
+        box-shadow: 0 0 10px #4c5499;
+    }
+    section.glow.gray, aside.glow.gray {
+        border: 1px solid #999;
+        -webkit-box-shadow: 0 0 10px #999;
+        -moz-box-shadow: 0 0 10px #999;
+        box-shadow: 0 0 10px #999;
+    }
+    section.glow.red, aside.glow.red {
+        border: 1px solid #990f0f;
+        -webkit-box-shadow: 0 0 10px #990f0f;
+        -moz-box-shadow: 0 0 10px #990f0f;
+        box-shadow: 0 0 10px #990f0f;
+    }
+    section.glow.amber, aside.glow.amber {
+        border: 1px solid #bf7a0a;
+        -webkit-box-shadow: 0 0 10px #bf7a0a;
+        -moz-box-shadow: 0 0 10px #bf7a0a;
+        box-shadow: 0 0 10px #bf7a0a;
+    }
+    section.glow.green, section.glow.purple, section.glow.gray, section.glow.red, section.glow.amber,
+    aside.glow.green, aside.glow.purple, aside.glow.gray, aside.glow.red, aside.glow.amber {
+        color: #f2f2f2; /* reset */
+        text-shadow: none; /* reset */
+    }
