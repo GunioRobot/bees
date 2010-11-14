@@ -22,10 +22,11 @@
         <link rel="stylesheet" href="stylesheets/beestyle.css" />
     <!-- bee flex box -->
         <link rel="stylesheet" href="stylesheets/bee-flex-box.css" />
+        <link rel="stylesheet" href="stylesheets/anti-bee-flex-box.css" media="only screen and (max-device-width: 480px)" /><!-- iphone ipod touch -->
     <!-- bee flex box scroll -->
         <link rel="stylesheet" href="stylesheets/bee-flex-scroll.css" media="not handheld" />
-        <link rel="stylesheet" href="stylesheets/anti-bee-flex-scroll.css" media="only screen and (max-device-width: 480px)" />
-        <link rel="stylesheet" href="stylesheets/anti-bee-flex-scroll.css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" />
+        <link rel="stylesheet" href="stylesheets/anti-bee-flex-scroll.css" media="only screen and (max-device-width: 480px)" /><!-- iphone ipod touch -->
+        <link rel="stylesheet" href="stylesheets/anti-bee-flex-scroll.css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" /><!-- ipad -->
     <!-- beestyle glow -->
         <link rel="stylesheet" href="stylesheets/bee-glow.css" />
     <!-- beestyle scroll -->
@@ -91,7 +92,7 @@
                         <p>BeeStyle Components: animation, button, glow, scroll (animation and scroll only supported by Webkit currently)</p>
                         <p>Javascript is required to fix a bug in Firefox's current CSS3 Flexible Box Layout implementation</p>
                         <p>Javascript is also required for scrolling capabilities within the layout areas combined with a sticky footer (rather than scrolling the page vertically)</p>
-                        <p>This customizable fluid layout targets any screen size, including iPhone 4, older iPhone, and iPad resolutions (todo: iPhone relayout)</p>
+                        <p>This customizable fluid layout targets any screen size, adapting to mobile resolutions including iPhone 4, older iPhone, and iPad (3 column on screen/iPad, 1 column with main content first on iPhone/iPod Touch)</p>
                         <p>Width and height are calculated automatically either by CSS/JS (Webkit) or JS (Gecko), even when optional html exists</p>
                         <p>Sidebars flex depending on screen size in relation to center content (can be set to fixed width if desired)</p>
                         <p>Source order is also flexible (customizable order currently set to: main, right, left)</p>

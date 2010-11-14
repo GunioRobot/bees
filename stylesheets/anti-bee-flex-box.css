@@ -1,0 +1,35 @@
+/* Page Structure
+------------------------------------ */
+
+    .flexbox {
+        -moz-box-orient: vertical;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+    }
+    .flexbox.center, .flexbox.right, .flexbox.left {
+        width: auto;
+    }
+    .flexbox.center {
+        -moz-box-ordinal-group: 1;
+        -webkit-box-ordinal-group: 1;
+        box-ordinal-group: 1;
+    }
+    .flexbox.right {
+        box-ordinal-group: 3;
+        -webkit-box-ordinal-group: 3;
+        -moz-box-ordinal-group: 3;
+    }
+    .flexbox.left {
+        box-ordinal-group: 2;
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2; 
+    }
+
+/* Scratch
+------------------------------------ */
+
+    header div.right, header div.left,
+    footer div.right, footer div.left,
+    #extra div.right, #extra div.left {
+        text-align: center;
+    }

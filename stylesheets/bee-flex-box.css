@@ -1,16 +1,3 @@
-/* Common Elements
------------------------------------- */
-
-    div.center {
-        text-align: center;
-    }
-    div.right {
-        text-align: right;
-    }
-    div.left {
-        text-align: left;
-    }
-
 /* Page Structure
 ------------------------------------ */
 
@@ -60,6 +47,15 @@
 /* Scratch
 ------------------------------------ */
 
+    div.center {
+        text-align: center;
+    }
+    div.right {
+        text-align: right;
+    }
+    div.left {
+        text-align: left;
+    }
     .flexbox.center, .flexbox.right, .flexbox.left {
         border: 1px dotted gray;
     }
