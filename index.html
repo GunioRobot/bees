@@ -60,6 +60,15 @@
         footer {
             border-top: 1px dotted #80994c;
         }
+        hr {
+            height: 1px;
+            border-top: 1px dotted gray
+        }
+        hr.min {
+            border-top: 1px dotted #80994c;
+            margin: 0 auto;
+            width: 20%;
+        }
         </style>
     </head>
     <body>
@@ -90,12 +99,15 @@
                         <p>Compatibility: Chrome 5+, Safari 3+, Firefox 3+</p>
                         <p>Libraries: Prototype 1.7rc3, Scripty 2b1, Quirksmode (browser detect), HTML5-boilerplate (CSS reset), BeeStyle</p>
                         <p>BeeStyle Components: animation, button, glow, scroll (animation and scroll only supported by Webkit currently)</p>
-                        <p>Javascript is required to fix a bug in Firefox's current CSS3 Flexible Box Layout implementation</p>
-                        <p>Javascript is also required for scrolling capabilities within the layout areas combined with a sticky footer (rather than scrolling the page vertically)</p>
-                        <p>This customizable fluid layout targets any screen size, adapting to mobile resolutions including iPhone 4, older iPhone, and iPad (3 column on screen/iPad, 1 column with main content first on iPhone/iPod Touch)</p>
-                        <p>Width and height are calculated automatically either by CSS/JS (Webkit) or JS (Gecko), even when optional html exists</p>
+                        <hr class="min" />
+                        <p>This customizable fluid layout targets any screen size, adapting to mobile resolutions including iPhone 4, older iPhone, and iPad</p>
                         <p>Sidebars flex depending on screen size in relation to center content (can be set to fixed width if desired)</p>
                         <p>Source order is also flexible (customizable order currently set to: main, right, left)</p>
+                        <p>Width and height are calculated automatically either by CSS/JS (Webkit) or JS (Gecko), accounting for optional html if it exists (not iPhone/iPad)</p>
+                        <hr class="min" />
+                        <p>Javascript is required to fix a bug in Firefox's current CSS3 Flexible Box Layout implementation</p>
+                        <p>Javascript is also required for scrolling capabilities within the layout areas combined with a sticky footer (rather than scrolling the page vertically)</p>
+                        <p>iPhone/iPod Touch only: 3 column layout becomes 1 column, displaying main content within each section first (not iPad)</p>
                         <p>Issues: not working with Modernizr currently; no IE or Opera compatibility</p>
                     </section>
                     <hr />
