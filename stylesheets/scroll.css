@@ -1,11 +1,12 @@
     /* css3 webkit scroll bars */
-    
+
     ::-webkit-scrollbar {
         width: 13px;
         height: 13px;
     }
 
     ::-webkit-scrollbar-corner {
+        background-color: #0d0d0d;
     }
 
     ::-webkit-scrollbar-corner:window-inactive {
@@ -137,9 +138,9 @@
     }
 
     ::-webkit-scrollbar-button:horizontal:decrement {
-        background-image: url(../images/scroll/right.png);
+        background-image: url(../images/scroll/left.png);
         background-repeat: no-repeat;
-        background-position: 0 9px;
+        background-position: 9px 0;
     }
 
     ::-webkit-scrollbar-button:horizontal:decrement:hover {
@@ -152,9 +153,9 @@
     }
 
     ::-webkit-scrollbar-button:horizontal:increment {
-        background-image: url(../images/scroll/left.png);
+        background-image: url(../images/scroll/right.png);
         background-repeat: no-repeat;
-        background-position: 0 5px;
+        background-position: 5px 0;
     }
 
     ::-webkit-scrollbar-button:horizontal:increment:hover {
@@ -416,4 +417,3 @@
     .none::-webkit-scrollbar-button {
         display: none;
     }
-    

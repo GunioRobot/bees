@@ -1,8 +1,8 @@
 var BeeStyle = {
 // set height for non iphone/ipodtouch/ipad devices so that footer sticks to bottom and main divs scroll
     setHeight: function(element) {
-        var header_height = $$('header')[0].getHeight();
-        var footer_height = $$('footer')[0].getHeight();
+        var header_height = $('header').getHeight();
+        var footer_height = $('footer').getHeight();
         var total_height = (header_height + footer_height) + 44;
         if ($('extra')) {
             var extra_height = $('extra').getHeight();
