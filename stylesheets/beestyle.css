@@ -48,6 +48,9 @@
     form {
         display: inline;
     }
+    input:focus, textarea:focus, select:focus {
+        outline-width: 0; /* removes blue border in webkit */
+    }
 
 /* Layout Elements
 ------------------------------------ */
