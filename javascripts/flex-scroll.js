@@ -45,6 +45,15 @@ document.observe('dom:loaded', function() {
         BeeStyle.scrollHeight();
     }
 });
+// reset height (for non iphone/ipodtouch/ipad devices) and width (for firefox) on asset load
+Event.observe(window, 'load', function() {
+    if (BrowserDetect.browser=="Firefox") {
+        BeeStyle.scrollWidth();
+    }
+    if (!(BrowserDetect.OS=="iPhone/iPod") && !(BrowserDetect.OS=="iPad")) {
+        BeeStyle.scrollHeight();
+    }
+});
 // set height (for non iphone/ipodtouch/ipad devices) and width (for firefox) on resize
 Event.observe(window, 'resize', function() {
     if (BrowserDetect.browser=="Firefox") {

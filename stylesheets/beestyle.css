@@ -51,6 +51,9 @@
     input:focus, textarea:focus, select:focus {
         outline-width: 0; /* removes blue border in webkit */
     }
+    select {
+        cursor: pointer;
+    }
 
 /* Layout Elements
 ------------------------------------ */

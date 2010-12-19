@@ -368,14 +368,12 @@ window.Modernizr = (function(window,document,undefined){
     //   to account for this gotcha yourself.
     tests['websqldatabase'] = function() {
       var result = !!window.openDatabase;
-      /*
-      if (result){
-        try {
-          result = !!openDatabase( mod + "testdb", "1.0", mod + "testdb", 2e4);
-        } catch(e) {
-        }
-      }
-      */
+      /*  if (result){
+            try {
+              result = !!openDatabase( mod + "testdb", "1.0", mod + "testdb", 2e4);
+            } catch(e) {
+            }
+          }  */
       return result;
     };
     
@@ -450,15 +448,13 @@ window.Modernizr = (function(window,document,undefined){
     
     
     // In testing support for a given CSS property, it's legit to test:
-    //    elem.style[styleName] !== undefined
+    //    `elem.style[styleName] !== undefined`
     // If the property is supported it will return an empty string,
     // if unsupported it will return undefined.
+    
     // We'll take advantage of this quick test and skip setting a style 
     // on our modernizr element, but instead just testing undefined vs
     // empty string.
-    // The legacy set_css_all calls will remain in the source 
-    // (however, commented) for clarity, yet functionally they are 
-    // no longer needed.
     
 
     tests['backgroundsize'] = function() {
@@ -466,7 +462,6 @@ window.Modernizr = (function(window,document,undefined){
     };
     
     tests['borderimage'] = function() {
-        //  set_css_all( 'border-image:url(m.png) 1 1 stretch' );
         return test_props_all( 'borderImage' );
     };
     
@@ -475,19 +470,17 @@ window.Modernizr = (function(window,document,undefined){
     // border-radius: http://muddledramblings.com/table-of-css3-border-radius-compliance
     
     tests['borderradius'] = function() {
-        //  set_css_all( 'border-radius:10px' );
         return test_props_all( 'borderRadius', '', function( prop ) {
             return contains( prop, 'orderRadius' );
         });
     };
     
-    
+    // WebOS unfortunately false positives on this test.
     tests['boxshadow'] = function() {
-        //  set_css_all( 'box-shadow:#000 1px 1px 3px' );
         return test_props_all( 'boxShadow' );
     };
     
-    // Note: FF3.0 will false positive on this test 
+    // FF3.0 will false positive on this test 
     tests['textshadow'] = function(){
         return document.createElement('div').style.textShadow === '';
     };
@@ -508,13 +501,11 @@ window.Modernizr = (function(window,document,undefined){
     
     
     tests['cssanimations'] = function() {
-        //  set_css_all( 'animation:"animate" 2s ease 2', 'position:relative' );
         return test_props_all( 'animationName' );
     };
     
     
     tests['csscolumns'] = function() {
-        //  set_css_all( 'column-count:3' );
         return test_props_all( 'columnCount' );
     };
     
@@ -541,19 +532,16 @@ window.Modernizr = (function(window,document,undefined){
     
     
     tests['cssreflections'] = function() {
-        //  set_css_all( 'box-reflect:right 1px' );
         return test_props_all( 'boxReflect' );
     };
     
     
     tests['csstransforms'] = function() {
-        //  set_css_all( 'transform:rotate(3deg)' );
         return !!test_props([ 'transformProperty', 'WebkitTransform', 'MozTransform', 'OTransform', 'msTransform' ]);
     };
     
     
     tests['csstransforms3d'] = function() {
-        //  set_css_all( 'perspective:500' );
         
         var ret = !!test_props([ 'perspectiveProperty', 'WebkitPerspective', 'MozPerspective', 'OPerspective', 'msPerspective' ]);
         
@@ -572,7 +560,6 @@ window.Modernizr = (function(window,document,undefined){
     
     
     tests['csstransitions'] = function() {
-        //  set_css_all( 'transition:all .5s linear' );
         return test_props_all( 'transitionProperty' );
     };
 
@@ -582,7 +569,7 @@ window.Modernizr = (function(window,document,undefined){
     tests['fontface'] = function(){
 
         var 
-        sheet,
+        sheet, bool,
         head = docHead || docElement,
         style = document.createElement("style"),
         impl = document.implementation || { hasFeature: function() { return false; } };
@@ -590,9 +577,6 @@ window.Modernizr = (function(window,document,undefined){
         style.type = 'text/css';
         head.insertBefore(style, head.firstChild);
         sheet = style.sheet || style.styleSheet;
-
-        // removing it crashes IE browsers
-        //head.removeChild(style);
 
         var supportAtRule = impl.hasFeature('CSS2', '') ?
                 function(rule) {
@@ -614,15 +598,10 @@ window.Modernizr = (function(window,document,undefined){
                             .replace(/\r+|\n+/g, '')
                             .indexOf(rule.split(' ')[0]) === 0;
                 };
-
-
-        // DEPRECATED - allow for a callback
-        ret._fontfaceready = function(fn){
-          fn(ret.fontface);
-        };
         
-        return supportAtRule('@font-face { font-family: "font"; src: "font.ttf"; }');
-        
+        bool = supportAtRule('@font-face { font-family: "font"; src: "font.ttf"; }');
+        head.removeChild(style);
+        return bool;
     };
     
 
@@ -676,31 +655,35 @@ window.Modernizr = (function(window,document,undefined){
     };
 
 
-    // Both localStorage and sessionStorage are
-    //   tested via the `in` operator because otherwise Firefox will
-    //   throw an error: https://bugzilla.mozilla.org/show_bug.cgi?id=365772
-    //   if cookies are disabled
-    
-    // They require try/catch because of possible firefox configuration:
-    //   http://github.com/Modernizr/Modernizr/issues#issue/92
-    
-    // FWIW miller device resolves to [object Storage] in all supporting browsers
-    //   except for IE who does [object Object]
-    
-    // IE8 Compat mode supports these features completely:
+    // Firefox has made these tests rather unfun.
+
+    // In FF4, if disabled, window.localStorage should === null.
+
+    // Normally, we could not test that directly and need to do a 
+    //   `('localStorage' in window) && ` test first because otherwise Firefox will
+    //   throw http://bugzil.la/365772 if cookies are disabled
+
+    // However, in Firefox 4 betas, if dom.storage.enabled == false, just mentioning
+    //   the property will throw an exception. http://bugzil.la/599479
+    // This looks to be fixed for FF4 Final.
+
+    // Because we are forced to try/catch this, we'll go aggressive.
+
+    // FWIW: IE8 Compat mode supports these features completely:
     //   http://www.quirksmode.org/dom/html5.html
-    
+    // But IE8 doesn't support either with local files
+
     tests['localstorage'] = function() {
         try {
-          return ('localStorage' in window) && window.localStorage !== null;
+            return !!localStorage.getItem;
         } catch(e) {
-          return false;
+            return false;
         }
     };
 
     tests['sessionstorage'] = function() {
         try {
-            return ('sessionStorage' in window) && window.sessionStorage !== null;
+            return !!sessionStorage.getItem;
         } catch(e){
             return false;
         }
