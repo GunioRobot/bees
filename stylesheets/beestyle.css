@@ -136,12 +136,3 @@
     .ie7 .block div, .ie6 .block div {
         display: inline;
     }
-
-    /* Lightshow Magic */
-    
-    .ie6 .p7LSM_wrapper, .ie6 .p7LSM_trigs a, .ie7 .p7LSM_wrapper, .ie7 .p7LSM_trigs a {
-        zoom: 1;
-    }
-    .ie6 #p7LSM_toolbar a {
-        margin-top: -1px;
-    }
