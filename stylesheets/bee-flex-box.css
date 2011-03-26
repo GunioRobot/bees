@@ -6,7 +6,7 @@
         display: -moz-box;
         display: -webkit-box;
         display: box;
-        -moz-box-orient: horizontal; 
+        -moz-box-orient: horizontal;
         -webkit-box-orient: horizontal;
         box-orient: horizontal;
      }
@@ -20,9 +20,9 @@
         box-orient: vertical;
     }
     .flexbox.center {
-        -moz-box-flex: 3;
-        -webkit-box-flex: 3;
-        box-flex: 3;
+        -moz-box-flex: 4;
+        -webkit-box-flex: 4;
+        box-flex: 4;
         -moz-box-ordinal-group: 2;
         -webkit-box-ordinal-group: 2;
         box-ordinal-group: 2;
@@ -87,15 +87,15 @@
     .flexbox.center, .flexbox.right, .flexbox.left {
         border: 1px dotted gray;
     }
-    header, footer, #main, #extra {
+    #header, #footer, #main, #extra {
         border: 1px dotted #80994c;
     }
     
     /* iphone / ipod touch */
     
     @media only screen and (max-device-width: 480px) {
-        header div.right, header div.left,
-        footer div.right, footer div.left,
+        #header div.right, #header div.left,
+        #footer div.right, #footer div.left,
         #extra div.right, #extra div.left {
             text-align: center;
         }
