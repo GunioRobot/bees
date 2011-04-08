@@ -16,3 +16,11 @@ AddType text/plain; qs=0.7 .txt
 AddType image/png; qs=0.6 .png
 AddType image/gif; qs=0.7 .gif
 AddType image/jpeg; qs=0.6 .jpg
+
+
+
+#IMB :: PHP AS HTML
+<IfModule mod_php5.c>
+AddType  application/x-httpd-php         .php .html
+AddType  application/x-httpd-php-source  .phps
+</IfModule>

@@ -97,28 +97,54 @@ window.Modernizr = (function(window,document,undefined){
     
     featurename, // used in testing loop
     
+    refNode = document.getElementsByTagName('script')[0],
     
+    
+
+    // adapted from matchMedia polyfill 
+    // by Scott Jehl and Paul Irish 
+    // gist.github.com/786768
     
     // todo: consider using http://javascript.nwbox.com/CSSSupport/css-support.js instead
-    testMediaQuery = function(mq){
+    testMediaQuery = (function(mq){
 
-      var st = document.createElement('style'),
-          div = document.createElement('div'),
-          ret;
+      var cache = {},
+          fakeBody = document.createElement('body'),
+          testDiv = document.createElement('div');
 
-      st.textContent = mq + '{#modernizr{height:3px}}';
-      docHead.appendChild(st);
-      div.id = 'modernizr';
-      docElement.appendChild(div);
+      testDiv.id = mod + '-mqtest';
+      fakeBody.appendChild(testDiv);
 
-      ret = div.offsetHeight === 3;
+      return function(mq){
+        if (cache[mq] == undefined) {
+          if (window.matchMedia){
+            return (cache[mq] = matchMedia(mq).matches);
+          }
+          var styleBlock = document.createElement('style'),
+              cssrule = '@media ' + mq + ' { #' + mod + '-mqtest { position: absolute; } }';
+          
+          styleBlock.type = "text/css";  // must set type for IE  
+          if (styleBlock.styleSheet){ 
+            styleBlock.styleSheet.cssText = cssrule;
+          } 
+          else {
+            styleBlock.appendChild(document.createTextNode(cssrule));
+          } 
+          refNode.parentNode.insertBefore(fakeBody, refNode);
+          refNode.parentNode.insertBefore(styleBlock, refNode);
+          cache[mq] = (window.getComputedStyle ? 
+                      getComputedStyle(testDiv, null) : 
+                      testDiv.currentStyle)['position'] == 'absolute';
+          fakeBody.parentNode.removeChild(fakeBody);
+          styleBlock.parentNode.removeChild(styleBlock);
+        }
+        return cache[mq];
+      };
 
-      st.parentNode.removeChild(st);
-      div.parentNode.removeChild(div);
+    })(),
 
-      return !!ret;
 
-    },
+
     
     
     /**
@@ -203,7 +229,7 @@ window.Modernizr = (function(window,document,undefined){
      * contains returns a boolean for if substr is found within str.
      */
     function contains( str, substr ) {
-        return (''+str).indexOf( substr ) !== -1;
+        return !!~(''+str).indexOf( substr );
     }
 
     /**
@@ -320,7 +346,7 @@ window.Modernizr = (function(window,document,undefined){
      
     tests['touch'] = function() {
 
-        return ('ontouchstart' in window) || testMediaQuery('@media ('+prefixes.join('touch-enabled),(')+'modernizr)');
+        return ('ontouchstart' in window) || testMediaQuery('('+prefixes.join('touch-enabled),(')+'modernizr)');
 
     };
 
@@ -370,18 +396,17 @@ window.Modernizr = (function(window,document,undefined){
       return result;
     };
     
-    // Vendors have inconsistent prefixing with the experimental Indexed DB:
-    // - Firefox is shipping indexedDB in FF4 as moz_indexedDB
+    // Vendors had inconsistent prefixing with the experimental Indexed DB:
     // - Webkit's implementation is accessible through webkitIndexedDB
-    // We test both styles.
+    // - Firefox shipped moz_indexedDB before FF4b9, but since then has been mozIndexedDB
+    // For speed, we don't test the legacy (and beta-only) indexedDB
     tests['indexedDB'] = function(){
       for (var i = -1, len = domPrefixes.length; ++i < len; ){ 
-        var prefix = domPrefixes[i].toLowerCase();
-        if (window[prefix + '_indexedDB'] || window[prefix + 'IndexedDB']){
+        if (window[ domPrefixes[i].toLowerCase() + 'IndexedDB']){
           return true;
         } 
       }
-      return false;
+      return !!window.indexedDB;
     };
 
     // documentMode logic from YUI to filter out IE8 Compat Mode
@@ -546,7 +571,7 @@ window.Modernizr = (function(window,document,undefined){
           
           // Webkit allows this media query to succeed only if the feature is enabled.    
           // `@media (transform-3d),(-o-transform-3d),(-moz-transform-3d),(-ms-transform-3d),(-webkit-transform-3d),(modernizr){ ... }`    
-          ret = testMediaQuery('@media ('+prefixes.join('transform-3d),(')+'modernizr)');
+          ret = testMediaQuery('('+prefixes.join('transform-3d),(')+'modernizr)');
         }
         return ret;
     };
@@ -859,25 +884,27 @@ window.Modernizr = (function(window,document,undefined){
     modElem = inputElem = null;
 
     //>>BEGIN IEPP
-    // Enable HTML 5 elements for styling in IE. 
-    // fyi: jscript version does not reflect trident version
-    //      therefore ie9 in ie7 mode will still have a jScript v.9
+    // Enable HTML 5 elements for styling (and printing) in IE. 
     if ( enableHTML5 && window.attachEvent && (function(){ var elem = document.createElement("div");
                                       elem.innerHTML = "<elem></elem>";
                                       return elem.childNodes.length !== 1; })()) {
-        // iepp v1.6.2 by @jon_neal : code.google.com/p/ie-print-protector
+        // iepp v2 by @jon_neal & afarkas : github.com/aFarkas/iepp/
         (function(win, doc) {
-          var elems = 'abbr|article|aside|audio|canvas|details|figcaption|figure|footer|header|hgroup|mark|meter|nav|output|progress|section|summary|time|video',
+          win.iepp = win.iepp || {};
+          var iepp = win.iepp,
+            elems = iepp.html5elements || 'abbr|article|aside|audio|canvas|datalist|details|figcaption|figure|footer|header|hgroup|mark|meter|nav|output|progress|section|summary|time|video',
             elemsArr = elems.split('|'),
             elemsArrLen = elemsArr.length,
             elemRegExp = new RegExp('(^|\\s)('+elems+')', 'gi'), 
             tagRegExp = new RegExp('<(\/*)('+elems+')', 'gi'),
+            filterReg = /^\s*[\{\}]\s*$/,
             ruleRegExp = new RegExp('(^|[^\\n]*?\\s)('+elems+')([^\\n]*)({[\\n\\w\\W]*?})', 'gi'),
             docFrag = doc.createDocumentFragment(),
             html = doc.documentElement,
             head = html.firstChild,
             bodyElem = doc.createElement('body'),
             styleElem = doc.createElement('style'),
+            printMedias = /print|all/,
             body;
           function shim(doc) {
             var a = -1;
@@ -885,64 +912,97 @@ window.Modernizr = (function(window,document,undefined){
               // Use createElement so IE allows HTML5-named elements in a document
               doc.createElement(elemsArr[a]);
           }
-          function getCSS(styleSheetList, mediaType) {
+
+          iepp.getCSS = function(styleSheetList, mediaType) {
+            if(styleSheetList+'' === undefined){return '';}
             var a = -1,
               len = styleSheetList.length,
               styleSheet,
               cssTextArr = [];
             while (++a < len) {
               styleSheet = styleSheetList[a];
+              //currently no test for disabled/alternate stylesheets
+              if(styleSheet.disabled){continue;}
+              mediaType = styleSheet.media || mediaType;
               // Get css from all non-screen stylesheets and their imports
-              if ((mediaType = styleSheet.media || mediaType) != 'screen') cssTextArr.push(getCSS(styleSheet.imports, mediaType), styleSheet.cssText);
+              if (printMedias.test(mediaType)) cssTextArr.push(iepp.getCSS(styleSheet.imports, mediaType), styleSheet.cssText);
+              //reset mediaType to all with every new *not imported* stylesheet
+              mediaType = 'all';
             }
             return cssTextArr.join('');
-          }
+          };
+
+          iepp.parseCSS = function(cssText) {
+            var cssTextArr = [],
+              rule;
+            while ((rule = ruleRegExp.exec(cssText)) != null){
+              // Replace all html5 element references with iepp substitute classnames
+              cssTextArr.push(( (filterReg.exec(rule[1]) ? '\n' : rule[1]) +rule[2]+rule[3]).replace(elemRegExp, '$1.iepp_$2')+rule[4]);
+            }
+            return cssTextArr.join('\n');
+          };
+
+          iepp.writeHTML = function() {
+            var a = -1;
+            body = body || doc.body;
+            while (++a < elemsArrLen) {
+              var nodeList = doc.getElementsByTagName(elemsArr[a]),
+                nodeListLen = nodeList.length,
+                b = -1;
+              while (++b < nodeListLen)
+                if (nodeList[b].className.indexOf('iepp_') < 0)
+                  // Append iepp substitute classnames to all html5 elements
+                  nodeList[b].className += ' iepp_'+elemsArr[a];
+            }
+            docFrag.appendChild(body);
+            html.appendChild(bodyElem);
+            // Write iepp substitute print-safe document
+            bodyElem.className = body.className;
+            bodyElem.id = body.id;
+            // Replace HTML5 elements with <font> which is print-safe and shouldn't conflict since it isn't part of html5
+            bodyElem.innerHTML = body.innerHTML.replace(tagRegExp, '<$1font');
+          };
+
+
+          iepp._beforePrint = function() {
+            // Write iepp custom print CSS
+            styleElem.styleSheet.cssText = iepp.parseCSS(iepp.getCSS(doc.styleSheets, 'all'));
+            iepp.writeHTML();
+          };
+
+          iepp.restoreHTML = function(){
+            // Undo everything done in onbeforeprint
+            bodyElem.innerHTML = '';
+            html.removeChild(bodyElem);
+            html.appendChild(body);
+          };
+
+          iepp._afterPrint = function(){
+            // Undo everything done in onbeforeprint
+            iepp.restoreHTML();
+            styleElem.styleSheet.cssText = '';
+          };
+
+
+
           // Shim the document and iepp fragment
           shim(doc);
           shim(docFrag);
+
+          //
+          if(iepp.disablePP){return;}
+
           // Add iepp custom print style element
           head.insertBefore(styleElem, head.firstChild);
           styleElem.media = 'print';
+          styleElem.className = 'iepp-printshim';
           win.attachEvent(
             'onbeforeprint',
-            function() {
-              var a = -1,
-                cssText = getCSS(doc.styleSheets, 'all'),
-                cssTextArr = [],
-                rule;
-              body = body || doc.body;
-              // Get only rules which reference HTML5 elements by name
-              while ((rule = ruleRegExp.exec(cssText)) != null)
-                // Replace all html5 element references with iepp substitute classnames
-                cssTextArr.push((rule[1]+rule[2]+rule[3]).replace(elemRegExp, '$1.iepp_$2')+rule[4]);
-              // Write iepp custom print CSS
-              styleElem.styleSheet.cssText = cssTextArr.join('\n');
-              while (++a < elemsArrLen) {
-                var nodeList = doc.getElementsByTagName(elemsArr[a]),
-                  nodeListLen = nodeList.length,
-                  b = -1;
-                while (++b < nodeListLen)
-                  if (nodeList[b].className.indexOf('iepp_') < 0)
-                    // Append iepp substitute classnames to all html5 elements
-                    nodeList[b].className += ' iepp_'+elemsArr[a];
-              }
-              docFrag.appendChild(body);
-              html.appendChild(bodyElem);
-              // Write iepp substitute print-safe document
-              bodyElem.className = body.className;
-              // Replace HTML5 elements with <font> which is print-safe and shouldn't conflict since it isn't part of html5
-              bodyElem.innerHTML = body.innerHTML.replace(tagRegExp, '<$1font');
-            }
+            iepp._beforePrint
           );
           win.attachEvent(
             'onafterprint',
-            function() {
-              // Undo everything done in onbeforeprint
-              bodyElem.innerHTML = '';
-              html.removeChild(bodyElem);
-              html.appendChild(body);
-              styleElem.styleSheet.cssText = '';
-            }
+            iepp._afterPrint
           );
         })(window, document);
     }
@@ -951,6 +1011,12 @@ window.Modernizr = (function(window,document,undefined){
     // Assign private properties to the return object with prefix
     ret._enableHTML5     = enableHTML5;
     ret._version         = version;
+    
+    
+    // expose methods
+    ret.mq = testMediaQuery; 
+    ret.isEventSupported = isEventSupported; // maybe rename to Modernizr.event() ?
+    
 
     // Remove "no-js" class from <html> element, if it exists:
     docElement.className = docElement.className.replace(/\bno-js\b/,'') 
