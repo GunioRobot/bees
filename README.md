@@ -1,4 +1,4 @@
-BeeStyle
+BeeStyle BeeFlex
 =========
 
 ### BeeStyle Flex Box :: a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
@@ -21,7 +21,7 @@ Javascript is required for scrolling capabilities within the layout areas combin
 
 Issues: no IE or Opera compatibility, Prototype 1.7 code to be ported to jQuery 1.6
 
-Demo and usage guidelines located at: [http://beemuse.net](http://beemuse.net)
+### Demo and usage guidelines located at: [http://beemuse.net](http://beemuse.net)
 
 Projects/scripts on which this builds include:
 
