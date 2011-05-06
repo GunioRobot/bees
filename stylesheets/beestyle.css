@@ -37,13 +37,9 @@
         text-decoration: none;
     }
     table {
+        /* auto-centers auto-expanding table */
         margin-left: auto;
         margin-right: auto;
-        border-collapse: collapse;
-    }
-    td {
-        padding: 0;
-        vertical-align: top;
     }
     form {
         display: inline;
