@@ -19,7 +19,7 @@ iPhone only: 3 column layout becomes 1 column, displaying main content within ea
 
 Javascript is required for scrolling capabilities within the layout areas combined with a sticky footer (not iPhone/iPad)
 
-Issues: no IE or Opera compatibility, Prototype 1.7 code to be ported to jQuery 1.6
+Issues: no IE or Opera compatibility, Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery
 
 ### Demo and usage guidelines located at: [http://beemuse.net](http://beemuse.net)
 
@@ -34,6 +34,8 @@ Projects/scripts on which this builds include:
 [https://github.com/yui/yuicompressor](https://github.com/yui/yuicompressor)
 
 Planned projects/scripts to build in include:
+
+[https://github.com/jashkenas/coffee-script](https://github.com/jashkenas/coffee-script)
 
 [https://github.com/jquery/jquery](https://github.com/jquery/jquery)
 
