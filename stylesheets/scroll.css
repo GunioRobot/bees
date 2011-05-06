@@ -6,7 +6,7 @@
     }
 
     ::-webkit-scrollbar-corner {
-        background-color: #0d0d0d;
+        background-color: transparent;
     }
 
     ::-webkit-scrollbar-corner:window-inactive {
