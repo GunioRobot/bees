@@ -1,0 +1,30 @@
+/* beeFlex :: margin/padding/width
+------------------------------------ */
+
+.beeFlex #extra {
+    padding: 20px 20px 0 20px;
+}
+.beeFlex #main {
+    margin: 0;
+}
+.beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
+    min-width: 140px;
+    max-width: 240px;
+    /* could be set to a fixed width for more preditable 
+    flexing when left and right sidebar content differs */
+}
+
+/* iPhone 4 and lesser brethren */
+
+@media only screen and (max-device-width: 960px) {
+    .beeFlex #extra {
+        padding: 5px 5px 0 5px;
+    }
+    .beeFlex #main {
+        margin: 0;
+    }
+    .beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
+        min-width: auto;
+        max-width: auto;
+    }
+}

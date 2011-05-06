@@ -1,0 +1,14 @@
+/* beeFlex :: inner scrolling
+------------------------------------ */
+
+.beeFlex div.scroll {
+    overflow-y: auto;
+}
+
+/* iPad 2 and lesser brethren */
+
+@media only screen and (max-device-width: 1024px) {
+    .beeFlex div.scroll {
+        overflow-y: visible;
+    }
+}

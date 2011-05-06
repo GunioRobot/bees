@@ -1,0 +1,16 @@
+body.beeDark, .beeDark select, .beeDark input, .beeDark textarea {
+    color: #eee; /* 93% gray */
+    background-color: #343434; /* 20% gray */
+}
+.beeDark .panel, .beeDark header, .beeDark footer {
+    color: #343434; /* 20% gray */
+    background-color: #eee; /* 93% gray */
+}
+.beeDark a, .beeDark a:active, .beeDark a:visited, .beeDark a:hover {
+    color: #c3ff62; /* light green */
+}
+.beeDark .panel a, .beeDark .panel a:active, .beeDark .panel a:visited, .beeDark .panel a:hover,
+.beeDark header a, .beeDark header a:active, .beeDark header a:visited, .beeDark header a:hover,
+.beeDark footer a, .beeDark footer a:active, .beeDark footer a:visited, .beeDark footer a:hover {
+    color: #619e00; /* dark green */
+}
