@@ -3,11 +3,14 @@
 
     body.beeDark {
         color: #eee; /* 93% gray */
-        background-color: #343434; /* 20% gray */
+        background-color: #333; /* 20% gray */
     }
     .beeDark .panel, .beeDark header, .beeDark footer {
-        color: #343434; /* 20% gray */
+        color: #333; /* 20% gray */
         background-color: #eee; /* 93% gray */
+    }
+    .beeDark hr {
+        border-top: 1px solid #bababa; /* 73% gray */
     }
     
     /* Links */
@@ -25,6 +28,6 @@
     
     .beeDark select, .beeDark input, .beeDark textarea {
         color: #eee; /* 93% gray */
-        background-color: #343434; /* 20% gray */
+        background-color: #333; /* 20% gray */
         border: 1px solid #eee; /* 93% gray */
     }

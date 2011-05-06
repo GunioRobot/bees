@@ -29,7 +29,7 @@
     <section class="beeFlex">
         <header id="header">
             <section class="aligncenter center">
-                <h1>BeeStyle BeeFlex</h1>
+                <h1>BeeStyle BeeFlip</h1>
             </section>
             <aside class="left">
                 <p>...</p>
@@ -55,41 +55,27 @@
                 <div class="scroll">
                     <div class="insert">
                     <!-- Main Content -->
-                        <h1>Flex Box Module</h1>
-                            <p>HTML5 Elements and CSS3 Flexible Box Layout</p>
-                            <p>Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+</p>
-                            <p>Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset), BeeStyle-BeeFlex (CSS/JS)</p>
-                            <p>This customizable fluid layout targets any screen size, adapting to mobile resolutions including iPhone and iPad</p>
-                            <p>Sidebars flex depending on screen size in relation to center content (can be set to fixed width if desired)</p>
-                            <p>Source order is also flexible (customizable order currently set to: main, left, right)</p>
-                            <p>iPhone only: 3 column layout becomes 1 column, displaying main content within each section first (not iPad)</p>
-                            <p>Javascript is required for scrolling capabilities within the layout areas combined with a sticky footer (not iPhone/iPad)</p>
-                            <p>Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Opera has no planned support yet)</p>
-                            <p>Todo: Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery</p>
-                        <hr />
-                        <h1>Usage &amp; Dependencies</h1>
-                            <p>First include HTML5-boilerplate and (optionally) WebKit scrollbars</p>
-                                <code>
-                                    &lt;link rel="stylesheet" href="stylesheets/reset.css"&gt;<br />
-                                    &lt;link rel="stylesheet" href="stylesheets/scroll.css"&gt;
-                                </code>
-                            <p>Then include the core BeeStyle-BeeFlex stylesheet</p>
-                                <code>
-                                    &lt;link rel="stylesheet" href="stylesheets/beestyle-beeflex-a1.min.css"&gt;
-                                </code>
-                            <p>Then load up Modernizr and Prototype</p>
-                                <code>
-                                    &lt;script src="javascripts/modernizr-1.7.min.js"&gt;&lt;/script&gt;<br />
-                                    &lt;script src="javascripts/prototype-1.7.js"&gt;&lt;/script&gt;
-                                </code>
-                            <p>Then include the core Beestyle-BeeFlex javascript</p>
-                                <code>
-                                    &lt;script src="javascripts/beestyle-beeflex-a1.min.js"&gt;&lt;/script&gt;
-                                </code>
-                            <p>Note this page includes demo javascript to power the extra/color toggles</p>
-                                <code>
-                                    &lt;script src="javascripts/beestyle-toggle-demos.min.js"&gt;&lt;/script&gt;
-                                </code>
+                        <h1>Animation Module</h1>
+                            <div class="beeFlip" style="margin: 10px 0 170px 0;">
+                                <div class="flip front">
+                                    <img src="photos/150px/IMG_2551.jpg" alt="" class="round8" />
+                                </div>
+                                <div class="flip back">
+                                    <img src="photos/150px/IMG_2465.jpg" alt="" class="round8" />
+                                </div>
+                            </div>
+                            <p>Note this relies on absolute positioning; for the rest of the page to flow, height must be known.
+                            In this case, adding a margin-bottom of 170px to beeFlip accommodates flip content (150px) plus padding (20px)</p>
+                            <code>
+                                &lt;div class="beeFlip"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip front"&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip back"&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                &lt;/div&gt;
+                            </code>
                     <!-- End Main Content -->
                     </div>
                 </div>
@@ -116,7 +102,7 @@
                         <span id="beeColorToggle"></span> :: <span id="beeExtraToggle"></span>
                     </div>
                     <div class="panel">
-                        <p><strong>BeeFlex</strong><br /><a href="beeflip">BeeFlip</a></p>
+                        <p><a href="./">BeeFlex</a><br /><strong>BeeFlip</strong></p>
                     </div>
                     <!-- End Right Sidebar -->
                 </div>

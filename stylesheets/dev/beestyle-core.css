@@ -86,6 +86,11 @@
         -moz-border-radius: 5px;
         border-radius: 5px;
     }
+    .round8 {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
     .round10 {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -100,6 +105,41 @@
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
+    }
+
+/* Animation Module */
+
+    /* css3 transforms :: FF3.5+ SF3+ CH3+ */
+    /* css3 transitions :: FF4+ SF3+ CH3+ */
+    /* css3 animations :: SF4+ CH4+ */
+    /* css3 3d transforms :: SF5+ */
+
+    .beeFlip {
+        position: relative;
+        -webkit-perspective: 1000;
+    }
+    .beeFlip .flip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: 0.75s;
+    }
+    .beeFlip .front {
+        z-index: 5;
+    }
+    .beeFlip:hover .front {
+        z-index: 5;
+        -webkit-transform: rotateY(180deg);
+    }
+    .beeFlip .back {
+        z-index: 0;
+        -webkit-transform: rotateY(-180deg);
+    }
+    .beeFlip:hover .back {
+        z-index: 10;
+        -webkit-transform: rotateY(0deg);
     }
 
 /* Internet Explorer

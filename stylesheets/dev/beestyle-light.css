@@ -2,12 +2,15 @@
 ------------------------------------ */
 
     body.beeLight {
-        color: #343434; /* 20% gray */
+        color: #333; /* 20% gray */
         background-color: #eee; /* 93% gray */
     }
     .beeLight .panel, .beeLight header, .beeLight footer {
         color: #eee; /* 93% gray */
-        background-color: #343434; /* 20% gray */
+        background-color: #333; /* 20% gray */
+    }
+    .beeLight hr {
+        border-top: 1px solid #666; /* 40% gray */
     }
     
     /* Links */
@@ -24,7 +27,7 @@
     /* Forms */
     
     .beeLight select, .beeLight input, .beeLight textarea {
-        color: #343434; /* 20% gray */
+        color: #333; /* 20% gray */
         background-color: #eee; /* 93% gray */
-        border: 1px solid #343434; /* 20% gray */
+        border: 1px solid #333; /* 20% gray */
     }
