@@ -1,28 +1,32 @@
-.insert {
-    padding: 20px 0;
-}
-.panel {
-    margin: 20px 0;
-    padding: 15px 20px;
-}
-.left .panel {
-    -webkit-border-top-right-radius: 8px;
-    -webkit-border-bottom-right-radius: 8px;
-    -moz-border-radius-topright: 8px;
-    -moz-border-radius-bottomright: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-.right .panel {
-    -webkit-border-top-left-radius: 8px;
-    -webkit-border-bottom-left-radius: 8px;
-    -moz-border-radius-topleft: 8px;
-    -moz-border-radius-bottomleft: 8px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
+/* Common Elements
+------------------------------------ */
 
-/* iPhone 4 and lesser brethren */
+    .insert {
+        padding: 20px 0;
+    }
+    .panel {
+        margin: 20px 0;
+        padding: 15px 20px;
+    }
+    .left .panel {
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px;
+        -moz-border-radius-topright: 8px;
+        -moz-border-radius-bottomright: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .right .panel {
+        -webkit-border-top-left-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-bottomleft: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+/* iPhone 4 and smaller
+------------------------------------ */
 
 @media only screen and (max-device-width: 960px) {
     .insert {

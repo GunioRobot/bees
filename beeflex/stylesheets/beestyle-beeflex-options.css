@@ -1,20 +1,21 @@
-/* beeFlex :: margin/padding/width
+/* Options :: Margins, Padding, Widths
 ------------------------------------ */
 
-.beeFlex #extra {
-    padding: 20px 20px 0 20px;
-}
-.beeFlex #main {
-    margin: 0;
-}
-.beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
-    min-width: 140px;
-    max-width: 240px;
-    /* could be set to a fixed width for more preditable 
-    flexing when left and right sidebar content differs */
-}
+    .beeFlex #extra {
+        padding: 20px 20px 0 20px;
+    }
+    .beeFlex #main {
+        margin: 0;
+    }
+    .beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
+        min-width: 140px;
+        max-width: 240px;
+        /* could be set to a fixed width for more preditable 
+        flexing when left and right sidebar content differs */
+    }
 
-/* iPhone 4 and lesser brethren */
+/* iPhone 4 and smaller
+------------------------------------ */
 
 @media only screen and (max-device-width: 960px) {
     .beeFlex #extra {

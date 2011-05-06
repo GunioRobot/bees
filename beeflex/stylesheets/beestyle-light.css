@@ -1,16 +1,30 @@
-body.beeLight, .beeLight select, .beeLight input, .beeLight textarea {
-    color: #343434; /* 20% gray */
-    background-color: #eee; /* 93% gray */
-}
-.beeLight .panel, .beeLight header, .beeLight footer {
-    color: #eee; /* 93% gray */
-    background-color: #343434; /* 20% gray */
-}
-.beeLight a, .beeLight a:active, .beeLight a:visited, .beeLight a:hover {
-    color: #619e00; /* dark green */
-}
-.beeLight .panel a, .beeLight .panel a:active, .beeLight .panel a:visited, .beeLight .panel a:hover,
-.beeLight header a, .beeLight header a:active, .beeLight header a:visited, .beeLight header a:hover,
-.beeLight footer a, .beeLight footer a:active, .beeLight footer a:visited, .beeLight footer a:hover {
-    color: #c3ff62; /* light green */
-}
+/* Common Elements
+------------------------------------ */
+
+    body.beeLight {
+        color: #343434; /* 20% gray */
+        background-color: #eee; /* 93% gray */
+    }
+    .beeLight .panel, .beeLight header, .beeLight footer {
+        color: #eee; /* 93% gray */
+        background-color: #343434; /* 20% gray */
+    }
+    
+    /* Links */
+    
+    .beeLight a, .beeLight a:active, .beeLight a:visited, .beeLight a:hover {
+        color: #619e00; /* dark green */
+    }
+    .beeLight .panel a, .beeLight .panel a:active, .beeLight .panel a:visited, .beeLight .panel a:hover,
+    .beeLight header a, .beeLight header a:active, .beeLight header a:visited, .beeLight header a:hover,
+    .beeLight footer a, .beeLight footer a:active, .beeLight footer a:visited, .beeLight footer a:hover {
+        color: #c3ff62; /* light green */
+    }
+    
+    /* Forms */
+    
+    .beeLight select, .beeLight input, .beeLight textarea {
+        color: #343434; /* 20% gray */
+        background-color: #eee; /* 93% gray */
+        border: 1px solid #343434; /* 20% gray */
+    }

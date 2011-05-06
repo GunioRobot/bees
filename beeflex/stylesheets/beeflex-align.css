@@ -1,17 +1,17 @@
-/* beeFlex :: horizontal content alignment
+/* Horizontal Content Alignment
 ------------------------------------ */
 
-.beeFlex .aligncenter {
-    text-align: center;
-}
-.beeFlex .alignright {
-    text-align: right;
-}
-.beeFlex .alignleft {
-    text-align: left;
-}
+    .beeFlex .aligncenter {
+        text-align: center;
+    }
+    .beeFlex .alignright {
+        text-align: right;
+    }
+    .beeFlex .alignleft {
+        text-align: left;
+    }
 
-/* beeFlex :: vertical content alignment
+/* Vertical Content Alignment
 ------------------------------------ */
 
     /* set to top :: no css control currently */
