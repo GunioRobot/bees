@@ -5,7 +5,7 @@ BeeStyle BeeFlex
 
 HTML5 Elements and CSS3 Flexible Box Layout
 
-Compatibility: Chrome 5+, Safari 3+, Firefox 3+
+Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
 Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset), BeeStyle-BeeFlex (CSS/JS)
 
@@ -19,7 +19,9 @@ iPhone only: 3 column layout becomes 1 column, displaying main content within ea
 
 Javascript is required for scrolling capabilities within the layout areas combined with a sticky footer (not iPhone/iPad)
 
-Issues: no IE or Opera compatibility, Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery
+Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Opera has no planned support yet)
+
+Todo: Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery
 
 ### Demo and usage guidelines located at: [http://beemuse.net](http://beemuse.net)
 
