@@ -49,15 +49,15 @@
     ::-webkit-scrollbar-thumb:horizontal {
         min-width: 20px;
         border: 1px solid #999;
-        -webkit-box-shadow: 0 0 10px #999;
+        /* -webkit-box-shadow: 0 0 10px #999;
         -moz-box-shadow: 0 0 10px #999;
-        box-shadow: 0 0 10px #999;
+        box-shadow: 0 0 10px #999; */
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
     }
 
-    ::-webkit-scrollbar-thumb:horizontal:hover {
+    /* ::-webkit-scrollbar-thumb:horizontal:hover {
         border: 1px solid #80994c;
         -webkit-box-shadow: 0 0 10px #80994c;
         -moz-box-shadow: 0 0 10px #80994c;
@@ -69,13 +69,13 @@
         -webkit-box-shadow: 0 0 10px #80994c;
         -moz-box-shadow: 0 0 10px #80994c;
         box-shadow: 0 0 10px #80994c;
-    }
+    } */
 
     ::-webkit-scrollbar-thumb:horizontal:window-inactive {
         border: 1px solid #999;
-        -webkit-box-shadow: 0 0 10px #999;
+        /* -webkit-box-shadow: 0 0 10px #999;
         -moz-box-shadow: 0 0 10px #999;
-        box-shadow: 0 0 10px #999;
+        box-shadow: 0 0 10px #999; */
     }
 
     ::-webkit-scrollbar-track-piece:horizontal:start:no-button,
@@ -225,15 +225,15 @@
     ::-webkit-scrollbar-thumb:vertical {
         min-height: 20px;
         border: 1px solid #999;
-        -webkit-box-shadow: 0 0 10px #999;
+        /* -webkit-box-shadow: 0 0 10px #999;
         -moz-box-shadow: 0 0 10px #999;
-        box-shadow: 0 0 10px #999;
+        box-shadow: 0 0 10px #999; */
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
     }
 
-    ::-webkit-scrollbar-thumb:vertical:hover {
+    /* ::-webkit-scrollbar-thumb:vertical:hover {
         border: 1px solid #80994c;
         -webkit-box-shadow: 0 0 10px #80994c;
         -moz-box-shadow: 0 0 10px #80994c;
@@ -245,13 +245,13 @@
         -webkit-box-shadow: 0 0 10px #80994c;
         -moz-box-shadow: 0 0 10px #80994c;
         box-shadow: 0 0 10px #80994c;
-    }
+    } */
 
     ::-webkit-scrollbar-thumb:vertical:window-inactive {
         border: 1px solid #999;
-        -webkit-box-shadow: 0 0 10px #999;
+        /* -webkit-box-shadow: 0 0 10px #999;
         -moz-box-shadow: 0 0 10px #999;
-        box-shadow: 0 0 10px #999;
+        box-shadow: 0 0 10px #999; */
     }
 
     ::-webkit-scrollbar-track-piece:vertical:start:no-button,
