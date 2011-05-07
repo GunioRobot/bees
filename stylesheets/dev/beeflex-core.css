@@ -12,7 +12,7 @@ html, body {
 
 /* iPhone 4 and lesser brethren */
 
-@media only screen and (max-device-width: 960px) {
+@media only screen and (max-device-width: 480px) {
     html, body {
         height: auto;
     }
@@ -89,9 +89,10 @@ html, body {
     box-ordinal-group: 3;
 }
 
-/* iPhone 4 and lesser brethren */
+/* iPhone 4 and equivalent
+------------------------------------ */
 
-@media only screen and (max-device-width: 960px) {
+@media only screen and (max-device-width: 480px) {
     .beeFlex #header,
     .beeFlex #footer,
     .beeFlex #extra,

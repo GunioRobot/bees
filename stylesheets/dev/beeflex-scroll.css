@@ -8,7 +8,7 @@
 /* iPad 2 and smaller
 ------------------------------------ */
 
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (device-width: 768px) {
     .beeFlex div.scroll {
         overflow-y: visible;
     }

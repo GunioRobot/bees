@@ -31,10 +31,10 @@
     }
 }
 
-/* iPhone 4 and smaller
+/* iPhone 4 and equivalent
 ------------------------------------ */
 
-@media only screen and (max-device-width: 960px) {
+@media only screen and (max-device-width: 480px) {
     .beeFlex #extra {
         padding: 5px 5px 0 5px;
     }
