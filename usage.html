@@ -12,18 +12,32 @@
     <link rel="stylesheet" href="stylesheets/reset.css">
     <!-- webkit scrollbars -->
     <link rel="stylesheet" href="stylesheets/scroll.css">
-    <!-- beestyle-beeflex -->
-    <link rel="stylesheet" href="stylesheets/beestyle-beeflex-a1.min.css">
+    <!-- beeflex core -->
+    <link rel="stylesheet" href="stylesheets/dev/beeflex-core.css">
+    <!-- beeflex options -->
+    <link rel="stylesheet" href="stylesheets/dev/beeflex-options.css">
+    <link rel="stylesheet" href="stylesheets/dev/beeflex-align.css">
+    <link rel="stylesheet" href="stylesheets/dev/beeflex-scroll.css">
+    <!-- beestyle-beeflex adapters -->
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-beeflex-options.css">
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-beeflex.css">
+    <!-- beestyle core modified -->
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-core.css">
+    <!-- beestyle colors -->
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-dark.css">
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-light.css">
     <!-- modernizr -->
     <script src="javascripts/modernizr-1.7.min.js"></script>
     <!-- jquery
-    <script src="javascripts/jquery-1.6.js"></script> -->
+    <script src="javascripts/dev/jquery-1.6.js"></script> -->
     <!-- prototype -->
     <script src="javascripts/prototype-1.7.js"></script>
-    <!-- beestyle-beeflex -->
-    <script src="javascripts/beestyle-beeflex-a1.min.js"></script>
-    <!-- beestyle toggle demos -->
-    <script src="javascripts/beestyle-toggle-demos.min.js"></script>
+    <!-- beeflex options -->
+    <script src="javascripts/dev/beeflex-scroll.js"></script>
+    <!-- beestyle extra toggle -->
+    <script src="javascripts/dev/beestyle-toggle-extra-scroll.js"></script>
+    <!-- beestyle color toggle -->
+    <script src="javascripts/dev/beestyle-toggle-color.js"></script>
 </head>
 <body class="beeLight">
     <section class="beeFlex">
@@ -55,21 +69,32 @@
                 <div class="scroll">
                     <div class="insert">
                     <!-- Main Content -->
-                        <h1>BeeStyle</h1>
-                            <p>Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+</p>
-                            <p>Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset), BeeStyle-BeeFlex (CSS/JS)</p>
-                            <p>Modules: Flex Box (for app-like layout), Animation (webkit-only), Shadows (box-shadow), Rounded Corners (border-radius)</p>
-                            <p>Themes: beeLight (shades of gray, green highlights), beeDark (shades of gray, green highlights)</p>
+                        <h1>Usage &amp; Dependencies</h1>
+                            <p>First include HTML5-boilerplate and (optionally) WebKit scrollbars</p>
+                                <code>
+                                    &lt;link rel="stylesheet" href="stylesheets/reset.css"&gt;<br />
+                                    &lt;link rel="stylesheet" href="stylesheets/scroll.css"&gt;
+                                </code>
+                            <p>Then include the core BeeStyle-BeeFlex stylesheet</p>
+                                <code>
+                                    &lt;link rel="stylesheet" href="stylesheets/beestyle-beeflex-a1.min.css"&gt;
+                                </code>
+                            <p>Then load up Modernizr and Prototype</p>
+                                <code>
+                                    &lt;script src="javascripts/modernizr-1.7.min.js"&gt;&lt;/script&gt;<br />
+                                    &lt;script src="javascripts/prototype-1.7.js"&gt;&lt;/script&gt;
+                                </code>
+                            <p>Then include the core Beestyle-BeeFlex javascript</p>
+                                <code>
+                                    &lt;script src="javascripts/beestyle-beeflex-a1.min.js"&gt;&lt;/script&gt;
+                                </code>
+                            <p>Note this page includes demo javascript to power the extra/color toggles</p>
+                                <code>
+                                    &lt;script src="javascripts/beestyle-toggle-demos.min.js"&gt;&lt;/script&gt;
+                                </code>
                         <hr />
-                        <h1>Flex Box Module</h1>
-                            <p>HTML5 Elements and CSS3 Flexible Box Layout</p>
-                            <p>This customizable fluid layout targets any screen size, adapting to mobile resolutions including iPhone and iPad</p>
-                            <p>Sidebars flex depending on screen size in relation to center content (can be set to fixed width if desired)</p>
-                            <p>Source order is also flexible (customizable order currently set to: main, left, right)</p>
-                            <p>iPhone only: 3 column layout becomes 1 column, displaying main content within each section first (not iPad)</p>
-                            <p>Javascript is required for scrolling capabilities within the layout areas combined with a sticky footer (not iPhone/iPad)</p>
-                            <p>Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Opera has no planned support yet)</p>
-                            <p>Todo: Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery</p>
+                        <h1>HTML Structure</h1>
+                            <p>...</p>
                     <!-- End Main Content -->
                     </div>
                 </div>
@@ -97,7 +122,7 @@
                         <p><span id="beeExtraToggle"></span></p>
                     </div>
                     <div class="panel">
-                        <p><strong>Home</strong><br /><a href="usage">Usage</a><br /><a href="options">Options</a></p>
+                        <p><a href="./">Home</a><br /><strong>Usage</strong><br /><a href="options">Options</a></p>
                     </div>
                     <!-- End Right Sidebar -->
                 </div>
