@@ -85,22 +85,39 @@
                             </code>
                         <hr />
                         <h1>Table Module</h1>
-                            <div class="shadow">
-                                <div class="table">
+                                <div class="table shadow">
                                     <div class="row">
                                         <div class="cell">&nbsp;1&nbsp;</div>
-                                        <div class="cell center">&nbsp;2&nbsp;</div>
-                                        <div class="cell right">&nbsp;3&nbsp;</div>
+                                        <div class="cell">&nbsp;2&nbsp;</div>
+                                        <div class="cell">&nbsp;3&nbsp;</div>
                                     </div>
                                     <div class="row">
                                         <div class="cell">&nbsp;3&nbsp;</div>
-                                        <div class="cell center">&nbsp;2&nbsp;</div>
-                                        <div class="cell right">&nbsp;1&nbsp;</div>
+                                        <div class="cell">&nbsp;2&nbsp;</div>
+                                        <div class="cell">&nbsp;1&nbsp;</div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="shadow">
+                                    <div class="table expand">
+                                        <div class="row">
+                                            <div class="cell">&nbsp;1&nbsp;</div>
+                                            <div class="cell center">&nbsp;2&nbsp;</div>
+                                            <div class="cell right">&nbsp;3&nbsp;</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell">&nbsp;3&nbsp;</div>
+                                            <div class="cell center">&nbsp;2&nbsp;</div>
+                                            <div class="cell right">&nbsp;1&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
                             <code>
                                 &lt;div class="table"&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;...&lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                &lt;/div&gt;<br /><br />
+                                &lt;div class="table expand"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;...&lt;/div&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell center"&gt;...&lt;/div&gt;<br />
@@ -113,8 +130,9 @@
                                 &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
                                 &lt;/div&gt;
                             </code>
-                            <p>Auto-expanding tables emulate html tables (with all the div wrappers to be expected!)
-                            Cells can individually be given horizontal and vertical alignment options: left, center, right, top, middle, bottom.
+                            <p>These CSS tables emulate good old html tables (with all the div wrappers to be expected!) Cells can individually
+                            be given horizontal and vertical alignment options: left, center, right, top, middle, bottom (default is top left).
+                            Tables can be set to auto-expand to fill whatever container they're in by adding the expand option to the table.</p>
                     <!-- End Main Content -->
                     </div>
                 </div>

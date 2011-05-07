@@ -38,6 +38,8 @@
 
     div.table {
         display: table;
+    }
+    div.table.expand {
         width: 100%;
     }
     div.row {
