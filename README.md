@@ -1,7 +1,7 @@
-BeeStyle
+a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
 =========
 
-### a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
+### BeeStyle
 
 Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
@@ -11,7 +11,9 @@ Modules: flex box (for app-like layout), animation (webkit-only), shadows (box-s
 
 Themes: beeLight (shades of gray, green highlights), beeDark (shades of gray, green highlights)
 
-### HTML5 Elements and CSS3 Flexible Box Layout
+### FlexBox Module
+
+HTML5 Elements and CSS3 Flexible Box Layout
 
 This customizable fluid layout targets any screen size, adapting to mobile resolutions including iPhone and iPad
 
@@ -27,7 +29,7 @@ Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Op
 
 Todo: Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery
 
-### Demo and usage guidelines located at: [http://beemuse.net](http://beemuse.net)
+### Demos and Usage at: [http://beemuse.net](http://beemuse.net)
 
 Projects/scripts on which this builds include:
 
