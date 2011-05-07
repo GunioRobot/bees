@@ -43,7 +43,7 @@
     <section class="beeFlex">
         <header id="header">
             <section class="aligncenter center">
-                <h1>BeeStyle</h1>
+                <h1>BeeStyle Options</h1>
             </section>
             <aside class="left">
                 <p>...</p>
@@ -69,21 +69,39 @@
                 <div class="scroll">
                     <div class="insert">
                     <!-- Main Content -->
-                        <h1>BeeStyle</h1>
-                            <p>Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+</p>
-                            <p>Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset), BeeStyle-BeeFlex (CSS/JS)</p>
-                            <p>Modules: Flex Box (for app-like layout), Animation (webkit-only), Shadows (box-shadow), Rounded Corners (border-radius)</p>
-                            <p>Themes: beeLight (shades of gray, green highlights), beeDark (shades of gray, green highlights)</p>
+                        <h1>Animation Module</h1>
+                            <div class="beeFlip" style="margin: 10px 0 170px 0;">
+                                <div class="flip front">
+                                    <img src="photos/150px/IMG_2551.jpg" alt="" class="round8" />
+                                </div>
+                                <div class="flip back">
+                                    <img src="photos/150px/IMG_2465.jpg" alt="" class="round8" />
+                                </div>
+                            </div>
+                            <code>
+                                &lt;div class="beeFlip"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip front"&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip back"&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                &lt;/div&gt;
+                            </code>
+                            <p>Note this relies on absolute positioning; for the rest of the page to flow, height must be known.
+                            In this case, adding a margin-bottom of 170px to beeFlip accommodates flip content (150px) plus padding (20px).</p>
                         <hr />
-                        <h1>Flex Box Module</h1>
-                            <p>HTML5 Elements and CSS3 Flexible Box Layout</p>
-                            <p>This customizable fluid layout targets any screen size, adapting to mobile resolutions including iPhone and iPad</p>
-                            <p>Sidebars flex depending on screen size in relation to center content (can be set to fixed width if desired)</p>
-                            <p>Source order is also flexible (customizable order currently set to: main, left, right)</p>
-                            <p>iPhone only: 3 column layout becomes 1 column, displaying main content within each section first (not iPad)</p>
-                            <p>Javascript is required for scrolling capabilities within the layout areas combined with a sticky footer (not iPhone/iPad)</p>
-                            <p>Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Opera has no planned support yet)</p>
-                            <p>Todo: Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery</p>
+                        <h1>Shadow &amp; Rounded Corner Modules</h1>
+                            <div class="block">
+                                <div><img src="photos/150px/IMG_2551.jpg" alt="" class="round8 shadow" /></div>
+                                <div style="width: 200px; height: 100px;" class="round20 shadow"></div><br />
+                            </div>
+                            <code>
+                                &lt;img class="shadow round8" /&gt; &lt;div class="shadow round20"&gt;...&lt;/div&gt;
+                            </code>
+                            <p>Shadows and Rounded Corners combine easily. Rounded corner presets are: 5px, 8px, 10px, 15px, and 20px.</p>
+                            <p>Note that combining Shadows with Animations can be issue-prone. In Firefox, the flip back shows through,
+                            whereas in WebKit, this is not so. This means that in Firefox, any shadows are doubled when compared to WebKit.</p>
                     <!-- End Main Content -->
                     </div>
                 </div>
@@ -111,7 +129,7 @@
                         <p><span id="beeExtraToggle"></span></p>
                     </div>
                     <div class="panel">
-                        <p><strong>Home</strong><br /><a href="install">Install</a><br /><a href="options">Options</a><br /><a href="eyecandy">Eye Candy</a></p>
+                        <p><a href="./">Home</a><br /><a href="install">Install</a><br /><a href="options">Options</a><br /><strong>Eye Candy</strong></p>
                     </div>
                     <!-- End Right Sidebar -->
                 </div>

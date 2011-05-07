@@ -69,40 +69,6 @@
                 <div class="scroll">
                     <div class="insert">
                     <!-- Main Content -->
-                        <h1>Animation Module</h1>
-                            <div class="beeFlip" style="margin: 10px 0 170px 0;">
-                                <div class="flip front">
-                                    <img src="photos/150px/IMG_2551.jpg" alt="" class="round8" />
-                                </div>
-                                <div class="flip back">
-                                    <img src="photos/150px/IMG_2465.jpg" alt="" class="round8" />
-                                </div>
-                            </div>
-                            <code>
-                                &lt;div class="beeFlip"&gt;<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip front"&gt;<br />
-                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip back"&gt;<br />
-                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                &lt;/div&gt;
-                            </code>
-                            <p>Note this relies on absolute positioning; for the rest of the page to flow, height must be known.
-                            In this case, adding a margin-bottom of 170px to beeFlip accommodates flip content (150px) plus padding (20px).</p>
-                        <hr />
-                        <h1>Shadow &amp; Rounded Corner Modules</h1>
-                            <div class="block">
-                                <div><img src="photos/150px/IMG_2551.jpg" alt="" class="round8 shadow" /></div>
-                                <div style="width: 200px; height: 100px;" class="round20 shadow"></div><br />
-                            </div>
-                            <code>
-                                &lt;img class="shadow round8" /&gt; &lt;div class="shadow round20"&gt;...&lt;/div&gt;
-                            </code>
-                            <p>Shadows and Rounded Corners combine easily. Rounded corner presets are: 5px, 8px, 10px, 15px, and 20px.</p>
-                            <p>Note that combining Shadows with Animations can be issue-prone. In Firefox, the flip back shows through,
-                            whereas in WebKit, this is not so. This means that in Firefox, any shadows are doubled when compared to WebKit.</p>
-                        <hr />
                         <h1>Inline Block Module</h1>
                             <div class="block">
                                 <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
@@ -135,6 +101,38 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
                                 &lt;/div&gt;
                             </code>
+                        <hr />
+                        <h1>CSS Table Module</h1>
+                            <div class="shadow">
+                                <div class="table">
+                                    <div class="row">
+                                        <div class="cell">&nbsp;1&nbsp;</div>
+                                        <div class="cell center">&nbsp;2&nbsp;</div>
+                                        <div class="cell right">&nbsp;3&nbsp;</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">&nbsp;3&nbsp;</div>
+                                        <div class="cell center">&nbsp;2&nbsp;</div>
+                                        <div class="cell right">&nbsp;1&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <code>
+                                &lt;div class="table"&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;1&lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell center"&gt;2&lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell right"&gt;3&lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;3&lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell center"&gt;2&lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell right"&gt;1&lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                &lt;/div&gt;
+                            </code>
+                            <p>Auto-expanding tables emulate html tables (with all the div wrappers to be expected!)
+                            Cells can individually be given horizontal and vertical alignment options: left, center, right, top, middle, bottom.
                     <!-- End Main Content -->
                     </div>
                 </div>
@@ -162,7 +160,7 @@
                         <p><span id="beeExtraToggle"></span></p>
                     </div>
                     <div class="panel">
-                        <p><a href="./">Home</a><br /><a href="docs">Docs</a><br /><strong>Options</strong></p>
+                        <p><a href="./">Home</a><br /><a href="install">Install</a><br /><strong>Options</strong><br /><a href="eyecandy">Eye Candy</a></p>
                     </div>
                     <!-- End Right Sidebar -->
                 </div>
