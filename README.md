@@ -6,7 +6,7 @@ Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
 Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset)
 
-Modules: Flex Box, Matrix, Tables, Animation, Shadows, Rounded Corners
+Modules: Flex Box, Multi-Column, Matrix, Tables, Animation, Shadows, Rounded Corners
 
 Themes: beeLight, beeDark (both shades of gray, green highlights)
 
