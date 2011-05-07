@@ -31,7 +31,7 @@
         cursor: pointer;
     }
 
-/* Layout Elements
+/* Table Module
 ------------------------------------ */
 
     /* css2 tables :: FF3+ SF3+ CH3+ IE8+ */
@@ -74,6 +74,9 @@
         vertical-align: bottom;
     }
 
+/* Matrix Module
+------------------------------------ */
+
     /* css2 display inline blocks :: FF3+ SF3+ CH3+ IE8+ */
 
     .matrix > div {
@@ -88,6 +91,9 @@
     .matrix.bottom > div {
         vertical-align: bottom;
     }
+
+/* Rounded Corner Module
+------------------------------------ */
 
     /* css3 rounded corners :: FF3+ SF3+ CH4+ IE9+ */
 
