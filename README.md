@@ -1,6 +1,3 @@
-a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
-=========
-
 ### BeeStyle
 
 Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
@@ -48,3 +45,5 @@ Planned projects/scripts to build in include:
 [https://github.com/jquery/jquery](https://github.com/jquery/jquery)
 
 [https://github.com/280north/aristo](https://github.com/280north/aristo)
+
+### a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
