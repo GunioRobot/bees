@@ -74,16 +74,16 @@
 
     /* css2 display inline blocks :: FF3+ SF3+ CH3+ IE8+ */
 
-    .block > div {
+    .matrix > div {
         display: inline-block;
     }
-    .block.top > div {
+    .matrix.top > div {
         vertical-align: top;
     }
-    .block.middle > div {
+    .matrix.middle > div {
         vertical-align: middle;
     }
-    .block.bottom > div {
+    .matrix.bottom > div {
         vertical-align: bottom;
     }
 
@@ -160,6 +160,6 @@
     .ie7 .table, .ie7 .row, .ie7 .cell, .ie6 .table, .ie6 .row, .ie6 .cell {
         display: block;
     }
-    .ie7 .block > div, .ie6 .block > div {
+    .ie7 .matrix > div, .ie6 .matrix > div {
         display: inline;
     }
