@@ -17,7 +17,7 @@
     .beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
         min-width: 100px;
         max-width: 200px;
-        /* ideally flex-box would flex better - but media queries plus min/max widths work */
+        /* could be set to a fixed width instead - if fixed width sidebars are desired */
     }
 
 /* iPhone 4 and equivalent
