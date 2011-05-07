@@ -4,12 +4,30 @@
     body.beeDark {
         color: #eee; /* 93% gray */
         background-color: #333; /* 20% gray */
-        background: -webkit-gradient(linear, left top, left bottom, from(#262626), to(#333)); /* 15% gray to 20% gray */
-        background: -moz-linear-gradient(top center, #262626, #333); /* 15% gray to 20% gray */
     }
     .beeDark .panel, .beeDark header, .beeDark footer {
         color: #333; /* 20% gray */
         background-color: #eee; /* 93% gray */
+    }
+    body.beeDark {
+        background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#404040)); /* 20% gray to 25% gray */
+        background: -moz-linear-gradient(top center, #333, #404040); /* 20% gray to 25% gray */
+    }
+    .beeDark header {
+        background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
+        background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
+    }
+    .beeDark footer {
+        background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e0e0e0)); /* 93% gray to 88% gray */
+        background: -moz-linear-gradient(top center, #eee, #e0e0e0); /* 93% gray to 88% gray */
+    }
+    .beeDark .left .panel {
+        background: -webkit-gradient(linear, left top, right top, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
+        background: -moz-linear-gradient(left center, #e0e0e0, #eee); /* 88% gray to 93% gray */
+    }
+    .beeDark .right .panel {
+        background: -webkit-gradient(linear, left top, right top, from(#eee), to(#e0e0e0)); /* 93% gray to 88% gray */
+        background: -moz-linear-gradient(left center, #eee, #e0e0e0); /* 93% gray to 88% gray */
     }
     .beeDark hr {
         border-top: 1px solid #bababa; /* 73% gray */

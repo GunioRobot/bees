@@ -4,12 +4,30 @@
     body.beeLight {
         color: #333; /* 20% gray */
         background-color: #eee; /* 93% gray */
-        background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
-        background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
     }
     .beeLight .panel, .beeLight header, .beeLight footer {
         color: #eee; /* 93% gray */
         background-color: #333; /* 20% gray */
+    }
+    body.beeLight {
+        background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
+        background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
+    }
+    .beeLight header {
+        background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#404040)); /* 20% gray to 25% gray */
+        background: -moz-linear-gradient(top center, #333, #404040); /* 20% gray to 25% gray */
+    }
+    .beeLight footer {
+        background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#333)); /* 25% gray to 20% gray */
+        background: -moz-linear-gradient(top center, #404040, #333); /* 25% gray to 20% gray */
+    }
+    .beeLight .left .panel {
+        background: -webkit-gradient(linear, left top, right top, from(#333), to(#404040)); /* 20% gray to 25% gray */
+        background: -moz-linear-gradient(left center, #333, #404040); /* 20% gray to 25% gray */
+    }
+    .beeLight .right .panel {
+        background: -webkit-gradient(linear, left top, right top, from(#404040), to(#333)); /* 25% gray to 20% gray */
+        background: -moz-linear-gradient(left center, #404040, #333); /* 25% gray to 20% gray */
     }
     .beeLight hr {
         border-top: 1px solid #666; /* 40% gray */
