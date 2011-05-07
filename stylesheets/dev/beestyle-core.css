@@ -92,6 +92,36 @@
         vertical-align: bottom;
     }
 
+/* Multiple Column Module
+------------------------------------ */
+
+    /* css3 multi-column layout :: FF3+ SF3+ CH3+ */
+
+    .column2 {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    .column3 {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    
+    /* following values not yet supported */
+    
+    .column2 h1, .column3 h1 {
+        /* -webkit-column-break-before: always; */
+        -webkit-column-break-after: avoid;
+        -webkit-column-break-inside: avoid;
+        /* -moz-column-break-before: always; */
+        -moz-column-break-after: avoid;
+        -moz-column-break-inside: avoid;
+        /* column-break-before: always; */
+        column-break-after: avoid;
+        column-break-inside: avoid;
+    }
+
 /* Rounded Corner Module
 ------------------------------------ */
 
@@ -159,3 +189,14 @@
         z-index: 10;
         -webkit-transform: rotateY(0deg);
     }
+
+/* iPhone 4 and equivalent
+------------------------------------ */
+
+@media only screen and (max-device-width: 480px) {
+    .column2, .column3 {
+        -webkit-column-count: auto;
+        -moz-column-count: auto;
+        column-count: auto;
+    }
+}
