@@ -79,15 +79,41 @@
                         <hr />
                         <h1>Shadow &amp; Rounded Corner Modules</h1>
                             <div class="block">
-                                <img src="photos/150px/IMG_2551.jpg" alt="" class="round8 shadow" />
+                                <div><img src="photos/150px/IMG_2551.jpg" alt="" class="round8 shadow" /></div>
+                                <div style="width: 200px; height: 100px;" class="round20 shadow"></div><br />
                             </div>
-                            <div style="width: 200px; height: 100px;" class="block round8 shadow"></div><br />
                             <code>
-                                &lt;img class="shadow round8" /&gt; &lt;div class="shadow round8"&gt;&lt;/div&gt;
+                                &lt;img class="shadow round8" /&gt; &lt;div class="shadow round20"&gt;...&lt;/div&gt;
                             </code>
-                            <p>In this case, the rounded corners are set to a radius of 8px. Rounded corner presets are currently: 5px, 8px, 10px, 15px, and 20px.</p>
-                            <p>Note that combining shadows with animations can be issue-prone. In Firefox, the flip back shows through,
+                            <p>Shadows and Rounded Corners combine easily. Rounded corner presets are: 5px, 8px, 10px, 15px, and 20px.</p>
+                            <p>Note that combining Shadows with Animations can be issue-prone. In Firefox, the flip back shows through,
                             whereas in WebKit, this is not so. This means that in Firefox, any shadows are doubled when compared to WebKit.</p>
+                        <hr />
+                        <h1>Inline Block Module</h1>
+                            <div class="block">
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                                <div style="width: 50px; height: 50px;" class="round5 shadow"></div>
+                            </div>
+                            <code>
+                                &lt;div class="block"&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
+                                &lt;/div&gt;<br />
+                                &lt;div class="middle block"&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
+                                &lt;/div&gt;
+                            </code>
+                            <p>This is when you want something like a matrix with pieces of similar-width content sitting together when possible,
+                            then wrapping as needed. Currently the default alignment is bottom, but this can be changed to: top, middle, or bottom.</p>
                     <!-- End Main Content -->
                     </div>
                 </div>

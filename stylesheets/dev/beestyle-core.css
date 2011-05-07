@@ -73,10 +73,17 @@
 
     /* css2 display inline blocks :: FF3+ SF3+ CH3+ IE8+ */
 
-    .block {
+    .block > div {
         display: inline-block;
+    }
+    .block.top > div {
+        vertical-align: top;
+    }
+    .block.middle > div {
         vertical-align: middle;
-        /* todo: assume middle? */
+    }
+    .block.bottom > div {
+        vertical-align: bottom;
     }
 
     /* css3 rounded corners :: FF3+ SF3+ CH4+ IE9+ */
@@ -151,6 +158,6 @@
     .ie7 .table, .ie7 .row, .ie7 .cell, .ie6 .table, .ie6 .row, .ie6 .cell {
         display: block;
     }
-    .ie7 .block, .ie6 .block {
+    .ie7 .block > div, .ie6 .block > div {
         display: inline;
     }
