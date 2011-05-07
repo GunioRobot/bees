@@ -4,7 +4,7 @@ Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
 Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset), BeeStyle-BeeFlex (CSS/JS)
 
-Modules: flex box (for app-like layout), animation (webkit-only), shadows (box-shadows), rounded corners (border-radius)
+Modules: Flex Box (for app-like layout), Animation (webkit-only), Shadows (box-shadow), Rounded Corners (border-radius)
 
 Themes: beeLight (shades of gray, green highlights), beeDark (shades of gray, green highlights)
 
