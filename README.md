@@ -1,6 +1,6 @@
 ### BeeStyle
 
-Size: 9.8 KB CSS, 635 B JS (in addition to the libraries below)
+Size: 10 KB CSS, 635 B JS (in addition to the libraries below)
 
 Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
