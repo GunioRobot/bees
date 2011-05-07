@@ -4,6 +4,8 @@
     body.beeDark {
         color: #eee; /* 93% gray */
         background-color: #333; /* 20% gray */
+        background: -webkit-gradient(linear, left top, left bottom, from(#262626), to(#333)); /* 15% gray to 20% gray */
+        background: -moz-linear-gradient(top center, #262626, #333); /* 15% gray to 20% gray */
     }
     .beeDark .panel, .beeDark header, .beeDark footer {
         color: #333; /* 20% gray */

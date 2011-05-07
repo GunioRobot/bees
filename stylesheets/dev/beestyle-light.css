@@ -4,6 +4,8 @@
     body.beeLight {
         color: #333; /* 20% gray */
         background-color: #eee; /* 93% gray */
+        background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
+        background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
     }
     .beeLight .panel, .beeLight header, .beeLight footer {
         color: #eee; /* 93% gray */
