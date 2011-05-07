@@ -1,9 +1,7 @@
-BeeStyle BeeFlex
+BeeStyle
 =========
 
-### BeeStyle Flex Box :: a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
-
-HTML5 Elements and CSS3 Flexible Box Layout
+### a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
 
 Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
@@ -12,6 +10,8 @@ Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset), BeeStyle
 Modules: flex box (for app-like layout), animation (webkit-only), shadows (box-shadows), rounded corners (border-radius)
 
 Themes: beeLight (shades of gray, green highlights), beeDark (shades of gray, green highlights)
+
+### HTML5 Elements and CSS3 Flexible Box Layout
 
 This customizable fluid layout targets any screen size, adapting to mobile resolutions including iPhone and iPad
 
