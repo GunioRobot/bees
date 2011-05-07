@@ -8,7 +8,7 @@ Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset)
 
 Modules: Flex Box, Matrix, Tables, Animation, Shadows, Rounded Corners
 
-Themes: beeLight (shades of gray, green highlights), beeDark (shades of gray, green highlights)
+Themes: beeLight, beeDark (both shades of gray, green highlights)
 
 ### FlexBox Module
 
