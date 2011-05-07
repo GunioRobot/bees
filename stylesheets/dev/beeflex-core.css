@@ -101,6 +101,14 @@ html, body {
         -webkit-box-orient: vertical;
         box-orient: vertical;
     }
+    .beeFlex #header section,
+    .beeFlex #footer section,
+    .beeFlex #extra section,
+    .beeFlex #main section {
+        -moz-box-flex: 1;
+        -webkit-box-flex: 1;
+        box-flex: 1;
+    }
     .beeFlex #header section.center,
     .beeFlex #footer section.center,
     .beeFlex #extra section.center,
