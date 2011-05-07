@@ -36,41 +36,41 @@
 
     /* css2 tables :: FF3+ SF3+ CH3+ IE8+ */
 
-    div.table {
+    .beeTable {
         display: table;
     }
-    div.table.expand {
+    .beeTable.expand {
         width: 100%;
     }
-    div.row {
+    .beeTable div.row {
         display: table-row;
     }
-    div.cell {
+    .beeTable div.cell {
         display: table-cell;
         vertical-align: top;
     }
 
     /* css2 table cells :: horizontal alignment */
 
-    div.cell.left {
+    .beeTable div.cell.left {
         text-align: left;
     }
-    div.cell.center {
+    .beeTable div.cell.center {
         text-align: center;
     }
-    div.cell.right {
+    .beeTable div.cell.right {
         text-align: right;
     }
 
     /* css2 table cells :: vertical alignment */
 
-    div.cell.top {
+    .beeTable div.cell.top {
         vertical-align: top;
     }
-    div.cell.middle {
+    .beeTable div.cell.middle {
         vertical-align: middle;
     }
-    div.cell.bottom {
+    .beeTable div.cell.bottom {
         vertical-align: bottom;
     }
 
@@ -79,16 +79,16 @@
 
     /* css2 display inline blocks :: FF3+ SF3+ CH3+ IE8+ */
 
-    .matrix > div {
+    .beeMatrix > div {
         display: inline-block;
     }
-    .matrix.top > div {
+    .beeMatrix.top > div {
         vertical-align: top;
     }
-    .matrix.middle > div {
+    .beeMatrix.middle > div {
         vertical-align: middle;
     }
-    .matrix.bottom > div {
+    .beeMatrix.bottom > div {
         vertical-align: bottom;
     }
 
@@ -97,12 +97,12 @@
 
     /* css3 multi-column layout :: FF3+ SF3+ CH3+ */
 
-    .column2 {
+    .beeColumn2 {
         -webkit-column-count: 2;
         -moz-column-count: 2;
         column-count: 2;
     }
-    .column3 {
+    .beeColumn3 {
         -webkit-column-count: 3;
         -moz-column-count: 3;
         column-count: 3;
@@ -110,7 +110,7 @@
     
     /* following values not yet supported */
     
-    .column2 h1, .column3 h1 {
+    .beeColumn2 h1, .beeColumn3 h1 {
         /* -webkit-column-break-before: always; */
         -webkit-column-break-after: avoid;
         -webkit-column-break-inside: avoid;
@@ -127,27 +127,27 @@
 
     /* css3 rounded corners :: FF3+ SF3+ CH4+ IE9+ */
 
-    .round5 {
+    .beeRound5 {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
     }
-    .round8 {
+    .beeRound8 {
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
         border-radius: 8px;
     }
-    .round10 {
+    .beeRound10 {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
     }
-    .round15 {
+    .beeRound15 {
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         border-radius: 15px;
     }
-    .round20 {
+    .beeRound20 {
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
@@ -194,7 +194,7 @@
 ------------------------------------ */
 
 @media only screen and (max-device-width: 480px) {
-    .column2, .column3 {
+    .beeColumn2, .beeColumn3 {
         -webkit-column-count: auto;
         -moz-column-count: auto;
         column-count: auto;

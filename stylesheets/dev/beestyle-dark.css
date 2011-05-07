@@ -4,36 +4,8 @@
     body.beeDark {
         color: #eee; /* 93% gray */
         background-color: #333; /* 20% gray */
-    }
-    .beeDark .panel, .beeDark header, .beeDark footer {
-        color: #333; /* 20% gray */
-        background-color: #eee; /* 93% gray */
-    }
-    body.beeDark {
         background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#404040)); /* 20% gray to 25% gray */
         background: -moz-linear-gradient(top center, #333, #404040); /* 20% gray to 25% gray */
-    }
-    .beeDark header {
-        background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
-        background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
-        -webkit-box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
-        -moz-box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
-        box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
-    }
-    .beeDark footer {
-        background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e0e0e0)); /* 93% gray to 88% gray */
-        background: -moz-linear-gradient(top center, #eee, #e0e0e0); /* 93% gray to 88% gray */
-        -webkit-box-shadow: 0 -1px 8px #262626; /* 15% gray */
-        -moz-box-shadow: 0 -1px 8px #262626; /* 15% gray */
-        box-shadow: 0 -1px 8px #262626; /* 15% gray */
-    }
-    .beeDark .left .panel {
-        background: -webkit-gradient(linear, left top, right top, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
-        background: -moz-linear-gradient(left center, #e0e0e0, #eee); /* 88% gray to 93% gray */
-    }
-    .beeDark .right .panel {
-        background: -webkit-gradient(linear, left top, right top, from(#eee), to(#e0e0e0)); /* 93% gray to 88% gray */
-        background: -moz-linear-gradient(left center, #eee, #e0e0e0); /* 93% gray to 88% gray */
     }
     .beeDark hr {
         border-top: 1px solid #bababa; /* 73% gray */
@@ -44,11 +16,6 @@
     .beeDark a, .beeDark a:active, .beeDark a:visited, .beeDark a:hover {
         color: #c3ff62; /* light green */
     }
-    .beeDark .panel a, .beeDark .panel a:active, .beeDark .panel a:visited, .beeDark .panel a:hover,
-    .beeDark header a, .beeDark header a:active, .beeDark header a:visited, .beeDark header a:hover,
-    .beeDark footer a, .beeDark footer a:active, .beeDark footer a:visited, .beeDark footer a:hover {
-        color: #619e00; /* dark green */
-    }
     
     /* Forms */
     
@@ -57,12 +24,51 @@
         background-color: #333; /* 20% gray */
         border: 1px solid #eee; /* 93% gray */
     }
-    
-    /* Shadows */
-    
-    .beeDark .shadow {
+
+/* Shadow Module
+------------------------------------ */
+
+    .beeDark .beeShadow {
         margin: 10px; /* to accommodate shadow */
         -webkit-box-shadow: 0 0 10px #eee; /* 93% gray */
         -moz-box-shadow: 0 0 10px #eee; /* 93% gray */
         box-shadow: 0 0 10px #eee; /* 93% gray */
+    }
+
+/* Layout Elements
+------------------------------------ */
+
+    .beeDark .beeFlex .panel, .beeDark .beeFlex #header, .beeDark .beeFlex #footer {
+        color: #333; /* 20% gray */
+        background-color: #eee; /* 93% gray */
+    }
+    .beeDark .beeFlex #header {
+        background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
+        background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
+        -webkit-box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
+        -moz-box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
+        box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
+    }
+    .beeDark .beeFlex #footer {
+        background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e0e0e0)); /* 93% gray to 88% gray */
+        background: -moz-linear-gradient(top center, #eee, #e0e0e0); /* 93% gray to 88% gray */
+        -webkit-box-shadow: 0 -1px 8px #262626; /* 15% gray */
+        -moz-box-shadow: 0 -1px 8px #262626; /* 15% gray */
+        box-shadow: 0 -1px 8px #262626; /* 15% gray */
+    }
+    .beeDark .beeFlex .left .panel {
+        background: -webkit-gradient(linear, left top, right top, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
+        background: -moz-linear-gradient(left center, #e0e0e0, #eee); /* 88% gray to 93% gray */
+    }
+    .beeDark .beeFlex .right .panel {
+        background: -webkit-gradient(linear, left top, right top, from(#eee), to(#e0e0e0)); /* 93% gray to 88% gray */
+        background: -moz-linear-gradient(left center, #eee, #e0e0e0); /* 93% gray to 88% gray */
+    }
+    
+    /* Links */
+    
+    .beeDark .beeFlex .panel a, .beeDark .beeFlex .panel a:active, .beeDark .beeFlex .panel a:visited, .beeDark .beeFlex .panel a:hover,
+    .beeDark .beeFlex #header a, .beeDark .beeFlex #header a:active, .beeDark .beeFlex #header a:visited, .beeDark .beeFlex #header a:hover,
+    .beeDark .beeFlex #footer a, .beeDark .beeFlex #footer a:active, .beeDark .beeFlex #footer a:visited, .beeDark .beeFlex #footer a:hover {
+        color: #619e00; /* dark green */
     }

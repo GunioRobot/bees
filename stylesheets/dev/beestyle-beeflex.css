@@ -1,17 +1,17 @@
 /* Common Elements
 ------------------------------------ */
 
-    .insert {
+    .beeFlex .insert {
         padding: 20px 0;
     }
-    .insert p {
+    .beeFlex .insert p {
         margin: 8px 0;
     }
-    .panel {
+    .beeFlex .panel {
         margin: 20px 0;
         padding: 15px 20px;
     }
-    .left .panel {
+    .beeFlex .left .panel {
         -webkit-border-top-right-radius: 8px;
         -webkit-border-bottom-right-radius: 8px;
         -moz-border-radius-topright: 8px;
@@ -19,7 +19,7 @@
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
     }
-    .right .panel {
+    .beeFlex .right .panel {
         -webkit-border-top-left-radius: 8px;
         -webkit-border-bottom-left-radius: 8px;
         -moz-border-radius-topleft: 8px;
@@ -32,14 +32,14 @@
 ------------------------------------ */
 
 @media only screen and (max-device-width: 480px) {
-    .insert {
+    .beeFlex .insert {
         padding: 10px 5px;
     }
-    .panel {
+    .beeFlex .panel {
         margin: 0;
         padding: 5px 10px;
     }
-    .right .panel {
+    .beeFlex .right .panel {
         -webkit-border-top-left-radius: 0;
         -webkit-border-bottom-left-radius: 0;
         -moz-border-radius-topleft: 0;

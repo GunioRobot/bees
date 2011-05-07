@@ -1,4 +1,4 @@
-/* beeFlex :: required layout setup
+/* Initial Setup
 ------------------------------------ */
 
 html, body {
@@ -10,7 +10,8 @@ html, body {
     min-height: 100%;
 }
 
-/* iPhone 4 and lesser brethren */
+/* iPhone 4 and equivalent
+------------------------------------ */
 
 @media only screen and (max-device-width: 480px) {
     html, body {
@@ -21,7 +22,7 @@ html, body {
     }
 }
 
-/* beeFlex :: css3 flex box
+/* Layout Elements
 ------------------------------------ */
 
 .beeFlex,

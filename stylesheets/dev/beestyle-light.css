@@ -4,36 +4,8 @@
     body.beeLight {
         color: #333; /* 20% gray */
         background-color: #eee; /* 93% gray */
-    }
-    .beeLight .panel, .beeLight header, .beeLight footer {
-        color: #eee; /* 93% gray */
-        background-color: #333; /* 20% gray */
-    }
-    body.beeLight {
         background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
         background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
-    }
-    .beeLight header {
-        background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#404040)); /* 20% gray to 25% gray */
-        background: -moz-linear-gradient(top center, #333, #404040); /* 20% gray to 25% gray */
-        -webkit-box-shadow: 0 1px 8px #bababa; /* 73% gray */
-        -moz-box-shadow: 0 1px 8px #bababa; /* 73% gray */
-        box-shadow: 0 1px 8px #bababa; /* 73% gray */
-    }
-    .beeLight footer {
-        background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#333)); /* 25% gray to 20% gray */
-        background: -moz-linear-gradient(top center, #404040, #333); /* 25% gray to 20% gray */
-        -webkit-box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
-        -moz-box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
-        box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
-    }
-    .beeLight .left .panel {
-        background: -webkit-gradient(linear, left top, right top, from(#333), to(#404040)); /* 20% gray to 25% gray */
-        background: -moz-linear-gradient(left center, #333, #404040); /* 20% gray to 25% gray */
-    }
-    .beeLight .right .panel {
-        background: -webkit-gradient(linear, left top, right top, from(#404040), to(#333)); /* 25% gray to 20% gray */
-        background: -moz-linear-gradient(left center, #404040, #333); /* 25% gray to 20% gray */
     }
     .beeLight hr {
         border-top: 1px solid #666; /* 40% gray */
@@ -44,11 +16,6 @@
     .beeLight a, .beeLight a:active, .beeLight a:visited, .beeLight a:hover {
         color: #619e00; /* dark green */
     }
-    .beeLight .panel a, .beeLight .panel a:active, .beeLight .panel a:visited, .beeLight .panel a:hover,
-    .beeLight header a, .beeLight header a:active, .beeLight header a:visited, .beeLight header a:hover,
-    .beeLight footer a, .beeLight footer a:active, .beeLight footer a:visited, .beeLight footer a:hover {
-        color: #c3ff62; /* light green */
-    }
     
     /* Forms */
     
@@ -57,12 +24,51 @@
         background-color: #eee; /* 93% gray */
         border: 1px solid #333; /* 20% gray */
     }
-    
-    /* Shadows */
-    
-    .beeLight .shadow {
+
+/* Shadow Module
+------------------------------------ */
+
+    .beeLight .beeShadow {
         margin: 10px; /* to accommodate shadow */
         -webkit-box-shadow: 0 0 10px #333; /* 20% gray */
         -moz-box-shadow: 0 0 10px #333; /* 20% gray */
         box-shadow: 0 0 10px #333; /* 20% gray */
+    }
+
+/* Layout Elements
+------------------------------------ */
+
+    .beeLight .beeFlex .panel, .beeLight .beeFlex #header, .beeLight .beeFlex #footer {
+        color: #eee; /* 93% gray */
+        background-color: #333; /* 20% gray */
+    }
+    .beeLight .beeFlex #header {
+        background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#404040)); /* 20% gray to 25% gray */
+        background: -moz-linear-gradient(top center, #333, #404040); /* 20% gray to 25% gray */
+        -webkit-box-shadow: 0 1px 8px #bababa; /* 73% gray */
+        -moz-box-shadow: 0 1px 8px #bababa; /* 73% gray */
+        box-shadow: 0 1px 8px #bababa; /* 73% gray */
+    }
+    .beeLight .beeFlex #footer {
+        background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#333)); /* 25% gray to 20% gray */
+        background: -moz-linear-gradient(top center, #404040, #333); /* 25% gray to 20% gray */
+        -webkit-box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
+        -moz-box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
+        box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
+    }
+    .beeLight .beeFlex .left .panel {
+        background: -webkit-gradient(linear, left top, right top, from(#333), to(#404040)); /* 20% gray to 25% gray */
+        background: -moz-linear-gradient(left center, #333, #404040); /* 20% gray to 25% gray */
+    }
+    .beeLight .beeFlex .right .panel {
+        background: -webkit-gradient(linear, left top, right top, from(#404040), to(#333)); /* 25% gray to 20% gray */
+        background: -moz-linear-gradient(left center, #404040, #333); /* 25% gray to 20% gray */
+    }
+    
+    /* Links */
+    
+    .beeLight .beeFlex .panel a, .beeLight .beeFlex .panel a:active, .beeLight .beeFlex .panel a:visited, .beeLight .beeFlex .panel a:hover,
+    .beeLight .beeFlex #header a, .beeLight .beeFlex #header a:active, .beeLight .beeFlex #header a:visited, .beeLight .beeFlex #header a:hover,
+    .beeLight .beeFlex #footer a, .beeLight .beeFlex #footer a:active, .beeLight .beeFlex #footer a:visited, .beeLight .beeFlex #footer a:hover {
+        color: #c3ff62; /* light green */
     }
