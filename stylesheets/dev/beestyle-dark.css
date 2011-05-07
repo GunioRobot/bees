@@ -45,16 +45,16 @@
     .beeDark .beeFlex #header {
         background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
         background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
-        -webkit-box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
-        -moz-box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
-        box-shadow: 0 1px 8px #1a1a1a; /* 10% gray */
+        -webkit-box-shadow: 0 1px 8px #1a1a1a, 0 0 12px #bababa inset; /* 10% gray, 73% gray */
+        -moz-box-shadow: 0 1px 8px #1a1a1a, 0 0 12px #bababa inset; /* 10% gray, 73% gray */
+        box-shadow: 0 1px 8px #1a1a1a, 0 0 12px #bababa inset; /* 10% gray, 73% gray */
     }
     .beeDark .beeFlex #footer {
         background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e0e0e0)); /* 93% gray to 88% gray */
         background: -moz-linear-gradient(top center, #eee, #e0e0e0); /* 93% gray to 88% gray */
-        -webkit-box-shadow: 0 -1px 8px #262626; /* 15% gray */
-        -moz-box-shadow: 0 -1px 8px #262626; /* 15% gray */
-        box-shadow: 0 -1px 8px #262626; /* 15% gray */
+        -webkit-box-shadow: 0 -1px 8px #262626, 0 0 12px #bababa inset; /* 15% gray, 73% gray */
+        -moz-box-shadow: 0 -1px 8px #262626, 0 0 12px #bababa inset; /* 15% gray, 73% gray */
+        box-shadow: 0 -1px 8px #262626, 0 0 12px #bababa inset; /* 15% gray, 73% gray */
     }
     .beeDark .beeFlex .left .panel {
         background: -webkit-gradient(linear, left top, right top, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
@@ -63,6 +63,11 @@
     .beeDark .beeFlex .right .panel {
         background: -webkit-gradient(linear, left top, right top, from(#eee), to(#e0e0e0)); /* 93% gray to 88% gray */
         background: -moz-linear-gradient(left center, #eee, #e0e0e0); /* 93% gray to 88% gray */
+    }
+    .beeDark .beeFlex .left .panel, .beeDark .beeFlex .right .panel {
+        -webkit-box-shadow: 0 0 6px #bababa inset; /* 73% gray */
+        -moz-box-shadow: 0 0 6px #bababa inset; /* 73% gray */
+        -box-shadow: 0 0 6px #bababa inset; /* 73% gray */
     }
     
     /* Links */
