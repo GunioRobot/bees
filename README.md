@@ -1,10 +1,12 @@
 ### BeeStyle
 
+Size: 8.1 KB CSS, 635 B JS (in addition to the libraries below)
+
 Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
-Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset), BeeStyle-BeeFlex (CSS/JS)
+Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset)
 
-Modules: Flex Box (for app-like layout), Animation (webkit-only), Shadows (box-shadow), Rounded Corners (border-radius)
+Modules: Flex Box, Matrix, Tables, Animation, Shadows, Rounded Corners
 
 Themes: beeLight (shades of gray, green highlights), beeDark (shades of gray, green highlights)
 

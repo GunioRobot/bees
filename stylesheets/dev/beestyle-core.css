@@ -151,15 +151,3 @@
         z-index: 10;
         -webkit-transform: rotateY(0deg);
     }
-
-/* Internet Explorer
------------------------------------- */
-
-    /* Layout Elements */
-
-    .ie7 .table, .ie7 .row, .ie7 .cell, .ie6 .table, .ie6 .row, .ie6 .cell {
-        display: block;
-    }
-    .ie7 .matrix > div, .ie6 .matrix > div {
-        display: inline;
-    }
