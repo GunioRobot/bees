@@ -73,7 +73,7 @@
 
     /* css2 display inline blocks :: FF3+ SF3+ CH3+ IE8+ */
 
-    .block div {
+    .block {
         display: inline-block;
         vertical-align: middle;
         /* todo: assume middle? */
@@ -150,6 +150,6 @@
     .ie7 .table, .ie7 .row, .ie7 .cell, .ie6 .table, .ie6 .row, .ie6 .cell {
         display: block;
     }
-    .ie7 .block div, .ie6 .block div {
+    .ie7 .block, .ie6 .block {
         display: inline;
     }

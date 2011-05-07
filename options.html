@@ -43,7 +43,7 @@
     <section class="beeFlex">
         <header id="header">
             <section class="aligncenter center">
-                <h1>BeeStyle BeeFlip</h1>
+                <h1>BeeStyle Options</h1>
             </section>
             <aside class="left">
                 <p>...</p>
@@ -78,8 +78,6 @@
                                     <img src="photos/150px/IMG_2465.jpg" alt="" class="round8" />
                                 </div>
                             </div>
-                            <p>Note this relies on absolute positioning; for the rest of the page to flow, height must be known.
-                            In this case, adding a margin-bottom of 170px to beeFlip accommodates flip content (150px) plus padding (20px)</p>
                             <code>
                                 &lt;div class="beeFlip"&gt;<br />
                                     &nbsp;&nbsp;&nbsp; &lt;div class="flip front"&gt;<br />
@@ -90,6 +88,20 @@
                                     &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
                                 &lt;/div&gt;
                             </code>
+                            <p>Note this relies on absolute positioning; for the rest of the page to flow, height must be known.
+                            In this case, adding a margin-bottom of 170px to beeFlip accommodates flip content (150px) plus padding (20px).</p>
+                        <hr />
+                        <h1>Shadow &amp; Rounded Corner Module</h1>
+                            <div class="block">
+                                <img src="photos/150px/IMG_2551.jpg" alt="" class="round8 shadow" />
+                            </div>
+                            <div style="width: 200px; height: 100px;" class="block round8 shadow"></div><br />
+                            <code>
+                                &lt;img class="shadow round8" /&gt; &lt;div class="shadow round8"&gt;&lt;/div&gt;
+                            </code>
+                            <p>Note that combining shadows with animations can be issue-prone. In Firefox, the flip back shows through,
+                            whereas in WebKit, this is not so. This means that in Firefox, any shadows are doubled when compared to WebKit.</p>
+                            <p>In this case, a class of round8 has been added - rounding is currently available at these presets: 5px, 8px, 10px, 15px, and 20px.</p>
                     <!-- End Main Content -->
                     </div>
                 </div>
@@ -113,10 +125,11 @@
                 <div class="scroll">
                     <!-- Right Sidebar -->
                     <div class="panel">
-                        <span id="beeColorToggle"></span> :: <span id="beeExtraToggle"></span>
+                        <p><span id="beeColorToggle"></span></p>
+                        <p><span id="beeExtraToggle"></span></p>
                     </div>
                     <div class="panel">
-                        <p><a href="./">BeeFlex</a><br /><strong>BeeFlip</strong></p>
+                        <p><a href="./">Home</a><br /><strong>Options</strong></p>
                     </div>
                     <!-- End Right Sidebar -->
                 </div>

@@ -31,3 +31,12 @@
         background-color: #333; /* 20% gray */
         border: 1px solid #eee; /* 93% gray */
     }
+    
+    /* Shadows */
+    
+    .beeDark .shadow {
+        margin: 10px; /* to accommodate shadow */
+        -webkit-box-shadow: 0 0 10px #eee; /* 93% gray */
+        -moz-box-shadow: 0 0 10px #eee; /* 93% gray */
+        box-shadow: 0 0 10px #eee; /* 93% gray */
+    }
