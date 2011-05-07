@@ -16,10 +16,16 @@
     .beeLight header {
         background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#404040)); /* 20% gray to 25% gray */
         background: -moz-linear-gradient(top center, #333, #404040); /* 20% gray to 25% gray */
+        -webkit-box-shadow: 0 1px 8px #bababa; /* 73% gray */
+        -moz-box-shadow: 0 1px 8px #bababa; /* 73% gray */
+        box-shadow: 0 1px 8px #bababa; /* 73% gray */
     }
     .beeLight footer {
         background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#333)); /* 25% gray to 20% gray */
         background: -moz-linear-gradient(top center, #404040, #333); /* 25% gray to 20% gray */
+        -webkit-box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
+        -moz-box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
+        box-shadow: 0 -1px 8px #c7c7c7; /* 78% gray */
     }
     .beeLight .left .panel {
         background: -webkit-gradient(linear, left top, right top, from(#333), to(#404040)); /* 20% gray to 25% gray */
