@@ -1,0 +1,11 @@
+/* Input
+------------------------------------ */
+
+    .beeLight input {
+        color: #333; /* 20% gray */
+        background-color: #eee; /* 93% gray */
+        border: 1px solid #666; /* 40% gray */
+        -webkit-box-shadow: 0 1px 2px #a1a1a1 inset; /* 63% gray */
+        -moz-box-shadow: 0 1px 2px #a1a1a1 inset; /* 63% gray */
+        box-shadow: 0 1px 2px #a1a1a1 inset; /* 63% gray */
+    }

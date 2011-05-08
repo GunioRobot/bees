@@ -22,6 +22,10 @@
     <!-- beestyle colors -->
     <link rel="stylesheet" href="stylesheets/dev/beestyle-dark.css">
     <link rel="stylesheet" href="stylesheets/dev/beestyle-light.css">
+    <!-- beestyle forms -->
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-forms.css">
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-forms-dark.css">
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-forms-light.css">
     <!-- modernizr -->
     <script src="javascripts/modernizr-1.7.min.js"></script>
     <!-- jquery
@@ -43,7 +47,7 @@
     <section class="beeFlex">
         <header id="header">
             <section class="aligncenter center">
-                <h1>BeeStyle EyeCandy</h1>
+                <h1>BeeStyle Forms</h1>
             </section>
             <aside class="left">
                 <p><img src="images/logo.png" alt="Bzt!" class="logo" /></p>
@@ -69,40 +73,42 @@
                 <div class="scroll">
                     <div class="insert">
                     <!-- Main Content -->
-                        <h1>Animation Module</h1>
-                            <div class="beeFlip" style="margin: 10px 0 170px 0;">
-                                <div class="flip front">
-                                    <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
+                        <form method="post" action="#">
+                            <fieldset>
+                                <legend>Form Module</legend>
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name">
                                 </div>
-                                <div class="flip back">
-                                    <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
+                                <div>
+                                    <label for="priority">Priority</label>
+                                    <input type="range" min="0" max="10" name="priority" value="0" id="priority">
                                 </div>
-                            </div>
-                            <code>
-                                &lt;div class="beeFlip"&gt;<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip front"&gt;<br />
-                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip back"&gt;<br />
-                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                &lt;/div&gt;
-                            </code>
-                            <p>Note this relies on absolute positioning; for the rest of the page to flow, width and height must be known.
-                            In this case, adding a margin-bottom of 170px to beeFlip accommodates flip content (150px) plus padding (20px).</p>
-                        <hr />
-                        <h1>Shadow &amp; Rounded Corner Modules</h1>
-                            <div class="beeMatrix">
-                                <div><img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8 beeShadow" /></div>
-                                <div style="width: 200px; height: 100px;" class="beeRound20 beeShadow"></div><br />
-                            </div>
-                            <code>
-                                &lt;img class="beeShadow beeRound8" /&gt;<br />
-                                &lt;div class="beeShadow beeRound20"&gt;...&lt;/div&gt;
-                            </code>
-                            <p>Shadows and Rounded Corners combine easily. Rounded corner presets are: 5px, 8px, 10px, 15px, and 20px.</p>
-                            <p>Note that combining Shadows with Animations can be issue-prone. In Firefox, the flip back shows through,
-                            whereas in WebKit, this is not so. This means that in Firefox, any shadows are doubled when compared to WebKit.</p>
+                                <div>
+                                    <label for="estimated_hours">Estimated Hours</label>
+                                    <input type="number" name="estimated_hours" min="0" max="100" id="estimated_hours">
+                                </div>
+                                <div>
+                                    <label for="start_date">Start date</label>
+                                    <input type="date" name="start_date" id="start_date" value="2011-05-01">
+                                </div>
+                                <div>
+                                    <label for="email">Email contact</label>
+                                    <input type="email" name="email" id="email">
+                                </div>
+                                <div>
+                                    <label for="url">Staging URL</label>
+                                    <input type="url" name="url" id="url">
+                                </div>
+                                <div>
+                                    <label for="project_color">Project color</label>
+                                    <input type="color" name="project_color" id="project_color">
+                                </div>
+                                <div>
+                                    <button class="blue">Submit</button><button class="gray">Nevermind</button><button disabled="disabled">Not here</button>
+                                </div>
+                            </fieldset>
+                        </form>
                     <!-- End Main Content -->
                     </div>
                 </div>
@@ -128,7 +134,7 @@
                         <p><span id="beeColToggle"></span></p>
                     </div>
                     <div class="panel">
-                        <p><a href="./">Home</a><br /><a href="install">Install</a><br /><a href="options">Options</a><br /><strong>EyeCandy</strong><br /><a href="forms">Forms</a> (dev)</p>
+                        <p><a href="./">Home</a><br /><a href="install">Install</a><br /><a href="options">Options</a><br /><a href="eyecandy">EyeCandy</a><br /><strong>Forms</strong> (dev)</p>
                     </div>
                     <!-- End Right Sidebar -->
                 </div>
