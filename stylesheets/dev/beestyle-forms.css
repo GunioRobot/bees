@@ -3,22 +3,22 @@
 
     legend {
         font-weight: bold;
-        padding-bottom: 5px;
+        padding-bottom: 5px; /* todo: revisit these margins and paddings in common elements here */
     }
     label {
-        display: block;
-        padding-top: 5px;
-        margin-left: 5px;
+        display: block; /* this should not always apply, stacks labels above forms currently */
+        padding-top: 5px; /* todo: revisit these margins and paddings in common elements here */
+        margin-left: 5px; /* to line up with inputs and buttons with 5px side margins for shadows */
     }
     input {
-        margin: 2px 5px;
-        padding: .15em .6em;
-        -webkit-border-radius: 1em;
-        -moz-border-radius: 1em;
-        border-radius: 1em;
+        margin: 2px 5px; /* 5px side margins allow 7px shadow to clear on both sides */
+        padding: .15em .6em; /* magic numbers force gecko and webkit to display same */
+        -webkit-border-radius: 1em; /* magic elliptical rounded corner number */
+        -moz-border-radius: 1em; /* magic elliptical rounded corner number */
+        border-radius: 1em; /* magic elliptical rounded corner number */
     }
     button {
-        margin: 10px 5px;
+        margin: 10px 5px; /* 5px side margins allow 7px shadow to clear on both sides */
     }
 
 /* Aristo Button
