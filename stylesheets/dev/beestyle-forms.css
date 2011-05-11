@@ -4,6 +4,7 @@
     legend {
         font-weight: bold;
         padding-bottom: 5px; /* todo: revisit these margins and paddings in common elements here */
+        padding-left: 5px; /* to line up with inputs and buttons with 5px side margins for shadows */
     }
     label {
         display: block; /* this should not always apply, stacks labels above forms currently */

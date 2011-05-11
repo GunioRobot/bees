@@ -25,7 +25,7 @@
     <!-- beestyle toggle demos -->
     <script src="javascripts/beestyle-toggle-demos.min.js"></script>
     <!-- beestyle demo css -->
-    <style>img.logo { margin: -10px 0 -40px 0; }</style>
+    <style>img.logo { margin: -10px 0 -40px 0;} fieldset, .demo { display: inline-block; vertical-align: top; }</style>
 </head>
 <body class="beeLight">
     <section class="beeFlex">
@@ -62,37 +62,68 @@
                                 <legend>Form Module</legend>
                                 <div>
                                     <label for="name">Name</label>
-                                    <input type="text" name="name" id="name">
+                                    <input type="text" name="name" id="name" placeholder="Full Name" />
                                 </div>
                                 <div>
                                     <label for="priority">Priority</label>
-                                    <input type="range" min="0" max="10" name="priority" value="0" id="priority">
+                                    <input type="range" min="0" max="10" name="priority" value="0" id="priority" />
                                 </div>
                                 <div>
                                     <label for="estimated_hours">Estimated Hours</label>
-                                    <input type="number" name="estimated_hours" min="0" max="100" id="estimated_hours">
+                                    <input type="number" name="estimated_hours" min="0" max="100" id="estimated_hours" />
                                 </div>
                                 <div>
                                     <label for="start_date">Start date</label>
-                                    <input type="date" name="start_date" id="start_date" value="2011-05-01">
+                                    <input type="date" name="start_date" id="start_date" value="2011-05-01" />
                                 </div>
                                 <div>
                                     <label for="email">Email contact</label>
-                                    <input type="email" name="email" id="email">
+                                    <input type="email" name="email" id="email" placeholder="buzz@beedrives.com" />
                                 </div>
                                 <div>
                                     <label for="url">Staging URL</label>
-                                    <input type="url" name="url" id="url">
+                                    <input type="url" name="url" id="url" placeholder="beedrives.com" />
                                 </div>
                                 <div>
                                     <label for="project_color">Project color</label>
-                                    <input type="color" name="project_color" id="project_color">
+                                    <input type="color" name="project_color" id="project_color" />
+                                </div>
+                                <div>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" value="" id="password" autocomplete="off" placeholder="8-16 characters" />
                                 </div>
                                 <div>
                                     <button class="blue">Submit</button><button class="gray">Nevermind</button><button disabled="disabled">Not here</button>
                                 </div>
                             </fieldset>
                         </form>
+                        <div class="demo">
+                            <h1>Editable Content Module</h1>
+                            <div>
+                                <p>Name: <span id="name" contenteditable="true">Buzz Buzzer</span></p>
+                            </div>
+                            <div>
+                                <p>Priority: <span id="priority" contenteditable="true">10</span></p>
+                            </div>
+                            <div>
+                                <p>Estimated Hours: <span id="estimated_hours" contenteditable="true">100</span></p>
+                            </div>
+                            <div>
+                                <p>Start date: <span id="start_date" contenteditable="true">2011-05-01</span></p>
+                            </div>
+                            <div>
+                                <p>Email contact: <span id="email" contenteditable="true">buzz@beedrives.com</span></p>
+                            </div>
+                            <div>
+                                <p>Staging URL: <span id="url" contenteditable="true">beedrives.com</span></p>
+                            </div>
+                            <div>
+                                <p>Project color: <span id="project_color" contenteditable="true">green</span></p>
+                            </div>
+                            <div>
+                                <p>Password: <span id="password" contenteditable="true" />buzzing bees</span></p>
+                            </div>
+                        </div>
                     <!-- End Main Content -->
                     </div>
                 </div>
