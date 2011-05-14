@@ -1,6 +1,6 @@
-var beeScroll = {
 // set height for non iphone/ipodtouch/ipad device
 // so footer sticks to bottom and main divs scroll
+var beeScroll = {
     setHeight: function(element) {
         // gather header and footer height
         var header_height = $('header').getHeight();
@@ -48,9 +48,25 @@ Event.observe(window, 'resize', function() {
 });
 
 /* 
-jQuery("#main").height();
-jQuery("#header").height();
-jQuery("#footer").height();
+var beeScroll = {
+    setHeight: function(element) {
+        var headerHeight = jQuery("#header").height();
+        var footerHeight = jQuery("#footer").height();
+        var extraHeight = jQuery("#extra").height();
+        var totalHeight = headerHeight + footerHeight + totalHeight;
+        var bodyHeight = jQuery("body").height();
+        var maxHeight = bodyHeight >= 100 ? bodyHeight : 100;
+        var finalHeight = maxHeight + 'px';
+        jQuery(element).css("height", finalHeight); // problem here
+    },
+    scrollHeight: function() {
+        if (!(Prototype.Browser.MobileSafari)) { // prototype here
+            jQuery(".scroll").each(function(s) {
+                beeScroll.setHeight(s);
+            });
+        }
+    }
+}
 
 jQuery(window).height();
 jQuery(document).height();
