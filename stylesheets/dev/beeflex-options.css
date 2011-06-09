@@ -44,8 +44,8 @@
         margin: 0;
     }
     .beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
-        min-width: auto;
-        max-width: auto;
+        min-width: inherit;
+        max-width: inherit;
         /* reset any min-width/max-width here - set to: auto */
         /* reset any fixed width here - set to: auto */
     }

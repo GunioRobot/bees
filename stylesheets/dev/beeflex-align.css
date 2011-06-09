@@ -15,3 +15,12 @@
 ------------------------------------ */
 
     /* set to top :: no css control currently */
+
+/* iPhone 4 and equivalent
+------------------------------------ */
+
+@media only screen and (max-device-width: 480px) {
+    .beeFlex #main section.alignright, .beeFlex #main aside.alignright {
+        text-align: left;
+    }
+}
