@@ -1,21 +1,21 @@
 var beeExtra = {
     show: function() {
-        $('extra').show();
+        jQuery('#extra').show();
         beeScroll.scrollHeight();
-        $$('#beeExtraToggle a')[0].remove();
-        $('beeExtraToggle').insert('<a href="javascript:beeExtra.hide();">hide extra</a>');
+        jQuery('#beeExtraToggle a').remove();
+        jQuery('#beeExtraToggle').append('<a href="javascript:beeExtra.hide();">hide extra</a>');
     },
     hide: function() {
-        $('extra').hide();
+        jQuery('#extra').hide();
         beeScroll.scrollHeight();
-        $$('#beeExtraToggle a')[0].remove();
-        $('beeExtraToggle').insert('<a href="javascript:beeExtra.show();">show extra</a>');
+        jQuery('#beeExtraToggle a').remove();
+        jQuery('#beeExtraToggle').append('<a href="javascript:beeExtra.show();">show extra</a>');
     }
 }
-document.observe('dom:loaded', function() {
-    $('beeExtraToggle').insert('<a href="javascript:beeExtra.show();">show extra</a>');
+jQuery(document).ready(function(){
+    jQuery('#beeExtraToggle').append('<a href="javascript:beeExtra.show();">show extra</a>');
 });
 
-// jQuery("#extra").show("slow", function(){ beeScroll.scrollHeight(); });
-// jQuery("#extra").hide("slow", function(){ beeScroll.scrollHeight(); });
+// jQuery('#extra').show('slow', function(){ beeScroll.scrollHeight(); });
+// jQuery('#extra').hide('slow', function(){ beeScroll.scrollHeight(); });
 // better if this is instant - not sliding in/out - due to scrollHeight auto-calc
