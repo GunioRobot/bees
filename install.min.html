@@ -51,31 +51,39 @@
                 <div class="scroll">
                     <div class="insert">
                     <!-- Main Content -->
-                        <h1>Usage &amp; Dependencies</h1>
-                            <p>First include HTML5-boilerplate and (optionally) WebKit scrollbars</p>
+                        <h1>Quick Setup (for fresh new pages)</h1>
+                            <p>Download this <a href="beestyle-a1.zip">zip file</a>, which includes a sample page and all dependencies</p>
+                        <hr />
+                        <h1>Integrate into existing pages (usage &amp; dependencies)</h1>
+                            <p><em>Required assets are noted in <strong>bold</strong></em></p>
+                            <p>First include HTML5-boilerplate and (optionally) Webkit scrollbars</p>
                                 <code>
-                                    &lt;link rel="stylesheet" href="stylesheets/reset.css"&gt;<br />
+                                    <strong>&lt;link rel="stylesheet" href="stylesheets/reset.css"&gt;</strong><br />
                                     &lt;link rel="stylesheet" href="stylesheets/scroll.css"&gt;
+                                </code>
+                            <p>If including Webkit scrollbars, ensure these images present in: <code>images/scroll</code></p>
+                                <code>
+                                    down.png left.png right.png up.png
                                 </code>
                             <p>Then include the core BeeStyle-BeeFlex stylesheet</p>
                                 <code>
-                                    &lt;link rel="stylesheet" href="stylesheets/beestyle-beeflex-a1.min.css"&gt;
+                                    <strong>&lt;link rel="stylesheet" href="stylesheets/beestyle-beeflex-a1.min.css"&gt;</strong>
                                 </code>
-                            <p>Then load up Modernizr and Prototype</p>
+                            <p>Then load up Modernizr and jQuery</p>
                                 <code>
-                                    &lt;script src="javascripts/modernizr-2.0.min.js"&gt;&lt;/script&gt;<br />
-                                    &lt;script src="javascripts/prototype-1.7.js"&gt;&lt;/script&gt;
+                                    <strong>&lt;script src="javascripts/modernizr-2.0.min.js"&gt;&lt;/script&gt;</strong><br />
+                                    <strong>&lt;script src="javascripts/jquery-1.6.min.js"&gt;&lt;/script&gt;</strong>
                                 </code>
                             <p>Then include the core Beestyle-BeeFlex javascript</p>
                                 <code>
-                                    &lt;script src="javascripts/beestyle-beeflex-a1.min.js"&gt;&lt;/script&gt;
+                                    <strong>&lt;script src="javascripts/beestyle-beeflex-a1.min.js"&gt;&lt;/script&gt;</strong>
                                 </code>
                             <p>Note this page includes demo javascript to power the demo toggles</p>
                                 <code>
                                     &lt;script src="javascripts/beestyle-toggle-demos.min.js"&gt;&lt;/script&gt;
                                 </code>
                         <hr />
-                        <h1>HTML Structure</h1>
+                        <h1>A look at the HTML Structure</h1>
                             <p>Substitute beeDark for beeLight as the body class to switch themes.
                             The extra aside is optional. Fill in the dots with content :)
                             A ready-to-go <a href="sample">sample page</a> is provided too.
