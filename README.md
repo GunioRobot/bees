@@ -4,7 +4,7 @@ Size: 12 KB CSS, 635 B JS (in addition to the libraries below)
 
 Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
-Libraries: Prototype 1.7, Modernizr 1.7, HTML5-boilerplate (CSS reset)
+Libraries: jQuery 1.6, Modernizr 2, HTML5 Boilerplate (CSS reset)
 
 Modules: Flex Box, Multi-Column, Matrix, Tables, Animation, Shadows, Rounded Corners
 
@@ -28,6 +28,8 @@ Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Op
 
 Todo: Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery
 
+Planned jQuery Plugins: Integrate ColorBox and Dynamic-Carousel
+
 ### Demos and Usage at: [http://beemuse.net](http://beemuse.net)
 
 Projects/scripts on which this builds include:
@@ -47,5 +49,9 @@ Planned projects/scripts to build in include:
 [https://github.com/jquery/jquery](https://github.com/jquery/jquery)
 
 [https://github.com/280north/aristo](https://github.com/280north/aristo)
+
+[https://github.com/jackmoore/colorbox](https://github.com/jackmoore/colorbox)
+
+[https://github.com/Wilto/Dynamic-Carousel](https://github.com/Wilto/Dynamic-Carousel)
 
 ### a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko

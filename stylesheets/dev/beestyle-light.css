@@ -77,3 +77,25 @@
     .beeLight .beeFlex #footer a, .beeLight .beeFlex #footer a:active, .beeLight .beeFlex #footer a:visited, .beeLight .beeFlex #footer a:hover {
         color: #c3ff62; /* light green */
     }
+
+/* iPhone 4 and equivalent
+------------------------------------ */
+
+@media only screen and (max-device-width: 480px) {
+    .beeLight .beeFlex .panel {
+        color: #333; /* 20% gray */
+        background-color: transparent;
+    }
+    .beeLight .beeFlex .left .panel,
+    .beeLight .beeFlex .right .panel {
+        background-image: none;
+    }
+    .beeLight .beeFlex .left .panel, .beeLight .beeFlex .right .panel {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -box-shadow: none;
+    }
+    .beeLight .beeFlex .panel a, .beeLight .beeFlex .panel a:active, .beeLight .beeFlex .panel a:visited, .beeLight .beeFlex .panel a:hover {
+        color: #619e00; /* dark green */
+    }
+}
