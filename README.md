@@ -26,9 +26,7 @@ Javascript is required for scrolling capabilities within the layout areas combin
 
 Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Opera has no planned support yet)
 
-Todo: Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery
-
-Planned jQuery Plugins: integrate ColorBox and Dynamic-Carousel
+Todo: integrate CoffeeScript, ColorBox, and Dynamic-Carousel
 
 ### Demos and Usage at: [http://beemuse.net](http://beemuse.net)
 
@@ -36,17 +34,15 @@ Projects/scripts on which this builds include:
 
 [https://github.com/paulirish/html5-boilerplate](https://github.com/paulirish/html5-boilerplate)
 
-[https://github.com/sstephenson/prototype](https://github.com/sstephenson/prototype)
-
 [https://github.com/Modernizr/Modernizr](https://github.com/Modernizr/Modernizr)
+
+[https://github.com/jquery/jquery](https://github.com/jquery/jquery)
 
 [https://github.com/yui/yuicompressor](https://github.com/yui/yuicompressor)
 
 Planned projects/scripts to build in include:
 
 [https://github.com/jashkenas/coffee-script](https://github.com/jashkenas/coffee-script)
-
-[https://github.com/jquery/jquery](https://github.com/jquery/jquery)
 
 [https://github.com/280north/aristo](https://github.com/280north/aristo)
 
