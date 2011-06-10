@@ -28,7 +28,7 @@ Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Op
 
 Todo: Prototype 1.7 code to be ported to jQuery 1.6, then CoffeeScript with jQuery
 
-Planned jQuery Plugins: Integrate ColorBox and Dynamic-Carousel
+Planned jQuery Plugins: integrate ColorBox and Dynamic-Carousel
 
 ### Demos and Usage at: [http://beemuse.net](http://beemuse.net)
 
