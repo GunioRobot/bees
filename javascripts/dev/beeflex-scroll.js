@@ -2,6 +2,8 @@
 // so footer sticks to bottom and main divs scroll
 var beeScroll = {
     scrollHeight: function() {
+        // mobile browsers should not get scrolling content?
+        // perhaps when orientation changes, recalculate?
         function isMobile() {
             return (
                 (navigator.platform.indexOf('iPhone') != -1) || 
