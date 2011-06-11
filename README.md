@@ -38,13 +38,9 @@ Projects/scripts on which this builds include:
 
 [https://github.com/jquery/jquery](https://github.com/jquery/jquery)
 
-[https://github.com/yui/yuicompressor](https://github.com/yui/yuicompressor)
-
 Planned projects/scripts to build in include:
 
 [https://github.com/jashkenas/coffee-script](https://github.com/jashkenas/coffee-script)
-
-[https://github.com/280north/aristo](https://github.com/280north/aristo)
 
 [https://github.com/jackmoore/colorbox](https://github.com/jackmoore/colorbox)
 
