@@ -30,12 +30,15 @@
     <script src="javascripts/dev/beeflex-scroll.js"></script>
     <!-- beestyle options -->
     <script src="javascripts/dev/beestyle-options.js"></script>
-    <!-- beestyle extra toggle -->
-    <script src="javascripts/dev/beestyle-toggle-extra-scroll.js"></script>
-    <!-- beestyle color toggle -->
-    <script src="javascripts/dev/beestyle-toggle-color.js"></script>
-    <!-- beestyle column toggle -->
-    <script src="javascripts/dev/beestyle-toggle-column.js"></script>
+    <!-- beestyle demo theme -->
+    <script src="javascripts/dev/beestyle-demo-theme.js"></script>
+    <!-- beestyle demo extra -->
+    <script src="javascripts/dev/beestyle-demo-extra.js"></script>
+    <!-- beestyle demo multicol -->
+    <script src="javascripts/dev/beestyle-demo-multicol.js"></script>
+    <!-- beestyle demo notes -->
+    <script src="javascripts/dev/beestyle-demo-notes.js"></script>
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-demo-notes.css">
     <!-- beestyle demo css -->
     <style>img.logo { margin: -10px 0 -40px 0; }</style>
 </head>
@@ -73,16 +76,19 @@
                              <div class="beeColumn3">
                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                              </div>
-                             <code>
-                                 &lt;div class="beeColumn3"&gt;<br />
-                                 &nbsp;&nbsp;&nbsp;&nbsp; ...<br />
-                                 &lt;/div&gt;
-                             </code>
-                             <p>Great for larger amounts of text content, though not yet fully supported by any browser. The portions lacking
-                             support are those controlling column breaks, so that e.g. headings do not end up at the bottom separated from content.</p>
-                             <p>Current options are: 2 columns, 3 columns. Columns are automatically collapsed to 1 column for iPhone screen sizes.
-                             Ideally used with CSS3 Media Queries so that, e.g. at large screen sizes 3 columns are used, at smaller, 2 columns, etc.</p>
-                             <p>Columns can be nested... try clicking the column toggle to see the columns above nest within!</p>
+                             <h2 class="beeNoteToggle 1">Code/Notes</h2>
+                             <div class="beeNote 1">
+                                 <p>
+                                     <code>&lt;div class="beeColumn3"&gt;<br />
+                                     &nbsp;&nbsp;&nbsp;&nbsp; ...<br />
+                                     &lt;/div&gt;</code>
+                                 </p>
+                                 <p>Great for larger amounts of text content, though not yet fully supported by any browser. The portions lacking
+                                 support are those controlling column breaks, so that e.g. headings do not end up at the bottom separated from content.</p>
+                                 <p>Current options are: 2 columns, 3 columns. Columns are automatically collapsed to 1 column for iPhone screen sizes.
+                                 Ideally used with CSS3 Media Queries so that, e.g. at large screen sizes 3 columns are used, at smaller, 2 columns, etc.</p>
+                                 <p>Columns can be nested... try clicking the column toggle to see the columns above nest within!</p>
+                             </div>
                          <hr />
                         <h1>Matrix Module</h1>
                             <div class="beeMatrix">
@@ -99,23 +105,26 @@
                                 <div style="width: 50px; height: 50px;" class="beeRound5 beeShadow"></div>
                                 <div style="width: 50px; height: 50px;" class="beeRound5 beeShadow"></div>
                             </div>
-                            <code>
-                                &lt;div class="beeMatrix"&gt;<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
-                                &lt;/div&gt;
-                            </code>
-                            <p>This is when you want something like a matrix with pieces of similar-width content sitting together when possible,
-                            then wrapping as needed. The divs immediately within the matrix div are required wrappers; anything else goes.</p>
-                            <p>No widths and heights are necessary on any divs, unless these are filled with long strings of text,
-                            in which case widths should be assigned to the enclosing divs, lest they expand across the page.</p>
-                            <p>Currently the default alignment is bottom, but this can be changed to: top, middle, or bottom.</p>
-                            <code>
-                                &lt;div class="beeMatrix middle"&gt;<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
-                                &lt;/div&gt;
-                            </code>
+                            <h2 class="beeNoteToggle 2">Code/Notes</h2>
+                            <div class="beeNote 2">
+                                <p>
+                                    <code>&lt;div class="beeMatrix"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
+                                    &lt;/div&gt;</code>
+                                </p>
+                                <p>This is when you want something like a matrix with pieces of similar-width content sitting together when possible,
+                                then wrapping as needed. The divs immediately within the matrix div are required wrappers; anything else goes.</p>
+                                <p>No widths and heights are necessary on any divs, unless these are filled with long strings of text,
+                                in which case widths should be assigned to the enclosing divs, lest they expand across the page.</p>
+                                <p>Currently the default alignment is bottom, but this can be changed to: <code>top, middle, or bottom</code>.</p>
+                                <p>
+                                    <code>&lt;div class="beeMatrix middle"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
+                                    &lt;/div&gt;</code>
+                                </p>
+                            </div>
                         <hr />
                         <h1>Table Module</h1>
                             <div class="beeMatrix">
@@ -158,28 +167,33 @@
                                     </div>
                                 </div>
                             </div>
-                            <code>
-                                &lt;div class="beeTable"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                &lt;/div&gt;<br /><br />
-                                &lt;div class="beeTable expand"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell center"&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell right"&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell center"&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell right"&gt;...&lt;/div&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                &lt;/div&gt;
-                            </code>
-                            <p>These CSS tables emulate good old html tables (with all the div wrappers to be expected!) Cells can individually
-                            be given horizontal and vertical alignment options: left, center, right, top, middle, bottom (default is top left).
-                            Tables can be set to auto-expand to fill whatever container they're in by adding the expand option to the table.</p>
+                            <h2 class="beeNoteToggle 3">Code/Notes</h2>
+                            <div class="beeNote 3">
+                                <p>
+                                    <code>&lt;div class="beeTable"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                    &lt;/div&gt;</code>
+                                </p>
+                                <p>
+                                    <code>&lt;div class="beeTable expand"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell center"&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell right"&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;div class="row"&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell"&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell center"&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="cell right"&gt;...&lt;/div&gt;<br />
+                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                    &lt;/div&gt;</code>
+                                </p>
+                                <p>These CSS tables emulate good old html tables (with all the div wrappers to be expected!) Cells can individually
+                                be given horizontal and vertical alignment options: <code>left, center, right, top, middle, bottom (default: top left)</code>.
+                                Tables can be set to auto-expand to fill whatever container they're in by adding the <code>expand</code> option to the table.</p>
+                            </div>
                     <!-- End Main Content -->
                     </div>
                 </div>

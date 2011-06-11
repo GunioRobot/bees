@@ -30,12 +30,15 @@
     <script src="javascripts/dev/beeflex-scroll.js"></script>
     <!-- beestyle options -->
     <script src="javascripts/dev/beestyle-options.js"></script>
-    <!-- beestyle extra toggle -->
-    <script src="javascripts/dev/beestyle-toggle-extra-scroll.js"></script>
-    <!-- beestyle color toggle -->
-    <script src="javascripts/dev/beestyle-toggle-color.js"></script>
-    <!-- beestyle column toggle -->
-    <script src="javascripts/dev/beestyle-toggle-column.js"></script>
+    <!-- beestyle demo theme -->
+    <script src="javascripts/dev/beestyle-demo-theme.js"></script>
+    <!-- beestyle demo extra -->
+    <script src="javascripts/dev/beestyle-demo-extra.js"></script>
+    <!-- beestyle demo multicol -->
+    <script src="javascripts/dev/beestyle-demo-multicol.js"></script>
+    <!-- beestyle demo notes -->
+    <script src="javascripts/dev/beestyle-demo-notes.js"></script>
+    <link rel="stylesheet" href="stylesheets/dev/beestyle-demo-notes.css">
     <!-- beestyle demo css -->
     <style>img.logo { margin: -10px 0 -40px 0; }</style>
 </head>
@@ -78,31 +81,37 @@
                                     <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
                                 </div>
                             </div>
-                            <code>
-                                &lt;div class="beeFlip"&gt;<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip front"&gt;<br />
-                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;div class="flip back"&gt;<br />
-                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
-                                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
-                                &lt;/div&gt;
-                            </code>
-                            <p>Note this relies on absolute positioning; for the rest of the page to flow, width and height must be known.
-                            In this case, adding a margin-bottom of 170px to beeFlip accommodates flip content (150px) plus padding (20px).</p>
+                            <h2 class="beeNoteToggle 1">Code/Notes</h2>
+                            <div class="beeNote 1">
+                                <p>
+                                    <code>&lt;div class="beeFlip"&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &lt;div class="flip front"&gt;<br />
+                                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
+                                        &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &lt;div class="flip back"&gt;<br />
+                                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
+                                        &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+                                    &lt;/div&gt;</code>
+                                </p>
+                                <p>Note this relies on absolute positioning; for the rest of the page to flow, width and height must be known.
+                                In this case, adding a margin-bottom of 170px to beeFlip accommodates flip content (150px) plus padding (20px).</p>
+                            </div>
                         <hr />
                         <h1>Shadow &amp; Rounded Corner Modules</h1>
                             <div class="beeMatrix">
                                 <div><img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8 beeShadow" /></div>
                                 <div style="width: 200px; height: 100px;" class="beeRound20 beeShadow"></div><br />
                             </div>
-                            <code>
-                                &lt;img class="beeShadow beeRound8" /&gt;<br />
-                                &lt;div class="beeShadow beeRound20"&gt;...&lt;/div&gt;
-                            </code>
-                            <p>Shadows and Rounded Corners combine easily. Rounded corner presets are: 5px, 8px, 10px, 15px, and 20px.</p>
-                            <p>Note that combining Shadows with Animations can be issue-prone. In Firefox, the flip back shows through,
-                            whereas in WebKit, this is not so. This means that in Firefox, any shadows are doubled when compared to WebKit.</p>
+                            <h2 class="beeNoteToggle 2">Code/Notes</h2>
+                            <div class="beeNote 2">
+                                <p>
+                                    <code>&lt;img class="beeShadow beeRound8" /&gt;<br />
+                                    &lt;div class="beeShadow beeRound20"&gt;...&lt;/div&gt;</code>
+                                </p>
+                                <p>Shadows and Rounded Corners combine easily. Rounded corner presets are: 5px, 8px, 10px, 15px, and 20px.</p>
+                                <p>Note that combining Shadows with Animations can be issue-prone. In Firefox, the flip back shows through,
+                                whereas in WebKit, this is not so. This means that in Firefox, any shadows are doubled when compared to WebKit.</p>
+                            </div>
                     <!-- End Main Content -->
                     </div>
                 </div>

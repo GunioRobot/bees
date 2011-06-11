@@ -16,10 +16,10 @@
     <script src="javascripts/jquery-1.6.min.js"></script>
     <!-- beestyle-beeflex -->
     <script src="javascripts/beestyle-beeflex-a1.min.js"></script>
-    <!-- beestyle toggle demos -->
-    <script src="javascripts/beestyle-toggle-demos.min.js"></script>
+    <!-- beestyle demo js -->
+    <script src="javascripts/beestyle-demos.min.js"></script>
     <!-- beestyle demo css -->
-    <style>img.logo { margin: -10px 0 -40px 0; }</style>
+    <link rel="stylesheet" href="stylesheets/beestyle-demos.min.css">
 </head>
 <body class="beeLight">
     <section class="beeFlex">
@@ -54,47 +54,48 @@
                         <h1>Quick Setup (for fresh new pages)</h1>
                             <p>Download this <a href="beestyle-a1.zip">zip file</a>, which includes a sample page and all dependencies</p>
                         <hr />
-                        <h1>Integrate into existing pages (usage &amp; dependencies)</h1>
+                        <h1 class="beeNoteToggle 1">Integrate into existing pages (usage &amp; dependencies)</h1>
+                        <div class="beeNote 1">
                             <p><em>Required assets are noted in <strong>bold</strong></em></p>
                             <p>First include HTML5-boilerplate and (optionally) Webkit scrollbars</p>
-                                <code>
-                                    <strong>&lt;link rel="stylesheet" href="stylesheets/reset.css"&gt;</strong><br />
-                                    &lt;link rel="stylesheet" href="stylesheets/scroll.css"&gt;
-                                </code>
-                            <p>If including Webkit scrollbars, ensure these images present in: <code>images/scroll</code></p>
-                                <code>
-                                    down.png left.png right.png up.png
-                                </code>
+                                <p>
+                                    <code><strong>&lt;link rel="stylesheet" href="stylesheets/reset.css"&gt;</strong><br />
+                                    &lt;link rel="stylesheet" href="stylesheets/scroll.css"&gt;</code>
+                                </p>
+                            <p>If including Webkit scrollbars, ensure these images present in: <p><code>images/scroll</code></p></p>
+                                <p>
+                                    <code>down.png left.png right.png up.png</code>
+                                </p>
                             <p>Then include the core BeeStyle-BeeFlex stylesheet</p>
-                                <code>
-                                    <strong>&lt;link rel="stylesheet" href="stylesheets/beestyle-beeflex-a1.min.css"&gt;</strong>
-                                </code>
+                                <p>
+                                    <code><strong>&lt;link rel="stylesheet" href="stylesheets/beestyle-beeflex-a1.min.css"&gt;</strong></code>
+                                </p>
                             <p>Then load up Modernizr and jQuery</p>
-                                <code>
-                                    <strong>&lt;script src="javascripts/modernizr-2.0.min.js"&gt;&lt;/script&gt;</strong><br />
-                                    <strong>&lt;script src="javascripts/jquery-1.6.min.js"&gt;&lt;/script&gt;</strong>
-                                </code>
+                                <p>
+                                    <code><strong>&lt;script src="javascripts/modernizr-2.0.min.js"&gt;&lt;/script&gt;</strong><br />
+                                    <strong>&lt;script src="javascripts/jquery-1.6.min.js"&gt;&lt;/script&gt;</strong></code>
+                                </p>
                             <p>Then include the core Beestyle-BeeFlex javascript</p>
-                                <code>
-                                    <strong>&lt;script src="javascripts/beestyle-beeflex-a1.min.js"&gt;&lt;/script&gt;</strong>
-                                </code>
+                                <p>
+                                    <code><strong>&lt;script src="javascripts/beestyle-beeflex-a1.min.js"&gt;&lt;/script&gt;</strong></code>
+                                </p>
                             <p>Note this page includes demo javascript to power the demo toggles</p>
-                                <code>
-                                    &lt;script src="javascripts/beestyle-toggle-demos.min.js"&gt;&lt;/script&gt;
-                                </code>
+                                <p>
+                                    <code>&lt;script src="javascripts/beestyle-demos.min.js"&gt;&lt;/script&gt;</code>
+                                </p>
+                        </div>
                         <hr />
                         <h1>A look at the HTML Structure</h1>
-                            <p>Substitute beeDark for beeLight as the body class to switch themes.
-                            The extra aside is optional. Fill in the dots with content :)
-                            A ready-to-go <a href="sample">sample page</a> is provided too.
-                            Here are direct links to the minified
-                            <a href="stylesheets/beestyle-beeflex-a1.min.css">a1 css</a> and
-                            <a href="javascripts/beestyle-beeflex-a1.min.js">a1 js</a></p>
-                            <code>
-                                &lt;body class="beeLight"&gt;<br />
+                            <p><strong>Themes:</strong> switch out <code>beeDark</code> for <code>beeLight</code> as the body class</p>
+                            <p><strong>Optional:</strong> the <code>extra</code> aside does not need to be shown or included</p>
+                            <p><strong>Content:</strong> fill in the dots with content :)</p>
+                            <p><em>Click on #header, #extra, #main, and #footer to expand</em></p>
+                            <div class="beeNote show">
+                            <p>
+                                <code>&lt;body class="beeLight"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &lt;section class="beeFlex"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;header id="header"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section class="aligncenter center"&gt;<br />
+                                <span class="beeCodeToggle 1">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;header id="header"&gt;</span><br />
+                                <span class="beeCode 1">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section class="aligncenter center"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/section&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;aside class="left"&gt;<br />
@@ -103,9 +104,9 @@
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;aside class="alignright right"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/aside&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/header&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;aside id="extra"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section class="aligncenter center"&gt;<br />
+                                </span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/header&gt;<br />
+                                <span class="beeCodeToggle 2">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;aside id="extra"&gt;</span><br />
+                                <span class="beeCode 2">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section class="aligncenter center"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/section&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;aside class="alignright left"&gt;<br />
@@ -114,9 +115,9 @@
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;aside class="alignleft right"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/aside&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/aside&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section id="main"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section class="center"&gt;<br />
+                                </span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/aside&gt;<br />
+                                <span class="beeCodeToggle 3">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section id="main"&gt;</span><br />
+                                <span class="beeCode 3">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section class="center"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="scroll"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class="insert"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
@@ -133,9 +134,9 @@
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/aside&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/section&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;footer id="footer"&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section class="aligncenter center"&gt;<br />
+                                </span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/section&gt;<br />
+                                <span class="beeCodeToggle 4">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;footer id="footer"&gt;</span><br />
+                                <span class="beeCode 4">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;section class="aligncenter center"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/section&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;aside class="left"&gt;<br />
@@ -144,10 +145,11 @@
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;aside class="alignright right"&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ...<br />
                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/aside&gt;<br />
-                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/footer&gt;<br />
+                                </span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/footer&gt;<br />
                                 &nbsp;&nbsp;&nbsp; &lt;/section&gt;<br />
-                                &lt;/body&gt;
-                            </code>
+                                &lt;/body&gt;</code>
+                            </p>
+                        </div>
                     <!-- End Main Content -->
                     </div>
                 </div>

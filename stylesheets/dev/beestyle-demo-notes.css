@@ -1,0 +1,38 @@
+.beeNoteToggle, .beeCodeToggle {
+    cursor: pointer;
+}
+.beeNote, .beeCode {
+    display: none;
+}
+.beeNote.show {
+    display: block;
+}
+.beeNote {
+    margin: 7px; /* 7px side margins allow 7px shadow to clear on both sides */
+    padding: 0 .75em; /* magic numbers i just made up */
+    -webkit-border-radius: 1em; /* magic elliptical rounded corner number */
+    -moz-border-radius: 1em; /* magic elliptical rounded corner number */
+    border-radius: 1em; /* magic elliptical rounded corner number */
+}
+.beeLight .beeNote {
+    color: #333; /* 20% gray */
+    background-color: #eee; /* 93% gray */
+    border: 1px solid #666; /* 40% gray */
+    -webkit-box-shadow: 0 1px 2px #a1a1a1 inset; /* 63% gray */
+    -moz-box-shadow: 0 1px 2px #a1a1a1 inset; /* 63% gray */
+    box-shadow: 0 1px 2px #a1a1a1 inset; /* 63% gray */
+}
+.beeDark .beeNote {
+    color: #eee; /* 93% gray */
+    background-color: #262626; /* 15% gray */
+    border: 1px solid #acacac; /* 67% gray */
+    -webkit-box-shadow: 0 1px 2px #0d0d0d inset; /* 5% gray */
+    -moz-box-shadow: 0 1px 2px #0d0d0d inset; /* 5% gray */
+    box-shadow: 0 1px 2px #0d0d0d inset; /* 5% gray */
+}
+.beeLight h2.beeNoteToggle {
+    color: #619e00; /* dark green */
+}
+.beeDark h2.beeNoteToggle {
+    color: #c3ff62; /* light green */
+}
