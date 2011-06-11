@@ -1,6 +1,9 @@
 .beeNoteToggle, .beeCodeToggle {
     cursor: pointer;
 }
+.beeCodeToggle:hover {
+    background-color: rgba(195,255,98,0.5);
+}
 .beeNote, .beeCode {
     display: none;
 }
