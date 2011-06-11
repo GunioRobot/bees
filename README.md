@@ -44,6 +44,4 @@ Planned projects/scripts to build in include:
 
 [https://github.com/jackmoore/colorbox](https://github.com/jackmoore/colorbox)
 
-[https://github.com/Wilto/Dynamic-Carousel](https://github.com/Wilto/Dynamic-Carousel)
-
 ### a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
