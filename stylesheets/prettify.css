@@ -1,0 +1,42 @@
+.beeLight .pln {
+    color: #333; /* 20% gray */
+}
+.beeDark .pln {
+    color: #eee; /* 93% gray */
+}
+.beeLight .str, .beeLight .atv {
+    color: #080;
+}
+.beeDark .str, .beeDark .atv {
+    color: #5dba5d; /* #0b0 */
+}
+.beeLight .kwd, .beeLight .tag {
+    color: #008;
+}
+.beeDark .kwd, .beeDark .tag {
+    color: #80a1ff; /* #04f */
+}
+.beeLight .com {
+    color: #800;
+}
+.beeDark .com {
+    color: #ba5d5d; /* #b00 */
+}
+.beeLight .typ, .beeLight .atn, .beeLight .dec, .beeLight .var {
+    color: #606;
+}
+.beeDark .typ, .beeDark .atn, .beeDark .dec, .beeDark .var {
+    color: #994d99; /* #909 */
+}
+.beeLight .lit {
+    color: #066;
+}
+.beeDark .lit {
+    color: #4d9999; /* #099 */
+}
+.beeLight .pun, .beeLight .opn, .beeLight .clo {
+    color: #660;
+}
+.beeDark .pun, .beeDark .opn, .beeDark .clo {
+    color: #99994d; /* #990 */
+}

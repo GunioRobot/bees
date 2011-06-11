@@ -39,6 +39,9 @@
     <!-- beestyle demo notes -->
     <script src="javascripts/dev/beestyle-demo-notes.js"></script>
     <link rel="stylesheet" href="stylesheets/dev/beestyle-demo-notes.css">
+    <!-- google prettify -->
+    <script src="javascripts/prettify.js"></script>
+    <link rel="stylesheet" href="stylesheets/prettify.css">
     <!-- beestyle demo css -->
     <style>img.logo { margin: -10px 0 -40px 0; }</style>
 </head>
@@ -118,7 +121,7 @@
                                 then wrapping as needed. The divs immediately within the matrix div are required wrappers; anything else goes.</p>
                                 <p>No widths and heights are necessary on any divs, unless these are filled with long strings of text,
                                 in which case widths should be assigned to the enclosing divs, lest they expand across the page.</p>
-                                <p>Currently the default alignment is bottom, but this can be changed to: <code>top, middle, or bottom</code>.</p>
+                                <p>Currently the default alignment is bottom, but this can be changed to: <code>top, middle, bottom</code>.</p>
                                 <p>
                                     <code>&lt;div class="beeMatrix middle"&gt;<br />
                                     &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;...&lt;/div&gt;<br />
@@ -191,7 +194,7 @@
                                     &lt;/div&gt;</code>
                                 </p>
                                 <p>These CSS tables emulate good old html tables (with all the div wrappers to be expected!) Cells can individually
-                                be given horizontal and vertical alignment options: <code>left, center, right, top, middle, bottom (default: top left)</code>.
+                                be given horizontal and vertical alignment options (default: top left): <code>left, center, right, top, middle, bottom</code>.
                                 Tables can be set to auto-expand to fill whatever container they're in by adding the <code>expand</code> option to the table.</p>
                             </div>
                     <!-- End Main Content -->

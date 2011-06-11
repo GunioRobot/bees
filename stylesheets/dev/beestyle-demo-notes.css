@@ -1,8 +1,11 @@
 .beeNoteToggle, .beeCodeToggle {
     cursor: pointer;
 }
-.beeCodeToggle:hover {
+.beeLight .beeCodeToggle:hover {
     background-color: rgba(195,255,98,0.5);
+}
+.beeDark .beeCodeToggle:hover {
+    background-color: rgba(195,255,98,0.1);
 }
 .beeNote, .beeCode {
     display: none;
@@ -27,7 +30,7 @@
 }
 .beeDark .beeNote {
     color: #eee; /* 93% gray */
-    background-color: #262626; /* 15% gray */
+    background-color: #2e2e2e; /* 18% gray */
     border: 1px solid #acacac; /* 67% gray */
     -webkit-box-shadow: 0 1px 2px #0d0d0d inset; /* 5% gray */
     -moz-box-shadow: 0 1px 2px #0d0d0d inset; /* 5% gray */

@@ -26,3 +26,8 @@ jQuery(document).ready(function(){
         jQuery('.beeCode.4').toggle();
     });
 });
+jQuery(document).ready(function() {
+    // google prettify syntax highlighting
+    jQuery('code').addClass('prettyprint');
+    prettyPrint();
+});
