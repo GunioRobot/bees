@@ -1,0 +1,68 @@
+.beeFlip .flip {
+    margin: 0; /* reset beestyle-core from 0 10px */
+}
+
+/* width and height configuration */
+/* height may be calculated automatically only if no beeFlip */
+
+.beeSlides .slides_container, .beeSlides .slides_container div.slide {
+    width: 510px; /* configure width */
+    height: 160px; /* allow 10px at bottom for beeFlip */
+}
+.beeSlides .next {
+    left: 516px; /* configure position based on .beeSlides .slides_container width */
+}
+.beeSlides .prev {
+    left: -30px; /* configure based on size of previous button image */
+}
+.beeSlides .next, .beeSlides .prev {
+    top: 45px; /* though .beeSlides height may be calculated automatically, still need to set relative height of controls */
+}
+.beeSlides .item {
+    width: 150px; /* configure width */
+    height: 150px; /* though .beeSlides height may be calculated automatically, still need to set item height */
+    margin: 0 10px; /* take these margins into account in width of .beeSlides .slides_container */
+}
+
+/* main css */
+
+.beeSlides {
+    position: relative; /* setup as non-static for absolute positioning relative to this container */
+    display: inline-block; /* automatically sets width of .beeSlides so this element can be centered */
+}
+.beeSlides .slides_container {
+    display: none; /* prevents content flash */
+}
+.beeSlides .slides_container div.slide {
+    display: block;
+}
+.beeSlides .next, .beeSlides .prev {
+    position: absolute;
+    z-index: 101;
+}
+.beeSlides .pagination {
+    list-style: none;
+    margin: 10px 0 20px 0;
+    padding: 0;
+    display: inline-block;
+}
+.beeSlides .pagination li {
+    float: left;
+    margin: 0 1px;
+}
+.beeSlides .pagination li a {
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 12px;
+    height: 0;
+    padding-top: 12px;
+    background-image: url(../images/slides/pagination.png);
+    background-position: 0 0;
+}
+.beeSlides .pagination li.current a {
+    background-position: 0 -12px;
+}
+.beeSlides .item {
+    float: left;
+}
