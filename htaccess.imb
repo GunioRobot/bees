@@ -1,6 +1,7 @@
-# Options -MultiViews
-
+# ----------------------------------------------------------------------
 # IMB :: Optional
+# ----------------------------------------------------------------------
+
 # turn on MultiViews for intelligent extensionless file matching
 # turn on directory Indexes for easy localhost navigation
 # on live server this should be:
@@ -18,8 +19,10 @@ AddType image/gif; qs=0.7 .gif
 AddType image/jpeg; qs=0.6 .jpg
 
 
+# ----------------------------------------------------------------------
+# IMB :: Optional :: PHP as HTML
+# ----------------------------------------------------------------------
 
-#IMB :: PHP AS HTML
 <IfModule mod_php5.c>
 AddType  application/x-httpd-php         .php .html
 AddType  application/x-httpd-php-source  .phps

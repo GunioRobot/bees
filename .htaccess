@@ -413,24 +413,7 @@ FileETag None
 # without -MultiViews, Apache will give a 404 for a rewrite if a folder of the same name does not exist 
 #   e.g. /blog/hello : webmasterworld.com/apache/3808792.htm
 
-# Options -MultiViews
-
-# IMB :: Optional
-# turn on MultiViews for intelligent extensionless file matching
-# turn on directory Indexes for easy localhost navigation
-# on live server this should be:
-# Options +MultiViews -Indexes
-Options +MultiViews +Indexes
-# setup MultiViews handler priorities per extension
-MultiviewsMatch Handlers
-# extension content type; priority; extension
-AddType text/html; qs=1.0 .html
-AddType text/css; qs=0.9 .css
-AddType text/js; qs=0.8 .js
-AddType text/plain; qs=0.7 .txt
-AddType image/png; qs=0.6 .png
-AddType image/gif; qs=0.7 .gif
-AddType image/jpeg; qs=0.6 .jpg
+# Options -MultiViews 
 
 
 
@@ -537,3 +520,24 @@ AddCharset utf-8 .html .css .js .xml .json .rss
 php_value session.cookie_httponly true
 </IfModule>
 
+
+
+# ----------------------------------------------------------------------
+# IMB :: Optional
+# ----------------------------------------------------------------------
+
+# turn on MultiViews for intelligent extensionless file matching
+# turn on directory Indexes for easy localhost navigation
+# on live server this should be:
+# Options +MultiViews -Indexes
+Options +MultiViews +Indexes
+# setup MultiViews handler priorities per extension
+MultiviewsMatch Handlers
+# extension content type; priority; extension
+AddType text/html; qs=1.0 .html
+AddType text/css; qs=0.9 .css
+AddType text/js; qs=0.8 .js
+AddType text/plain; qs=0.7 .txt
+AddType image/png; qs=0.6 .png
+AddType image/gif; qs=0.7 .gif
+AddType image/jpeg; qs=0.6 .jpg
