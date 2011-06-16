@@ -169,7 +169,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin: 0 10px; /* to accommodate flip */
         -webkit-transform-style: preserve-3d;
         -webkit-backface-visibility: hidden;
         -webkit-transition: 0.75s;
