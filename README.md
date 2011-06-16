@@ -28,7 +28,7 @@ Javascript is required for scrolling capabilities within the layout areas combin
 
 Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Opera has no planned support yet)
 
-Todo: integrate CoffeeScript, ColorBox, and Dynamic-Carousel
+Todo: integrate CoffeeScript, ColorBox, Slides
 
 ### Demos and Usage at: [http://beemuse.net](http://beemuse.net)
 
