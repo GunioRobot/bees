@@ -1,5 +1,12 @@
+/* beeFlip animation configuration */
+
 .beeFlip .flip {
     margin: 0; /* reset beestyle-core from 0 10px */
+}
+.beeFlip .front, .beeFlip .back {
+    cursor: pointer; /* provides cursor more of time */
+    width: 150px; /* seems to smooth css3 3d transforms */
+    height: 150px; /* match width and height of .item */
 }
 
 /* width and height configuration */
