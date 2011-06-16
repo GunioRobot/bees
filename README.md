@@ -1,3 +1,5 @@
+A responsive modular HTML5 CSS3 framework, primarily targeted to internal projects on Webkit or Gecko
+
 ### BeeStyle
 
 Size: 13 KB CSS, 753 B JS (in addition to the libraries below)
@@ -44,4 +46,4 @@ Planned projects/scripts to build in include:
 
 [https://github.com/jackmoore/colorbox](https://github.com/jackmoore/colorbox)
 
-### a modular css and javascript layout, primarily targeted to internal projects on webkit or gecko
+[https://github.com/nathansearles/Slides](https://github.com/nathansearles/Slides)
