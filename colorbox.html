@@ -55,7 +55,12 @@
     <script src="javascripts/colorbox.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("a[rel='colorbox']").colorbox({ slideshow: true, slideshowSpeed: 4000, transition: "fade" });
+            if (!/android|ipad|iphone|ipod|series60|symbian|windows ce|blackberry/i.test(navigator.userAgent)) {
+                $("a[rel='colorbox']").colorbox({ slideshow: true, slideshowSpeed: 4000, transition: "fade" });
+            }
+            if (/android|ipad|iphone|ipod|series60|symbian|windows ce|blackberry/i.test(navigator.userAgent)) {
+                $("a[rel='colorbox']").attr("href", "#")
+            }
         });
     </script>
     <!-- beestyle demo css -->

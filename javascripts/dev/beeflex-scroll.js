@@ -2,16 +2,8 @@
 // so footer sticks to bottom and main divs scroll
 var beeScroll = {
     scrollHeight: function() {
-        // mobile browsers should not get scrolling content?
-        // perhaps when orientation changes, recalculate?
-        function isMobile() {
-            return (
-                (navigator.platform.indexOf("iPhone") != -1) || 
-                (navigator.platform.indexOf("iPod") != -1) || 
-                (navigator.platform.indexOf("iPad") != -1)
-            );
-        }
-        if (!isMobile()) {
+        // mobile browsers should not get sticky footer with vertical inner scrolling
+        if (!/android|ipad|iphone|ipod|series60|symbian|windows ce|blackberry/i.test(navigator.userAgent)) {
             // gather header and footer height
             var headerHeight = jQuery("#header").height();
             var footerHeight = jQuery("#footer").height();
