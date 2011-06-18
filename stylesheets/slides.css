@@ -26,7 +26,7 @@
     height: 43px;
 }
 .beeSlides .next, .beeSlides .prev {
-    top: 45px; /* though .beeSlides height may be calculated automatically, still need to set relative height of controls */
+    top: 52px; /* though .beeSlides height may be calculated automatically, still need to set relative height of controls */
 }
 .beeSlides .item {
     width: 150px; /* configure width */
