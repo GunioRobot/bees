@@ -9,6 +9,7 @@
 
 */
 
+/*Global shadow styles*/
 .beeDark #p7LSM_box.lightbox {
     -webkit-box-shadow: 0 0 15px rgba(64,64,64,0.7);
     -moz-box-shadow: 0 0 15px rgba(64,64,64,0.7);
@@ -19,6 +20,7 @@
     -moz-box-shadow: 0 0 15px rgba(191,191,191,0.9);
     box-shadow: 0 0 15px rgba(191,191,191,0.9);
 }
+
 /*Reset li padding */
 .lightbox li {
     padding: 0;
@@ -35,12 +37,24 @@
     padding: 1.25em;
 }
 .beeDark #p7LSM_box.lightbox #p7LSM_cnt {
-    background-color: #e5e5e5;
-    color: #000000;
+    background-color: #404040; /* brighten by 20% to account for non-opacity */
+    color: #dedede;
+    border: 1px solid rgba(64,64,64,0.5);
+    background: -webkit-gradient(linear, left top, left bottom, from(#262626), to(#262626), color-stop(.1, #1a1a1a), color-stop(.9, #1a1a1a));
+    background: -moz-linear-gradient(top center, #262626, #262626, #1a1a1a 10%, #1a1a1a 90%);
+    -webkit-box-shadow: 0 0 5px rgba(64,64,64,0.5);
+    -moz-box-shadow: 0 0 5px rgba(64,64,64,0.5);
+    box-shadow: 0 0 5px rgba(64,64,64,0.5);
 }
 .beeLight #p7LSM_box.lightbox #p7LSM_cnt {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #bfbfbf; /* darken by 20% to account for non-opacity */
+    color: #212121;
+    border: 1px solid rgba(191,191,191,0.9);
+    background: -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#d9d9d9), color-stop(.1, #e5e5e5), color-stop(.9, #e5e5e5));
+    background: -moz-linear-gradient(top center, #d9d9d9, #d9d9d9, #e5e5e5 10%, #e5e5e5 90%);
+    -webkit-box-shadow: 0 0 5px rgba(191,191,191,0.9);
+    -moz-box-shadow: 0 0 5px rgba(191,191,191,0.9);
+    box-shadow: 0 0 5px rgba(191,191,191,0.9);
 }
 
 /*Popup Box: Set border around main box*/
@@ -83,13 +97,9 @@
     background-color: #ebebeb;
 }
 
-/*Description, Caption,  and Counter*/
-
-/*Hide Description and Links in Dreamweaver Design View*/
-.p7lsm_link, .p7lsm_description {display: none;}
-
+/*Description, Caption, and Counter*/
 /*
-Wrapper for Description, Caption,  and Counter
+Wrapper for Description, Caption, and Counter
 Padding matches the padding on the Full-Size image outer container.
 */
 .beeDark #p7LSM_box.lightbox #p7LSM_info {
@@ -103,7 +113,6 @@ Padding matches the padding on the Full-Size image outer container.
     zoom: 1;
     padding: 3px 0 6px 0;
 }
-
 /*Padding-Right matches the padding on the Full-Size image outer container.*/
 .lightbox #p7LSM_caption {
     text-align: center;
@@ -116,6 +125,7 @@ Padding matches the padding on the Full-Size image outer container.
     padding: 3px 0 0 0;
     zoom: 1;
 }
+
 /*Full-Size Image*/
 /*Full-Size Image Inner Container (Hugs Image)*/
 .beeDark .lightbox #p7LSMfsim {
@@ -139,19 +149,6 @@ Padding matches the padding on the Full-Size image outer container.
     background-image: url(../images/lightbox/p7lsm_loading.gif);
 }
 
-/*Clear Floats*/
-.p7lsm_clearfloat {
-    clear: both;
-    height: 0;
-    line-height: 0;
-    font-size: 0;
-}
-
-/*TOC and Help Popup Boxes*/
-/*Table of Contents and Help Popup Boxes Common Styles*/
-#p7LSM_tocbox.lightbox, #p7LSM_helpbox.lightbox {
-    display: none; /* IMB */
-}
 /* Toolbar */
 .lightbox #p7LSM_toolbar {
     position: relative;
@@ -167,10 +164,7 @@ Padding matches the padding on the Full-Size image outer container.
     height: 36px;
     display: block;
 }
-/*TOC and HELP Toolbar Icons*/
-.lightbox #p7LSM_toolbartoc, .lightbox #p7LSM_toolbarhelp {
-	display: none; /* IMB */
-}
+
 /*VCR Controls*/
 #p7LSM_vcr ul li {
     list-style-type: none;
@@ -215,6 +209,7 @@ Padding matches the padding on the Full-Size image outer container.
     background-image: url(../images/lightbox/p7LSM02_last.png);
     width: 28px;
 }
+
 /*Close Toolbar Icon*/
 .lightbox #p7LSM_toolbarclose {
     position: absolute;
@@ -225,6 +220,7 @@ Padding matches the padding on the Full-Size image outer container.
     background-image: url(../images/lightbox/p7LSM02_close.png);
     width: 28px;
 }
+
 /*Toolbar Hovers and Utilities*/
 .lightbox #p7LSM_toolbar a:hover, .lightbox #p7LSM_toolbar a:focus, .lightbox #p7LSM_toolbar a.down {
     background-position: 0px -36px;
