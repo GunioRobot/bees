@@ -93,7 +93,7 @@
         left: -15px; /* configure based on size of previous button image */
     }
     .beeSlides .next, .beeSlides .prev {
-        top: 22px; /* though .beeSlides height may be calculated automatically, still need to set relative height of controls */
+        top: 25px; /* though .beeSlides height may be calculated automatically, still need to set relative height of controls */
     }
     .beeSlides .next img, .beeSlides .prev img {
         width: 12px;
