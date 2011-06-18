@@ -106,10 +106,16 @@ Padding matches the padding on the Full-Size image outer container.
 /*Full-Size Image*/
 /*Full-Size Image Inner Container (Hugs Image)*/
 .beeDark .lightbox #p7LSMfsim {
-    border: 1px solid #333;
+    border: 1px solid #0d0d0d;
+    -webkit-box-shadow: 0 0 10px #0d0d0d;
+    -moz-box-shadow: 0 0 10px #0d0d0d;
+    box-shadow: 0 0 10px #0d0d0d;
 }
 .beeLight .lightbox #p7LSMfsim {
-    border: 1px solid #ccc;
+    border: 1px solid #808080;
+    -webkit-box-shadow: 0 0 10px #808080;
+    -moz-box-shadow: 0 0 10px #808080;
+    box-shadow: 0 0 10px #808080;
 }
 
 /*Loading Image*/
