@@ -53,63 +53,7 @@
     <!-- lightbox -->
     <link rel="stylesheet" href="stylesheets/lightbox.css">
     <script src="javascripts/lightbox.js"></script>
-    <script>
-        $(document).ready(function() {
-            // no mobile browsers here
-            if (!/android|ipad|iphone|ipod|series60|symbian|windows ce|blackberry/i.test(navigator.userAgent)) {
-                // setup each lightbox
-                P7_LSMop('p7LSM_1',3,0,100,500,1,0,1,0,0,0,5,1,0,1,0,0,0,100,1);
-                // initialize lightbox
-                P7_LSMinit();
-                // attach lightboxes onclick
-                $(".lightbox").each(function() {
-                    // grab slide number
-                    var rel = $(this).attr("rel");
-                    // grab lightbox number
-                    var rev = $(this).attr("rev");
-                    // launch lightbox onclick
-                    $(this).click(function() {
-                        P7_LSMctrl(rel,rev);
-                    });
-                });
-            }
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $(".beeNoteOverlayToggle").each(function() {
-                $(this).click(function() {
-                    // puase lightbox slideshow if running
-                    P7_LSMctrl("pause");
-                    // toggle note overlay
-                    // todo: this should really apply just to this overlay not all
-                    $(".beeNoteOverlay").slideToggle("fast");
-                    // also ensure overlays closed when switching slides
-                    // line added to lightbox.js: $(".beeNoteOverlay").each(function() { $(this).hide(); });
-                });
-            });
-        });
-    </script>
-    <style>
-    .beeNoteOverlay {
-        width: 600px; /* subtract 40px for padding from photo size */
-        padding: 20px;
-        display: none;
-        position: absolute;
-        top: 37px;
-        opacity: 0.8;
-    }
-    .beeDark .beeNoteOverlay {
-        border: 1px solid rgba(64,64,64,0.5);
-        background-color: #0d0d0d;
-        color: #dedede; /* brighten by 20% to account for 80% overlay opacity */
-    }
-    .beeLight .beeNoteOverlay {
-        border: 1px solid rgba(191,191,191,0.9);
-        background-color: #f2f2f2;
-        color: #212121; /* darken by 20% to account for 80% overlay opacity */
-    }
-    </style>
+    <script src="javascripts/dev/lightbox.js"></script>
     <!-- beestyle demo css -->
     <style>img.logo { margin: -10px 0 -40px 0; } .beeFlip .flip { margin: 0; }</style>
 </head>

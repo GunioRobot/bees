@@ -9,6 +9,26 @@
 
 */
 
+/*beeNoteOverlay - Modal Window-Specific*/
+.beeNoteOverlay {
+    width: 600px; /* subtract 40px for padding from photo size */
+    padding: 20px;
+    display: none;
+    position: absolute;
+    top: 37px;
+    opacity: 0.8;
+}
+.beeDark .beeNoteOverlay {
+    border: 1px solid rgba(64,64,64,0.5);
+    background-color: #0d0d0d;
+    color: #dedede; /* brighten by 20% to account for 80% overlay opacity */
+}
+.beeLight .beeNoteOverlay {
+    border: 1px solid rgba(191,191,191,0.9);
+    background-color: #f2f2f2;
+    color: #212121; /* darken by 20% to account for 80% overlay opacity */
+}
+
 /*Global shadow styles*/
 .beeDark #p7LSM_box.lightbox {
     -webkit-box-shadow: 0 0 15px rgba(64,64,64,0.7);
