@@ -6,6 +6,16 @@
   -----------------------------------
 */
 
+.beeDark #p7LSM_box.lightbox {
+    -webkit-box-shadow: 0 0 15px rgba(64,64,64,0.7);
+    -moz-box-shadow: 0 0 15px rgba(64,64,64,0.7);
+    box-shadow: 0 0 15px rgba(64,64,64,0.7);
+}
+.beeLight #p7LSM_box.lightbox {
+    -webkit-box-shadow: 0 0 15px rgba(191,191,191,0.9);
+    -moz-box-shadow: 0 0 15px rgba(191,191,191,0.9);
+    box-shadow: 0 0 15px rgba(191,191,191,0.9);
+}
 /*Reset li padding */
 .lightbox li {
     padding: 0;
@@ -37,13 +47,13 @@
 }
 .beeDark .lightbox #p7LSM_container {
     background-color: #1a1a1a;
-    border: 1px solid #0d0d0d;
+    border: 1px rgba(64,64,64,0.7);
     background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#1a1a1a), color-stop(.1, #1a1a1a));
     background: -moz-linear-gradient(top center, #404040, #1a1a1a, #1a1a1a 10%);
 }
 .beeLight .lightbox #p7LSM_container {
     background-color: #e5e5e5;
-    border: 1px solid #f2f2f2;
+    border: 1px solid rgba(191,191,191,0.9);
     background: -webkit-gradient(linear, left top, left bottom, from(#bfbfbf), to(#e5e5e5), color-stop(.1, #e5e5e5));
     background: -moz-linear-gradient(top center, #bfbfbf, #e5e5e5, #e5e5e5 10%);
 }
@@ -106,16 +116,16 @@ Padding matches the padding on the Full-Size image outer container.
 /*Full-Size Image*/
 /*Full-Size Image Inner Container (Hugs Image)*/
 .beeDark .lightbox #p7LSMfsim {
-    border: 1px solid #0d0d0d;
-    -webkit-box-shadow: 0 0 10px #0d0d0d;
-    -moz-box-shadow: 0 0 10px #0d0d0d;
-    box-shadow: 0 0 10px #0d0d0d;
+    border: 1px solid rgba(64,64,64,0.5);
+    -webkit-box-shadow: 0 0 5px rgba(64,64,64,0.5);
+    -moz-box-shadow: 0 0 5px rgba(64,64,64,0.5);
+    box-shadow: 0 0 5px rgba(64,64,64,0.5);
 }
 .beeLight .lightbox #p7LSMfsim {
-    border: 1px solid #808080;
-    -webkit-box-shadow: 0 0 10px #808080;
-    -moz-box-shadow: 0 0 10px #808080;
-    box-shadow: 0 0 10px #808080;
+    border: 1px solid rgba(191,191,191,0.9);
+    -webkit-box-shadow: 0 0 5px rgba(191,191,191,0.9);
+    -moz-box-shadow: 0 0 5px rgba(191,191,191,0.9);
+    box-shadow: 0 0 5px rgba(191,191,191,0.9);
 }
 
 /*Loading Image*/

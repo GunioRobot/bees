@@ -230,10 +230,10 @@ function P7_LSMinit(){
 						return P7_LSMshow(this);
 					};
 					tA[i].parentNode.onmouseover=function(){
-						this.className="over";
+						this.addClass("over");
 					};
 					tA[i].parentNode.onmouseout=function(){
-						this.className="";
+						this.removeClass("over");
 					};
 					tA[i].p7lsmdiv=tD.id;
 					tA[i].p7lsmsnum=cntr+1;
@@ -1616,38 +1616,30 @@ function P7_LSMkey(evt){
 		if(!evt.altKey&&!evt.ctrlKey){
 			if(nn!='input'&&nn!='textarea'){
 				k=evt.keyCode;
-				if(k==33||k==37||k==109 || k==32&&evt.shiftKey){
+				if(k==33||k==37||k==109 || k==32&&evt.shiftKey){ // page up | left arrow | subtract | shift+spacebar
 					P7_LSMctrl('previous');
 					m=false;
 				}
-				else if(k==34||k==39||k==107||k==32){
+				else if(k==34||k==39||k==107||k==32){ // page down | right arrow | add | spacebar
 					P7_LSMctrl('next');
 					m=false;
 				}
-				else if(k==35){
+				else if(k==35){ // end
 					P7_LSMctrl('last');
 					m=false;
 				}
-				else if(k==36){
+				else if(k==36){ // home
 					P7_LSMctrl('first');
 					m=false;
 				}
-				else if(k==80){
+				else if(k==80){ // p
 					P7_LSMppTrig();
 					m=false;
 				}
-				else if(k==27 || (k==88&&typeof(opera)!='object')){
+				else if(k==27 || (k==88&&typeof(opera)!='object')){ // escape | x
 					P7_LSMclose();
 					m=false;
 				}
-				// else if(k==72&&typeof(opera)!='object'){
-				// 	P7_LSMhelp();
-				// 	m=false;
-				// }
-				// else if(k==84){
-				// 	P7_LSMtoc();
-				// 	m=false;
-				// }
 			}
 		}
 	}
@@ -1871,23 +1863,23 @@ function P7_LSMurl(){
 			s=h.split(/[=&]/g);
 			if(s&&s.length){
 				for(i=0;i<s.length;i+=2){
-				if(s[i]==d){
-					x=s[i+1];
-					nn=x.split("_");
-					if(nn&&nn[1]){
-					P7_LSMctrl(nn[1],'p7LSM_'+nn[0],1);
+					if(s[i]==d){
+						x=s[i+1];
+						nn=x.split("_");
+						if(nn&&nn[1]){
+							P7_LSMctrl(nn[1],'p7LSM_'+nn[0],1);
+						}
 					}
 				}
 			}
 		}
-	}
-	h=document.location.hash;
-	x=h.substring(1,h.length);
-	if(x&&x.indexOf(d)===0){
-		nn=x.replace(d,'').split("_");
-		if(nn&&nn[1]){
-			P7_LSMctrl(nn[1],'p7LSM_'+nn[0],1);
+		h=document.location.hash;
+		x=h.substring(1,h.length);
+		if(x&&x.indexOf(d)===0){
+			nn=x.replace(d,'').split("_");
+			if(nn&&nn[1]){
+				P7_LSMctrl(nn[1],'p7LSM_'+nn[0],1);
+			}
 		}
-	 }
 	}
 }
