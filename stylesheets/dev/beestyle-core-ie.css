@@ -1,0 +1,16 @@
+/* Internet Explorer
+------------------------------------ */
+
+    /* Table Module
+    ------------------------------------ */
+
+    .ie7 .beeTable, .ie7 .beeTable div.row, .ie7 .beeTable div.cell, .ie6 .beeTable, .ie6 .beeTable div.row, .ie6 .beeTable div.cell {
+        display: block;
+    }
+
+    /* Matrix Module
+    ------------------------------------ */
+
+    .ie7 .beeMatrix > div, .ie6 .beeMatrix > div {
+        display: inline;
+    }
