@@ -4,7 +4,7 @@ $(document).ready(function() {
         // setup each lightbox
         $("div.lightbox").each(function() {
             var lightboxID = $(this).attr("id");
-            P7_LSMop(lightboxID,3,0,100,500,1,0,1,0,0,0,5,1,0,1,0,0,0,100,1);
+            P7_LSMop(lightboxID,3,0,100,450,1,0,1,0,0,0,5,1,0,1,0,0,0,100,1);
         });
         // initialize lightbox
         P7_LSMinit();
