@@ -11,7 +11,6 @@
 
 /*beeNoteOverlay - Modal Window-Specific*/
 .beeNoteOverlay {
-    width: 600px; /* subtract 40px for padding from photo size */
     padding: 20px;
     display: none;
     position: absolute;
@@ -166,7 +165,7 @@ Padding matches the padding on the Full-Size image outer container.
     display: none;
     width: 78px;
     height: 8px;
-    background-image: url(../../images/lightbox/p7lsm_loading.gif);
+    background-image: url(../images/lightbox/p7lsm_loading.gif);
 }
 
 /* Toolbar */
@@ -205,28 +204,28 @@ Padding matches the padding on the Full-Size image outer container.
     list-style-type: none;
 }
 .lightbox #p7LSM_first {
-    background-image: url(../../images/lightbox/p7LSM02_first.png);
+    background-image: url(../images/lightbox/p7LSM02_first.png);
     width: 28px;
 }
 .lightbox #p7LSM_prev {
-    background-image: url(../../images/lightbox/p7LSM02_prev.png);
+    background-image: url(../images/lightbox/p7LSM02_prev.png);
     width: 15px;
 }
 .lightbox #p7LSM_toolbar .p7LSM_pause {
-    background-image: url(../../images/lightbox/p7LSM02_pauseplay.png);
+    background-image: url(../images/lightbox/p7LSM02_pauseplay.png);
     width: 32px;
     background-position: 0px -72px;
 }
 .lightbox #p7LSM_toolbar .p7LSM_play {
-    background-image: url(../../images/lightbox/p7LSM02_pauseplay.png);
+    background-image: url(../images/lightbox/p7LSM02_pauseplay.png);
     width: 32px;
 }
 .lightbox #p7LSM_next {
-    background-image: url(../../images/lightbox/p7LSM02_next.png);
+    background-image: url(../images/lightbox/p7LSM02_next.png);
     width: 15px;
 }
 .lightbox #p7LSM_last {
-    background-image: url(../../images/lightbox/p7LSM02_last.png);
+    background-image: url(../images/lightbox/p7LSM02_last.png);
     width: 28px;
 }
 
@@ -237,7 +236,7 @@ Padding matches the padding on the Full-Size image outer container.
     top: 0px;
 }
 .lightbox #p7LSM_close {
-    background-image: url(../../images/lightbox/p7LSM02_close.png);
+    background-image: url(../images/lightbox/p7LSM02_close.png);
     width: 28px;
 }
 

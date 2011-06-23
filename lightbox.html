@@ -9,47 +9,47 @@
     <!-- webkit scrollbars -->
     <link rel="stylesheet" href="stylesheets/scroll.css">
     <!-- beeflex core -->
-    <link rel="stylesheet" href="stylesheets/dev/beeflex-core.css">
+    <link rel="stylesheet" href="stylesheets/dev-beeflex-core.css">
     <!-- beeflex options -->
-    <link rel="stylesheet" href="stylesheets/dev/beeflex-options.css">
-    <link rel="stylesheet" href="stylesheets/dev/beeflex-align.css">
-    <link rel="stylesheet" href="stylesheets/dev/beeflex-scroll.css">
+    <link rel="stylesheet" href="stylesheets/dev-beeflex-options.css">
+    <link rel="stylesheet" href="stylesheets/dev-beeflex-align.css">
+    <link rel="stylesheet" href="stylesheets/dev-beeflex-scroll.css">
     <!-- beestyle-beeflex adapters -->
-    <link rel="stylesheet" href="stylesheets/dev/beestyle-beeflex-options.css">
-    <link rel="stylesheet" href="stylesheets/dev/beestyle-beeflex.css">
+    <link rel="stylesheet" href="stylesheets/dev-beestyle-beeflex-options.css">
+    <link rel="stylesheet" href="stylesheets/dev-beestyle-beeflex.css">
     <!-- beestyle core modified -->
-    <link rel="stylesheet" href="stylesheets/dev/beestyle-core.css">
+    <link rel="stylesheet" href="stylesheets/dev-beestyle-core.css">
     <!-- beestyle colors -->
-    <link rel="stylesheet" href="stylesheets/dev/beestyle-dark.css">
-    <link rel="stylesheet" href="stylesheets/dev/beestyle-light.css">
+    <link rel="stylesheet" href="stylesheets/dev-beestyle-dark.css">
+    <link rel="stylesheet" href="stylesheets/dev-beestyle-light.css">
     <!-- modernizr -->
-    <script src="javascripts/modernizr-2.0.min.js"></script>
+    <script src="javascripts/modernizr.min.js"></script>
     <!-- jquery -->
-    <script src="javascripts/jquery-1.6.min.js"></script>
+    <script src="javascripts/jquery.min.js"></script>
     <!-- beeflex options -->
-    <script src="javascripts/dev/beeflex-scroll.js"></script>
+    <script src="javascripts/dev-beeflex-scroll.js"></script>
     <!-- beestyle options -->
-    <script src="javascripts/dev/beestyle-options.js"></script>
+    <script src="javascripts/dev-beestyle-options.js"></script>
     <!-- beestyle demo theme -->
-    <script src="javascripts/dev/beestyle-demo-theme.js"></script>
+    <script src="javascripts/dev-beestyle-demo-theme.js"></script>
     <!-- beestyle demo extra -->
-    <script src="javascripts/dev/beestyle-demo-extra.js"></script>
+    <script src="javascripts/dev-beestyle-demo-extra.js"></script>
     <!-- beestyle demo multicol -->
-    <script src="javascripts/dev/beestyle-demo-multicol.js"></script>
+    <script src="javascripts/dev-beestyle-demo-multicol.js"></script>
     <!-- beestyle demo notes -->
-    <script src="javascripts/dev/beestyle-demo-notes.js"></script>
-    <link rel="stylesheet" href="stylesheets/dev/beestyle-demo-notes.css">
+    <script src="javascripts/dev-beestyle-demo-notes.js"></script>
+    <link rel="stylesheet" href="stylesheets/dev-beestyle-demo-notes.css">
     <!-- google prettify -->
     <link rel="stylesheet" href="stylesheets/prettify.css">
     <script src="javascripts/prettify.min.js"></script>
     <!-- slides -->
-    <link rel="stylesheet" href="stylesheets/dev/beestyle-slides.css">
+    <link rel="stylesheet" href="stylesheets/dev-beestyle-slides.css">
     <script src="javascripts/slides.min.js"></script>
-    <script src="javascripts/dev/beestyle-slides.js"></script>
+    <script src="javascripts/dev-beestyle-slides.js"></script>
     <!-- lightbox -->
-    <link rel="stylesheet" href="stylesheets/dev/beestyle-lightbox.css">
+    <link rel="stylesheet" href="stylesheets/dev-beestyle-lightbox.css">
     <script src="javascripts/lightbox.js"></script>
-    <script src="javascripts/dev/beestyle-lightbox.js"></script>
+    <script src="javascripts/dev-beestyle-lightbox.js"></script>
     <!-- beestyle demo css -->
     <style>img.logo { margin: -10px 0 -40px 0; } .beeFlip .flip { margin: 0; }</style>
 </head>
@@ -85,7 +85,47 @@
                     <!-- Main Content -->
                         <h1>Experimental integration with ProjectSeven Lightshow Magic and <a href="http://slidesjs.com">Slides</a></h1>
                         <p>Note that any usage of ProjectSeven Lightshow Magic requires a license!</p>
-                        <!-- todo: colorboxes need to link to other pages, and include additional html notes -->
+                        <p>
+                            Webkit issue: on a page with multiple sliders, when css3 3d transforms apply to elements, 
+                            the first slider must first be interacted with before the other sliders; if not, 
+                            all sliders beyond the first slider will advance/ reverse normally, but without easing 
+                            (until after such time as the first is interacted with).
+                        </p>
+                        <h2 class="beeNoteToggle 1">div.beeFlip causes issue inside div.item:</h2>
+                        <div class="beeNote 1">
+<pre><code>.beeFlip {
+    position: relative;
+    <strong>-webkit-perspective: 1000;</strong>
+}
+.beeFlip .flip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    <strong>-webkit-transform-style: preserve-3d;</strong>
+    <strong>-webkit-backface-visibility: hidden;</strong>
+    <strong>-webkit-transition: 0.75s;</strong>
+}
+.beeFlip .front {
+    z-index: 5;
+}
+.beeFlip:hover .front {
+    z-index: 5;
+    <strong>-webkit-transform: rotateY(180deg);</strong>
+}
+.beeFlip .back {
+    z-index: 0;
+    <strong>-webkit-transform: rotateY(-180deg);</strong>
+}
+.beeFlip:hover .back {
+    z-index: 10;
+    <strong>-webkit-transform: rotateY(0deg);</strong>
+}</code></pre>
+                            <p>
+                                <em>Note that relative/ absolute positioning does not cause the problem; 
+                                easing works perfectly on all sliders with above css rules set, 
+                                so long as all css3 3d transform rules (bold) are removed.</em>
+                            </p>
+                        </div>
                     </div>
                     <div class="insert aligncenter">
                         <div class="beeSlides">
@@ -196,12 +236,209 @@
                             <a href="#" class="prev"><img src="images/slides/arrow-prev.png" width="24" height="43" alt="previous" /></a>
                             <a href="#" class="next"><img src="images/slides/arrow-next.png" width="24" height="43" alt="next" /></a>
                         </div>
+                        <br />
+                        <div class="beeSlides">
+                            <div class="slides_container">
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="1" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="2" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2497.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2509.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="3" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2499.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2507.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="4" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2501.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2503.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="5" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="6" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2509.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2497.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="7" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2507.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2499.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="8" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2503.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2501.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="prev"><img src="images/slides/arrow-prev.png" width="24" height="43" alt="previous" /></a>
+                            <a href="#" class="next"><img src="images/slides/arrow-next.png" width="24" height="43" alt="next" /></a>
+                        </div>
                     <!-- End Main Content -->
                     </div>
                     <div style="display: none;">
                         <div id="p7LSM_1" class="lightbox">
                             <div class="p7LSM_wrapper">
                                 <div id="p7LSMtrg_1">
+                                <ul>
+                                    <li>
+                                        <a href="photos/640px/IMG_2551.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2551"></a>
+                                        <div class="p7lsm_description">
+                                            <button class="beeNoteOverlayToggle">+</button>
+                                            <div class="beeNoteOverlay">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="photos/640px/IMG_2509.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2509"></a>
+                                        <div class="p7lsm_description">
+                                            <button class="beeNoteOverlayToggle">+</button>
+                                            <div class="beeNoteOverlay">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="photos/640px/IMG_2507.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2507"></a>
+                                        <div class="p7lsm_description">
+                                            <button class="beeNoteOverlayToggle">+</button>
+                                            <div class="beeNoteOverlay">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="photos/640px/IMG_2503.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2503"></a>
+                                        <div class="p7lsm_description">
+                                            <button class="beeNoteOverlayToggle">+</button>
+                                            <div class="beeNoteOverlay">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="photos/640px/IMG_2465.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2465"></a>
+                                        <div class="p7lsm_description">
+                                            <button class="beeNoteOverlayToggle">+</button>
+                                            <div class="beeNoteOverlay">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="photos/640px/IMG_2497.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2497"></a>
+                                        <div class="p7lsm_description">
+                                            <button class="beeNoteOverlayToggle">+</button>
+                                            <div class="beeNoteOverlay">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="photos/640px/IMG_2499.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2499"></a>
+                                        <div class="p7lsm_description">
+                                            <button class="beeNoteOverlayToggle">+</button>
+                                            <div class="beeNoteOverlay">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="photos/640px/IMG_2501.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2501"></a>
+                                        <div class="p7lsm_description">
+                                            <button class="beeNoteOverlayToggle">+</button>
+                                            <div class="beeNoteOverlay">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="p7LSM_2" class="lightbox">
+                            <div class="p7LSM_wrapper">
+                                <div id="p7LSMtrg_2">
                                 <ul>
                                     <li>
                                         <a href="photos/640px/IMG_2551.jpg" class="p7lsm_type_img"><img src="images/lightbox/none.gif" alt="IMG 2551"></a>
@@ -314,7 +551,7 @@
                         <p><a href="./">Home</a><br /><a href="install">Install</a><br /><a href="options">Options</a><br /><a href="eyecandy">EyeCandy</a></p>
                     </nav>
                     <nav class="panel">
-                        <p><a href="forms">Forms</a> (dev)<br /><a href="slides">Slides</a> (dev)<br /><a href="colorbox">ColorBox</a> (dev)</p>
+                        <p><a href="forms">Forms</a> (dev)<br /><strong>Slides/Lightbox</strong> (dev)</p>
                     </nav>
                     <!-- End Right Sidebar -->
                 </div>

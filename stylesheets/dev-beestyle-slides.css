@@ -48,6 +48,7 @@
     display: block;
 }
 .beeSlides .next, .beeSlides .prev {
+    display: none;
     position: absolute;
     z-index: 101;
 }
@@ -68,7 +69,7 @@
     width: 12px;
     height: 0;
     padding-top: 12px;
-    background-image: url(../../images/slides/pagination.png);
+    background-image: url(../images/slides/pagination.png);
     background-position: 0 0;
 }
 .beeSlides .pagination li.current a {
@@ -107,3 +108,14 @@
         height: 75px; /* though .beeSlides height may be calculated automatically, still need to set item height */
     }
 }
+
+/* Javascript off
+------------------------------------ */
+
+    .no-js .beeSlides .pagination {
+        display: none;
+    }
+    .no-js .beeSlides .slides_container {
+        display: block;
+        overflow: hidden;
+    }
