@@ -31,8 +31,8 @@ $(document).ready(function() {
                 var beeNote = $(this).siblings().last();
                 // set width of overlay equal to width of image
                 $(".beeNoteOverlay").width(beeNoteWidth);
-                // toggle note overlay
-                beeNote.slideToggle("fast");
+                // toggle note overlay - optional easing requires easing.js jquery plugin
+                beeNote.slideToggle(300, "easeInOutQuint");
                 // also ensure overlays closed when switching slides
                 // line added to lightbox.js: $(".beeNoteOverlay").each(function() { $(this).hide(); });
             });
