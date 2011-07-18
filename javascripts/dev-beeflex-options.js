@@ -1,6 +1,6 @@
-var beeMin = {
+var beeSidebars = {
     toggle: function() {
-        $(".minToggle").click(function() {
+        $(".toggleSidebars").click(function() {
             if ($(this).hasClass("out")) {
                 $("#main aside").addClass("min");
                 $("#main section").addClass("min");
@@ -23,5 +23,5 @@ var beeMin = {
 // set when dom loads
 // so we don't have to wait for each last bit of content to load in before the layout assembles itself
 $(document).ready(function() {
-    beeMin.toggle();
+    beeSidebars.toggle();
 });

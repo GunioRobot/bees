@@ -59,23 +59,23 @@
 /* Options :: Aside Hide/Show
 ------------------------------------ */
 
-.minToggle {
+.toggleSidebars {
     width: 32px;
     height: 32px;
     cursor: pointer;
     margin: -10px -5px;
 }
-.minToggle.out,
-.beeLight .minToggle.out {
+.toggleSidebars.out,
+.beeLight .toggleSidebars.out {
     background: url(../images/options/showhide.png) no-repeat 0 0;
 }
-.minToggle.in,
-.beeLight .minToggle.in {
+.toggleSidebars.in,
+.beeLight .toggleSidebars.in {
     background: url(../images/options/showhide.png) no-repeat 0 -32px;
 }
-.beeDark .minToggle.out {
+.beeDark .toggleSidebars.out {
     background: url(../images/options/showhide.png) no-repeat -32px 0;
 }
-.beeDark .minToggle.in {
+.beeDark .toggleSidebars.in {
     background: url(../images/options/showhide.png) no-repeat -32px -32px;
 }
