@@ -23,3 +23,11 @@ var beeSidebars = {
 $(document).ready(function() {
     beeSidebars.toggle();
 });
+/*
+$("#main aside").animate({ minWidth: "0", maxWidth: "0", opacity: "0" }, 200, function() {
+    $("#main aside").hide();
+});
+$("#main aside").show(function() {
+    $("#main aside").animate({ minWidth: "100px", maxWidth: "200px", opacity: "1.0" }, 200);
+});
+*/
