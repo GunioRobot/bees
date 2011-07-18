@@ -19,15 +19,10 @@
         max-width: 200px;
         /* could be set to a fixed width instead - if fixed width sidebars are desired */
     }
-    
-    /* experimental */
-    
     .beeFlex #main aside.min {
-        min-width: 20px;
-        max-width: 40px;
-    }
-    .beeFlex #main aside.min p, .beeFlex #main aside.min h1 {
         display: none;
+    }
+    .beeFlex #main section.min {
     }
 
 /* iPhone 4 and equivalent
@@ -59,4 +54,28 @@
         /* reset any min-width/max-width here - set to: auto */
         /* reset any fixed width here - set to: auto */
     }
+}
+
+/* Options :: Aside Hide/Show
+------------------------------------ */
+
+.minToggle {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin: -10px -5px;
+}
+.minToggle.out,
+.beeLight .minToggle.out {
+    background: url(../images/options/showhide.png) no-repeat 0 0;
+}
+.minToggle.in,
+.beeLight .minToggle.in {
+    background: url(../images/options/showhide.png) no-repeat 0 -32px;
+}
+.beeDark .minToggle.out {
+    background: url(../images/options/showhide.png) no-repeat -32px 0;
+}
+.beeDark .minToggle.in {
+    background: url(../images/options/showhide.png) no-repeat -32px -32px;
 }

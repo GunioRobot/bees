@@ -1,18 +1,27 @@
 var beeMin = {
-    out: function() {
-        // add min class to main aside
-        $(".beeFlex #main aside").addClass("min");
-        // wrap panel in a link
-        $(".beeFlex #main aside .panel").wrap("<a href='javascript:beeMin.inn();' />");
-    },
-    inn: function() {
-        // remove min class on main aside
-        $(".beeFlex #main aside").removeClass("min");
-        // unlink panel divs
-        $(".beeFlex #main aside .panel").unwrap();
+    toggle: function() {
+        $(".minToggle").click(function() {
+            if ($(this).hasClass("out")) {
+                $("#main aside").addClass("min");
+                $("#main section").addClass("min");
+                $(this).removeClass("out");
+                $(this).addClass("in");
+                $(this).removeAttr("title");
+                $(this).attr("title","show sidebars");
+            }
+            else {
+                $("#main aside").removeClass("min");
+                $("#main section").removeClass("min");
+                $(this).removeClass("in");
+                $(this).addClass("out");
+                $(this).removeAttr("title");
+                $(this).attr("title","hide sidebars");
+            }
+        });
     }
 }
+// set when dom loads
+// so we don't have to wait for each last bit of content to load in before the layout assembles itself
 $(document).ready(function() {
-    // add minify toggle link
-    $("#beeMinToggle").append("<a href='javascript:beeMin.out();'>minify</a>");
+    beeMin.toggle();
 });
