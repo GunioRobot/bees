@@ -2,14 +2,14 @@ var beeSidebars = {
     toggle: function() {
         $(".toggleSidebars").click(function() {
             if ($(this).hasClass("out")) {
-                $("#main aside").fadeOut("slow");
+                $("#main aside").fadeOut(400);
                 $(this).removeClass("out");
                 $(this).addClass("in");
                 $(this).removeAttr("title");
                 $(this).attr("title","show sidebars");
             }
             else {
-                $("#main aside").fadeIn("slow");
+                $("#main aside").fadeIn(400);
                 $(this).removeClass("in");
                 $(this).addClass("out");
                 $(this).removeAttr("title");
