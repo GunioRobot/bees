@@ -19,11 +19,6 @@
         max-width: 200px;
         /* could be set to a fixed width instead - if fixed width sidebars are desired */
     }
-    .beeFlex #main aside.min {
-        display: none;
-    }
-    .beeFlex #main section.min {
-    }
 
 /* iPhone 4 and equivalent
 ------------------------------------ */

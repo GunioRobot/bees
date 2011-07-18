@@ -2,16 +2,14 @@ var beeSidebars = {
     toggle: function() {
         $(".toggleSidebars").click(function() {
             if ($(this).hasClass("out")) {
-                $("#main aside").addClass("min");
-                $("#main section").addClass("min");
+                $("#main aside").fadeOut("slow");
                 $(this).removeClass("out");
                 $(this).addClass("in");
                 $(this).removeAttr("title");
                 $(this).attr("title","show sidebars");
             }
             else {
-                $("#main aside").removeClass("min");
-                $("#main section").removeClass("min");
+                $("#main aside").fadeIn("slow");
                 $(this).removeClass("in");
                 $(this).addClass("out");
                 $(this).removeAttr("title");
