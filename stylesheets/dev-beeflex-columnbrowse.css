@@ -1,0 +1,15 @@
+/* Inner Scrolling
+------------------------------------ */
+
+    .beeFlex div.beeColumnBrowse section {
+        overflow-y: auto;
+    }
+
+/* iPad 2 and smaller
+------------------------------------ */
+
+@media only screen and (device-width: 768px) {
+    .beeFlex div.beeColumnBrowse section {
+        overflow-y: visible;
+    }
+}

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="stylesheets/dev-beeflex-options.css">
     <link rel="stylesheet" href="stylesheets/dev-beeflex-align.css">
     <link rel="stylesheet" href="stylesheets/dev-beeflex-scroll.css">
+    <link rel="stylesheet" href="stylesheets/dev-beeflex-columnbrowse.css">
     <!-- beestyle-beeflex adapters -->
     <link rel="stylesheet" href="stylesheets/dev-beestyle-beeflex-options.css">
     <link rel="stylesheet" href="stylesheets/dev-beestyle-beeflex.css">
@@ -22,16 +23,13 @@
     <!-- beestyle colors -->
     <link rel="stylesheet" href="stylesheets/dev-beestyle-dark.css">
     <link rel="stylesheet" href="stylesheets/dev-beestyle-light.css">
-    <!-- beestyle forms -->
-    <link rel="stylesheet" href="stylesheets/dev-beestyle-forms.css">
-    <link rel="stylesheet" href="stylesheets/dev-beestyle-forms-dark.css">
-    <link rel="stylesheet" href="stylesheets/dev-beestyle-forms-light.css">
     <!-- modernizr -->
     <script src="javascripts/modernizr.min.js"></script>
     <!-- jquery -->
     <script src="javascripts/jquery.min.js"></script>
     <!-- beeflex options -->
     <script src="javascripts/dev-beeflex-scroll.js"></script>
+    <script src="javascripts/dev-beeflex-columnbrowse.js"></script>
     <script src="javascripts/dev-beeflex-options.js"></script>
     <!-- beestyle options -->
     <script src="javascripts/dev-beestyle-options.js"></script>
@@ -48,13 +46,13 @@
     <script src="javascripts/prettify.min.js"></script>
     <link rel="stylesheet" href="stylesheets/prettify.css">
     <!-- beestyle demo css -->
-    <style>img.logo { margin: -10px 0 -40px 0; } fieldset, .demo { display: inline-block; vertical-align: top; }</style>
+    <style>img.logo { margin: -10px 0 -40px 0; }</style>
 </head>
 <body class="beeLight">
     <section class="beeFlex">
         <header id="header">
             <section class="aligncenter center">
-                <h1>BeeStyle Forms</h1>
+                <h1>BeeStyle Column Browse</h1>
             </section>
             <aside class="left">
                 <p><img src="images/logo.png" alt="Bzt!" class="logo" /></p>
@@ -80,72 +78,20 @@
                 <div class="scroll">
                     <div class="insert">
                     <!-- Main Content -->
-                        <form method="post" action="#">
-                            <fieldset>
-                                <legend>Form Module</legend>
-                                <div>
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" placeholder="Full Name" />
-                                </div>
-                                <div>
-                                    <label for="priority">Priority</label>
-                                    <input type="range" min="0" max="10" name="priority" value="0" id="priority" />
-                                </div>
-                                <div>
-                                    <label for="estimated_hours">Estimated Hours</label>
-                                    <input type="number" name="estimated_hours" min="0" max="100" id="estimated_hours" />
-                                </div>
-                                <div>
-                                    <label for="start_date">Start date</label>
-                                    <input type="date" name="start_date" id="start_date" value="2011-05-01" />
-                                </div>
-                                <div>
-                                    <label for="email">Email contact</label>
-                                    <input type="email" name="email" id="email" placeholder="buzz@beedrives.com" />
-                                </div>
-                                <div>
-                                    <label for="url">Staging URL</label>
-                                    <input type="url" name="url" id="url" placeholder="beedrives.com" />
-                                </div>
-                                <div>
-                                    <label for="project_color">Project color</label>
-                                    <input type="color" name="project_color" id="project_color" />
-                                </div>
-                                <div>
-                                    <label for="password">Password</label>
-                                    <input type="password" name="password" value="" id="password" autocomplete="off" placeholder="8-16 characters" />
-                                </div>
-                                <div>
-                                    <button class="blue">Submit</button><button class="gray">Nevermind</button><button disabled="disabled">Not here</button>
-                                </div>
-                            </fieldset>
-                        </form>
-                        <div class="demo">
-                            <h1>Editable Content Module</h1>
-                            <div>
-                                <p>Name: <span id="name" contenteditable="true">Buzz Buzzer</span></p>
-                            </div>
-                            <div>
-                                <p>Priority: <span id="priority" contenteditable="true">10</span></p>
-                            </div>
-                            <div>
-                                <p>Estimated Hours: <span id="estimated_hours" contenteditable="true">100</span></p>
-                            </div>
-                            <div>
-                                <p>Start date: <span id="start_date" contenteditable="true">2011-05-01</span></p>
-                            </div>
-                            <div>
-                                <p>Email contact: <span id="email" contenteditable="true">buzz@beedrives.com</span></p>
-                            </div>
-                            <div>
-                                <p>Staging URL: <span id="url" contenteditable="true">beedrives.com</span></p>
-                            </div>
-                            <div>
-                                <p>Project color: <span id="project_color" contenteditable="true">green</span></p>
-                            </div>
-                            <div>
-                                <p>Password: <span id="password" contenteditable="true">buzzing bees</span></p>
-                            </div>
+                        <h1>Column Browser</h1>
+                        <div class="beeColumnBrowse">
+                            <section>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </section>
+                            <section>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </section>
+                            <section>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </section>
+                            <section>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </section>
                         </div>
                     <!-- End Main Content -->
                     </div>
@@ -175,7 +121,7 @@
                         <p><a href="./">Home</a><br /><a href="install">Install</a><br /><a href="options">Options</a><br /><a href="eyecandy">EyeCandy</a></p>
                     </nav>
                     <nav class="panel">
-                        <p><strong>Forms</strong> (dev)<br /><a href="lightbox">Slides/Lightbox</a> (dev)<br /><a href="columnbrowse">ColumnBrowse</a> (dev)</p>
+                        <p><a href="forms">Forms</a> (dev)<br /><a href="lightbox">Slides/Lightbox</a> (dev)<br /><strong>ColumnBrowse</strong> (dev)</p>
                     </nav>
                     <!-- End Right Sidebar -->
                 </div>

@@ -26,6 +26,7 @@ html, body {
 ------------------------------------ */
 
 .beeFlex,
+.beeFlex .beeColumnBrowse,
 .beeFlex #header, .beeFlex #header section, .beeFlex #header aside,
 .beeFlex #footer, .beeFlex #footer section, .beeFlex #footer aside,
 .beeFlex #extra, .beeFlex #extra section, .beeFlex #extra aside,
@@ -35,6 +36,7 @@ html, body {
     display: box;
 }
 .beeFlex,
+.beeFlex .beeColumnBrowse section,
 .beeFlex #header section, .beeFlex #header aside,
 .beeFlex #footer section, .beeFlex #footer aside,
 .beeFlex #extra section, .beeFlex #extra aside,
@@ -43,6 +45,7 @@ html, body {
     -webkit-box-orient: vertical;
     box-orient: vertical;
 }
+.beeFlex .beeColumnBrowse,
 .beeFlex #header,
 .beeFlex #footer,
 .beeFlex #extra,
@@ -52,6 +55,7 @@ html, body {
     box-orient: horizontal;
 }
 .beeFlex,
+.beeFlex .beeColumnBrowse,
 .beeFlex #main, .beeFlex #main aside {
     -moz-box-flex: 1;
     -webkit-box-flex: 1;
