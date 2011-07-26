@@ -7,7 +7,12 @@ var beeColumnBrowse = {
             // gather header and footer height
             var headerHeight = $("#header").height();
             var footerHeight = $("#footer").height();
-            var totalHeight = headerHeight + footerHeight + 160;
+            var excludeHeight = 0;
+            $("div.beeColumnExclude").each(function() {
+                var addExcludeHeight = $(this).height();
+                excludeHeight = excludeHeight + addExcludeHeight;
+            });
+            var totalHeight = headerHeight + footerHeight + excludeHeight + 140;
             // gather extra height if visible
             if ($("#extra").is(":visible")) {
                 var extraHeight = $("#extra").height();

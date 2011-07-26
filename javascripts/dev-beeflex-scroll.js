@@ -7,7 +7,7 @@ var beeScroll = {
             // gather header and footer height
             var headerHeight = $("#header").height();
             var footerHeight = $("#footer").height();
-            var totalHeight = headerHeight + footerHeight + 100;
+            var totalHeight = headerHeight + footerHeight + 80;
             // gather extra height if visible
             if ($("#extra").is(":visible")) {
                 var extraHeight = $("#extra").height();
