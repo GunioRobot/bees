@@ -3,6 +3,8 @@
 
     .beeFlex div.beeColumnBrowse section {
         overflow-y: auto;
+        min-width: 100px;
+        max-width: 300px;
     }
 
 /* iPad 2 and smaller
