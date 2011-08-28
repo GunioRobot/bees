@@ -24,7 +24,7 @@
     form {
         display: inline; /* default is block display */
     }
-    input:focus, textarea:focus, select:focus {
+    input:focus, textarea:focus, select:focus, button:focus {
         outline-width: 0; /* removes blue border in webkit */
     }
     select {
