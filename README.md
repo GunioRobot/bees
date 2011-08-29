@@ -6,9 +6,9 @@ Size: 14 KB CSS, 1.7 KB JS (in addition to the libraries below)
 
 Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
-Libraries: jQuery 1.6, Modernizr 2, HTML5 Boilerplate (CSS reset)
+Libraries: jQuery 1.6, Modernizr 2, HTML5 Boilerplate, FlexSlider
 
-Modules: Flex Box, Multi-Column, Matrix, Tables, Animation, Shadows, Rounded Corners
+Modules: Flex Box, ColumnBrowse, Multi-Column, Matrix, Tables, Animation, Shadows, Rounded Corners
 
 Themes: beeLight, beeDark (both shades of gray, green highlights)
 
@@ -28,7 +28,7 @@ Javascript is required for scrolling capabilities within the layout areas combin
 
 Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Opera has no planned support yet)
 
-Todo: integrate CoffeeScript, ColorBox, Slides
+Todo: integrate CoffeeScript, TransformJS, ContextMenu
 
 ### Demos and Usage at: [http://beemuse.net](http://beemuse.net)
 
@@ -40,10 +40,12 @@ Projects/scripts on which this builds include:
 
 [https://github.com/jquery/jquery](https://github.com/jquery/jquery)
 
+[https://github.com/mbmufffin/FlexSlider](https://github.com/mbmufffin/FlexSlider)
+
 Planned projects/scripts to build in include:
 
 [https://github.com/jashkenas/coffee-script](https://github.com/jashkenas/coffee-script)
 
-[https://github.com/jackmoore/colorbox](https://github.com/jackmoore/colorbox)
+[https://github.com/sproutcore/TransformJS](https://github.com/sproutcore/TransformJS)
 
-[https://github.com/nathansearles/Slides](https://github.com/nathansearles/Slides)
+[https://github.com/medialize/jQuery-contextMenu](https://github.com/medialize/jQuery-contextMenu)
