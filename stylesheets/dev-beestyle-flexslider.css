@@ -1,0 +1,85 @@
+/* Configure beeFlip
+------------------------------------ */
+
+.beeFlip .flip {
+    margin: 0; /* reset beestyle-core from 0 10px */
+}
+
+/* Configure FlexSlider
+------------------------------------ */
+
+.flexslider {
+    background: transparent;
+    border: 0 none;
+}
+
+/* Direction Nav */
+.flex-direction-nav li a {
+    background: url(../images/flexslider/bg_direction_nav.png) no-repeat 0 0;
+    margin: -26px 0 0 0;
+    z-index: 50;
+}
+.flex-direction-nav li a.next {
+    right: -6px;
+}
+.flex-direction-nav li a.prev {
+    left: -6px;
+}
+
+/* Control Nav */
+.flex-control-nav {
+    bottom: -25px;
+}
+.flex-control-nav li {
+    margin: 0 0 0 3px;
+}
+.flex-control-nav li a {
+    background: url(../images/flexslider/bg_control_nav.png) no-repeat 0 0;
+    width: 12px;
+    height: 12px;
+}
+
+/* Configure beeSlides
+------------------------------------ */
+
+/* width and height configuration */
+/* height may be calculated automatically only if no beeFlip */
+
+.beeSlides .flexslider {
+    width: 510px; /* configure width */
+}
+.beeSlides .item {
+    width: 150px; /* configure width */
+    height: 150px; /* though .beeSlides height may be calculated automatically, still need to set item height */
+    margin: 10px; /* take these margins into account in width of .beeSlides .slides_container */
+}
+.beeSlides .next, .beeSlides .prev {
+    display: none; /* temporarily hide in order to fade in after delay in beestyle-flexslider.js */
+}
+
+/* beeSlides layout
+------------------------------------ */
+
+.beeSlides {
+    position: relative; /* setup as non-static for absolute positioning relative to this container */
+    display: inline-block; /* automatically sets width of .beeSlides so this element can be centered */
+}
+.beeSlides .item {
+    float: left;
+}
+
+/* iPhone 4 and equivalent
+------------------------------------ */
+
+@media only screen and (max-device-width: 480px) {
+    .beeSlides .flexslider {
+        width: 255px; /* configure width */
+    }
+    .beeSlides .item {
+        margin: 0 5px; /* take these margins into account in width of .beeSlides .slides_container */
+    }
+    .beeSlides .item, .beeSlides .item img {
+        width: 75px; /* configure width */
+        height: 75px; /* though .beeSlides height may be calculated automatically, still need to set item height */
+    }
+}
