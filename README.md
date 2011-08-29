@@ -2,7 +2,7 @@ A responsive modular HTML5 CSS3 framework, primarily targeted to internal projec
 
 ### BeeStyle
 
-Size: 13 KB CSS, 693 B JS (in addition to the libraries below)
+Size: 14 KB CSS, 1.7 KB JS (in addition to the libraries below)
 
 Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
