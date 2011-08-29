@@ -18,15 +18,9 @@
     <script src="javascripts/easing.min.js"></script>
     <!-- beestyle-beeflex -->
     <script src="javascripts/beestyle-beeflex-a2.min.js"></script>
-    <!-- slider -->
-    <link rel="stylesheet" href="stylesheets/flexslider.css">
-    <script src="javascripts/flexslider.min.js"></script>
-    <link rel="stylesheet" href="stylesheets/dev-beestyle-flexslider.css">
-    <script src="javascripts/dev-beestyle-flexslider.js"></script>
-    <!-- lightbox -->
-    <link rel="stylesheet" href="stylesheets/dev-beestyle-lightbox.css">
-    <script src="javascripts/lightbox.min.js"></script>
-    <script src="javascripts/dev-beestyle-lightbox.js"></script>
+    <!-- beestyle-slides-lightbox -->
+    <link rel="stylesheet" href="stylesheets/beestyle-slides-lightbox.min.css">
+    <script src="javascripts/beestyle-slides-lightbox.min.js"></script>
     <!-- beestyle demos -->
     <script src="javascripts/beestyle-demos.min.js"></script>
     <link rel="stylesheet" href="stylesheets/beestyle-demos.min.css">
@@ -38,7 +32,7 @@
     <section class="beeFlex">
         <header id="header">
             <section class="aligncenter center">
-                <h1>Lightbox with FlexSlider</h1>
+                <h1>Lightbox with Slides</h1>
             </section>
             <aside class="left">
                 <p><img src="images/logo.png" alt="Bzt!" class="logo" /></p>
@@ -64,119 +58,268 @@
                 <div class="scroll">
                     <div class="insert">
                     <!-- Main Content -->
-                        <h1>Experimental integration with ProjectSeven Lightshow Magic and <a href="http://flex.madebymufffin.com">FlexSlider</a></h1>
+                        <h1>Experimental integration with ProjectSeven Lightshow Magic and <a href="http://slidesjs.com">Slides</a></h1>
                         <p>Note that any usage of ProjectSeven Lightshow Magic requires a license!</p>
-                        <p>Multiple slideshow support coming to FlexSlider around Wednesday (8/31)</p>
+                        <p>
+                            Webkit issue: on a page with multiple sliders, when css3 3d transforms apply to elements, 
+                            the first slider must first be interacted with before the other sliders; if not, 
+                            all sliders beyond the first slider will advance/ reverse normally, but without easing 
+                            (until after such time as the first is interacted with).
+                        </p>
+                        <h2 class="beeNoteToggle 1">div.beeFlip causes issue inside div.item:</h2>
+                        <div class="beeNote 1">
+<pre><code>.beeFlip {
+    position: relative;
+    <strong>-webkit-perspective: 1000;</strong>
+}
+.beeFlip .flip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    <strong>-webkit-transform-style: preserve-3d;</strong>
+    <strong>-webkit-backface-visibility: hidden;</strong>
+    <strong>-webkit-transition: 0.75s;</strong>
+}
+.beeFlip .front {
+    z-index: 5;
+}
+.beeFlip:hover .front {
+    z-index: 5;
+    <strong>-webkit-transform: rotateY(180deg);</strong>
+}
+.beeFlip .back {
+    z-index: 0;
+    <strong>-webkit-transform: rotateY(-180deg);</strong>
+}
+.beeFlip:hover .back {
+    z-index: 10;
+    <strong>-webkit-transform: rotateY(0deg);</strong>
+}</code></pre>
+                            <p>
+                                <em>Note that relative/ absolute positioning does not cause the problem; 
+                                easing works perfectly on all sliders with above css rules set, 
+                                so long as all css3 3d transform rules (bold) are removed.</em>
+                            </p>
+                        </div>
                     </div>
                     <div class="insert aligncenter">
-                      <div class="beeSlides">
-                        <div class="flexslider">
-                          <ul class="slides">
-                            <li>
-                                <div class="item">
-                                    <div class="beeFlip">
-                                    <a href="#" class="lightbox" rel="1" rev="p7LSM_1">
-                                        <div class="flip front">
-                                            <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
+                        <div class="beeSlides">
+                            <div class="slides_container">
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="1" rev="p7LSM_1">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
                                         </div>
-                                        <div class="flip back">
-                                            <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="2" rev="p7LSM_1">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2497.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2509.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
                                         </div>
-                                    </a>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="3" rev="p7LSM_1">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2499.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2507.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="beeFlip">
-                                    <a href="#" class="lightbox" rel="2" rev="p7LSM_1">
-                                        <div class="flip front">
-                                            <img src="photos/150px/IMG_2497.jpg" alt="" class="beeRound8" />
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="4" rev="p7LSM_1">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2501.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2503.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
                                         </div>
-                                        <div class="flip back">
-                                            <img src="photos/150px/IMG_2509.jpg" alt="" class="beeRound8" />
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="5" rev="p7LSM_1">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
                                         </div>
-                                    </a>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="6" rev="p7LSM_1">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2509.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2497.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="beeFlip">
-                                    <a href="#" class="lightbox" rel="3" rev="p7LSM_1">
-                                        <div class="flip front">
-                                            <img src="photos/150px/IMG_2499.jpg" alt="" class="beeRound8" />
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="7" rev="p7LSM_1">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2507.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2499.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
                                         </div>
-                                        <div class="flip back">
-                                            <img src="photos/150px/IMG_2507.jpg" alt="" class="beeRound8" />
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="8" rev="p7LSM_1">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2503.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2501.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
                                         </div>
-                                    </a>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <div class="beeFlip">
-                                    <a href="#" class="lightbox" rel="4" rev="p7LSM_1">
-                                        <div class="flip front">
-                                            <img src="photos/150px/IMG_2501.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                        <div class="flip back">
-                                            <img src="photos/150px/IMG_2503.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                    </a>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="beeFlip">
-                                    <a href="#" class="lightbox" rel="5" rev="p7LSM_1">
-                                        <div class="flip front">
-                                            <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                        <div class="flip back">
-                                            <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                    </a>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="beeFlip">
-                                    <a href="#" class="lightbox" rel="6" rev="p7LSM_1">
-                                        <div class="flip front">
-                                            <img src="photos/150px/IMG_2509.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                        <div class="flip back">
-                                            <img src="photos/150px/IMG_2497.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                    </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <div class="beeFlip">
-                                    <a href="#" class="lightbox" rel="7" rev="p7LSM_1">
-                                        <div class="flip front">
-                                            <img src="photos/150px/IMG_2507.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                        <div class="flip back">
-                                            <img src="photos/150px/IMG_2499.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                    </a>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="beeFlip">
-                                    <a href="#" class="lightbox" rel="8" rev="p7LSM_1">
-                                        <div class="flip front">
-                                            <img src="photos/150px/IMG_2503.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                        <div class="flip back">
-                                            <img src="photos/150px/IMG_2501.jpg" alt="" class="beeRound8" />
-                                        </div>
-                                    </a>
-                                    </div>
-                                </div>
-                            </li>
-                          </ul>
+                            </div>
+                            <a href="#" class="prev"><img src="images/slides/arrow-prev.png" width="24" height="43" alt="previous" /></a>
+                            <a href="#" class="next"><img src="images/slides/arrow-next.png" width="24" height="43" alt="next" /></a>
                         </div>
-                      </div>
+                        <br />
+                        <div class="beeSlides">
+                            <div class="slides_container">
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="1" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="2" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2497.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2509.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="3" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2499.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2507.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="4" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2501.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2503.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="5" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2551.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2465.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="6" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2509.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2497.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="7" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2507.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2499.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="beeFlip">
+                                        <a href="#" class="lightbox" rel="8" rev="p7LSM_2">
+                                            <div class="flip front">
+                                                <img src="photos/150px/IMG_2503.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                            <div class="flip back">
+                                                <img src="photos/150px/IMG_2501.jpg" alt="" class="beeRound8" />
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="prev"><img src="images/slides/arrow-prev.png" width="24" height="43" alt="previous" /></a>
+                            <a href="#" class="next"><img src="images/slides/arrow-next.png" width="24" height="43" alt="next" /></a>
+                        </div>
                     <!-- End Main Content -->
                     </div>
                     <div style="display: none;">
@@ -383,7 +526,7 @@
                         <p><a href="./">Home</a><br /><a href="install">Install</a><br /><a href="options">Options</a><br /><a href="eyecandy">EyeCandy</a></p>
                     </nav>
                     <nav class="panel">
-                        <p><a href="forms">Forms</a> (dev)<br /><strong>Slides/Lightbox</strong> (dev)<br /><a href="columnbrowse">ColumnBrowse</a> (dev)</p>
+                        <p><a href="forms">Forms</a><br /><strong>Lightbox/FlexSlider</strong><br /><a href="columnbrowse">ColumnBrowse</a></p>
                     </nav>
                     <!-- End Right Sidebar -->
                 </div>

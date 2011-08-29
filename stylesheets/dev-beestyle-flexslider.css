@@ -82,4 +82,8 @@
         width: 75px; /* configure width */
         height: 75px; /* though .beeSlides height may be calculated automatically, still need to set item height */
     }
+    .flex-direction-nav li a {
+        width: 26px; /* todo: why is this not working? cloudflare caching issue? */
+        height: 26px; /* todo: why is this not working? cloudflare caching issue? */
+    }
 }
