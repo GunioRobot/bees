@@ -8,7 +8,7 @@ Compatibility: Safari 3+, iOS 3+, Chrome 5+, Android 2+, Firefox 3+
 
 Libraries: jQuery 1.6, Modernizr 2, HTML5 Boilerplate, FlexSlider
 
-Modules: Flex Box, ColumnBrowse, Multi-Column, Matrix, Tables, Animation, Shadows, Rounded Corners
+Modules: Flex Box, ColumnBrowse, Multi-Column, Matrix, Tables, Forms, Animation, Shadows, Rounded Corners
 
 Themes: beeLight, beeDark (both shades of gray, green highlights)
 
