@@ -53,7 +53,7 @@
     height: 150px; /* though .beeSlides height may be calculated automatically, still need to set item height */
     margin: 10px; /* take these margins into account in width of .beeSlides .slides_container */
 }
-.beeSlides .next, .beeSlides .prev {
+.beeSlides .next, .beeSlides .prev, .beeSlides .flex-control-nav {
     display: none; /* temporarily hide in order to fade in after delay in beestyle-flexslider.js */
 }
 
