@@ -83,7 +83,17 @@
         height: 75px; /* though .beeSlides height may be calculated automatically, still need to set item height */
     }
     .flex-direction-nav li a {
-        width: 26px; /* todo: why is this not working? cloudflare caching issue? */
-        height: 26px; /* todo: why is this not working? cloudflare caching issue? */
+        width: 26px;
+        height: 26px;
+        background: url(../images/flexslider/bg_direction_nav_ios.png) no-repeat 0 0;
+        margin: -13px 0 0 0;
+        z-index: 50;
+    }
+    .flex-direction-nav li a.next {
+        background-position: -26px 0;
+        right: -3px;
+    }
+    .flex-direction-nav li a.prev {
+        left: -3px;
     }
 }
