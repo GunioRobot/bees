@@ -6,6 +6,7 @@
         background-color: #eee; /* 93% gray */
         background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
         background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
+        text-shadow: 0 1px 1px #fff; /* indented look */
     }
     .beeLight hr {
         border-top: 1px solid #666; /* 40% gray */
@@ -41,6 +42,7 @@
     .beeLight .beeFlex .panel, .beeLight .beeFlex #header, .beeLight .beeFlex #footer {
         color: #eee; /* 93% gray */
         background-color: #333; /* 20% gray */
+        text-shadow: 0 1px 1px #000; /* indented look */
     }
     .beeLight .beeFlex #header {
         background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#404040)); /* 20% gray to 25% gray */
@@ -85,6 +87,7 @@
     .beeLight .beeFlex .panel {
         color: #333; /* 20% gray */
         background-color: transparent;
+        text-shadow: 0 1px 1px #fff; /* indented look */
     }
     .beeLight .beeFlex .left .panel,
     .beeLight .beeFlex .right .panel {
