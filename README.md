@@ -49,3 +49,5 @@ Planned projects/scripts to build in include:
 [https://github.com/sproutcore/TransformJS](https://github.com/sproutcore/TransformJS)
 
 [https://github.com/medialize/jQuery-contextMenu](https://github.com/medialize/jQuery-contextMenu)
+
+[https://github.com/jyoungblood/smoke.js](https://github.com/jyoungblood/smoke.js)
