@@ -26,7 +26,7 @@ iPhone only: 3 column layout becomes 1 column, displaying main content within ea
 
 Javascript is required for scrolling capabilities within the layout areas combined with a sticky footer (not iPhone/iPad)
 
-Issues: no IE or Opera compatibility (IE plans to implement flex box in IE10, Opera has no planned support yet)
+Support: IE10 support only; no earlier IE or Opera compatibility (flex box spec still in flux)
 
 Todo: integrate CoffeeScript, TransformJS, ContextMenu
 
