@@ -1,0 +1,108 @@
+@import "dev-beestyle-colors";
+
+body.beeLight {
+
+/* Common Elements
+------------------------------------ */
+
+    color: $gray20;
+    background-color: $gray93;
+    background: -webkit-gradient(linear, left top, left bottom, from($gray88), to($gray93));
+    background: -moz-linear-gradient(top center, $gray88, $gray93);
+    text-shadow: 0 1px 1px white; // indented look
+    
+    hr {
+        border-top: 1px solid $gray40;
+    }
+    
+    // Links
+    
+    a, a:active, a:visited, a:hover {
+        color: $greenDark;
+    }
+    
+    // Forms
+    
+    select, input, textarea {
+        color: $gray20;
+        background-color: $gray93;
+        border: 1px solid $gray20;
+    }
+
+/* Shadow Module
+------------------------------------ */
+
+    .beeShadow {
+        margin: 10px; // to accommodate shadow
+        -webkit-box-shadow: 0 0 10px $gray20;
+        -moz-box-shadow: 0 0 10px $gray20;
+        box-shadow: 0 0 10px $gray20;
+    }
+
+/* Layout Elements
+------------------------------------ */
+
+    .beeFlex {
+        .panel, #header, #footer {
+            color: $gray93;
+            background-color: $gray20;
+            text-shadow: 0 -1px 1px black; // indented look
+        }
+        .panel {
+            // iPhone 4 and equivalent
+            @media only screen and (max-device-width: 480px) {
+                color: $gray20;
+                background-color: transparent;
+                text-shadow: 0 1px 1px white; // indented look
+            }
+        }
+        #header {
+            background: -webkit-gradient(linear, left top, left bottom, from($gray20), to($gray25));
+            background: -moz-linear-gradient(top center, $gray20, $gray25);
+            -webkit-box-shadow: 0 1px 8px $gray73, 0 0 12px $gray15 inset;
+            -moz-box-shadow: 0 1px 8px $gray73, 0 0 12px $gray15 inset;
+            box-shadow: 0 1px 8px $gray73, 0 0 12px $gray15 inset;
+        }
+        #footer {
+            background: -webkit-gradient(linear, left top, left bottom, from($gray25), to($gray20));
+            background: -moz-linear-gradient(top center, $gray25, $gray20);
+            -webkit-box-shadow: 0 -1px 8px $gray78, 0 0 12px $gray15 inset;
+            -moz-box-shadow: 0 -1px 8px $gray78, 0 0 12px $gray15 inset;
+            box-shadow: 0 -1px 8px $gray78, 0 0 12px $gray15 inset;
+        }
+        .left .panel {
+            background: -webkit-gradient(linear, left top, right top, from($gray20), to($gray25));
+            background: -moz-linear-gradient(left center, $gray20, $gray25);
+        }
+        .right .panel {
+            background: -webkit-gradient(linear, left top, right top, from($gray25), to($gray20));
+            background: -moz-linear-gradient(left center, $gray25, $gray20);
+        }
+        .left .panel, .right .panel {
+            -webkit-box-shadow: 0 0 6px $gray15 inset;
+            -moz-box-shadow: 0 0 6px $gray15 inset;
+            -box-shadow: 0 0 6px $gray15 inset;
+            // iPhone 4 and equivalent
+            @media only screen and (max-device-width: 480px) {
+                background-image: none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                -box-shadow: none;
+            }
+        }
+
+        // Links
+
+        .panel a, .panel a:active, .panel a:visited, .panel a:hover,
+        #header a, #header a:active, #header a:visited, #header a:hover,
+        #footer a, #footer a:active, #footer a:visited, #footer a:hover {
+            color: $greenLight;
+        }
+        .panel a, .panel a:active, .panel a:visited, .panel a:hover {
+            // iPhone 4 and equivalent
+            @media only screen and (max-device-width: 480px) {
+                color: $greenDark;
+            }
+        }
+    }
+}

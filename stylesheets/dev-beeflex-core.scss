@@ -1,0 +1,132 @@
+/* Initial Setup
+------------------------------------ */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    // iPhone 4 and equivalent
+    @media only screen and (max-device-width: 480px) {
+        height: auto;
+    }
+}
+.beeFlex,
+.beeFlex .beeColumnBrowse {
+    width: 100%;
+    min-height: 100%;
+    // iPhone 4 and equivalent
+    @media only screen and (max-device-width: 480px) {
+        min-height: auto;
+    }
+}
+
+/* Layout Elements
+------------------------------------ */
+
+@mixin beeFlexSetup {
+    display: -ms-box;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+}
+@mixin beeFlexOrientation($orient: vertical) {
+    -ms-box-orient: $orient;
+    -moz-box-orient: $orient;
+    -webkit-box-orient: $orient;
+    box-orient: $orient;
+}
+@mixin beeFlexRelativeFlex($flex: 1) {
+    -ms-box-flex: $flex;
+    -moz-box-flex: $flex;
+    -webkit-box-flex: $flex;
+    box-flex: $flex;
+}
+@mixin beeFlexRenderingOrder($ordinal) {
+    -ms-box-ordinal-group: $ordinal;
+    -moz-box-ordinal-group: $ordinal;
+    -webkit-box-ordinal-group: $ordinal;
+    box-ordinal-group: $ordinal;
+}
+
+.beeFlex {
+
+    @include beeFlexSetup;
+    @include beeFlexOrientation;
+    @include beeFlexRelativeFlex;
+
+    // Setup
+
+    .beeColumnBrowse, .beeColumnBrowse section,
+    #header, #header section, #header aside,
+    #footer, #footer section, #footer aside,
+    #extra, #extra section, #extra aside,
+    #main, #main section, #main aside {
+        @include beeFlexSetup;
+    }
+
+    // Orientation
+
+    .beeColumnBrowse section,
+    #header section, #header aside,
+    #footer section, #footer aside,
+    #extra section, #extra aside,
+    #main section, #main aside {
+        @include beeFlexOrientation;
+    }
+    .beeColumnBrowse,
+    #header,
+    #footer,
+    #extra,
+    #main {
+        @include beeFlexOrientation(horizontal);
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            @include beeFlexOrientation;
+        }
+    }
+
+    // Relative Flex
+
+    .beeColumnBrowse,
+    #main, #main aside {
+        @include beeFlexRelativeFlex;
+    }
+    #header section,
+    #footer section,
+    #extra section,
+    #main section {
+        @include beeFlexRelativeFlex(3);
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            @include beeFlexRelativeFlex;
+        }
+    }
+
+    // Rendering Order
+
+    #header section.center,
+    #footer section.center,
+    #extra section.center,
+    #main section.center {
+        @include beeFlexRenderingOrder(2);
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            @include beeFlexRenderingOrder(1);
+        }
+    }
+    #header aside.left,
+    #footer aside.left,
+    #extra aside.left,
+    #main aside.left {
+        @include beeFlexRenderingOrder(1);
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            @include beeFlexRenderingOrder(2);
+        }
+    }
+    #header aside.right,
+    #footer aside.right,
+    #extra aside.right,
+    #main aside.right {
+        @include beeFlexRenderingOrder(3);
+    }
+}

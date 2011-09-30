@@ -1,0 +1,198 @@
+@import "dev-beestyle-colors";
+
+/* HTML5 Boilerplate Resets
+------------------------------------ */
+
+    html {
+        overflow-y: visible; // default is visible not scroll
+    }
+
+    // selection declarations must be separate
+    // has to be defined unthemed
+    ::-moz-selection {
+        background: $greenHighlight;
+        color: $grayDark;
+        text-shadow: none;
+    }
+    ::selection {
+        background: $greenHighlight;
+        color: $grayDark;
+        text-shadow: none;
+    }
+
+/* Form Element Resets
+------------------------------------ */
+
+    form {
+        display: inline; // default is block display
+    }
+    input:focus, textarea:focus, select:focus, button:focus {
+        outline-width: 0; // default is browser-specific
+    }
+    select {
+        cursor: pointer; // default is arrow pointer
+    }
+
+/* Table Module
+------------------------------------ */
+// FF3+ SF3+ CH3+ IE8+
+
+    .beeTable {
+        display: table;
+        div.row {
+            display: table-row;
+        }
+        div.cell {
+            display: table-cell;
+            vertical-align: top;
+        }
+        // horizontal alignment
+        div.cell.left {
+            text-align: left;
+        }
+        div.cell.center {
+            text-align: center;
+        }
+        div.cell.right {
+            text-align: right;
+        }
+        // vertical alignment
+        div.cell.top {
+            vertical-align: top;
+        }
+        div.cell.middle {
+            vertical-align: middle;
+        }
+        div.cell.bottom {
+            vertical-align: bottom;
+        }
+    }
+    .beeTable.expand {
+        width: 100%;
+        height: 100%;
+    }
+
+/* Matrix Module
+------------------------------------ */
+// FF3+ SF3+ CH3+ IE8+
+
+    .beeMatrix > div {
+        display: inline-block;
+    }
+    .beeMatrix.top > div {
+        vertical-align: top;
+    }
+    .beeMatrix.middle > div {
+        vertical-align: middle;
+    }
+    .beeMatrix.bottom > div {
+        vertical-align: bottom;
+    }
+
+/* Multiple Column Module
+------------------------------------ */
+// FF3+ SF3+ CH3+
+
+    @mixin beeColumn($count: 2) {
+        -webkit-column-count: $count;
+        -moz-column-count: $count;
+        column-count: $count;
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            -webkit-column-count: auto;
+            -moz-column-count: auto;
+            column-count: auto;
+        }
+    }
+    @mixin beeColumnHeader {
+        // following values not yet supported
+        // -webkit-column-break-before: always;
+        -webkit-column-break-after: avoid;
+        -webkit-column-break-inside: avoid;
+        // -moz-column-break-before: always;
+        -moz-column-break-after: avoid;
+        -moz-column-break-inside: avoid;
+        // column-break-before: always;
+        column-break-after: avoid;
+        column-break-inside: avoid;
+    }
+
+    .beeColumn2 {
+        @include beeColumn;
+        h1, h2, h3, h4, h5, h6 {
+            @include beeColumnHeader;
+        }
+    }
+    .beeColumn3 {
+        @include beeColumn(3);
+        h1, h2, h3, h4, h5, h6 {
+            @include beeColumnHeader;
+        }
+    }
+    .beeColumn4 {
+        @include beeColumn(4);
+        h1, h2, h3, h4, h5, h6 {
+            @include beeColumnHeader;
+        }
+    }
+
+/* Rounded Corner Module
+------------------------------------ */
+// FF3+ SF3+ CH4+ IE9+
+
+    @mixin beeRound($rounding: 5px) {
+        -webkit-border-radius: $rounding $rounding;
+        -moz-border-radius: $rounding $rounding;
+        border-radius: $rounding $rounding;
+    }
+
+    .beeRound5 {
+        @include beeRound;
+    }
+    .beeRound8 {
+        @include beeRound(8px);
+    }
+    .beeRound10 {
+        @include beeRound(10px);
+    }
+    .beeRound15 {
+        @include beeRound(15px);
+    }
+    .beeRound20 {
+        @include beeRound(20px);
+    }
+
+/* Animation Module
+------------------------------------ */
+// css3 transforms :: FF3.5+ SF3+ CH3+ */
+// css3 transitions :: FF4+ SF3+ CH3+ */
+// css3 animations :: SF4+ CH4+ */
+// css3 3d transforms :: SF5+ */
+
+    .beeFlip {
+        position: relative;
+        -webkit-perspective: 1000;
+        .flip {
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            -webkit-transition: 0.75s;
+        }
+        .front {
+            z-index: 5;
+        }
+        .back {
+            z-index: 0;
+            -webkit-transform: rotateY(-180deg);
+        }
+    }
+    .beeFlip:hover .front {
+        z-index: 5;
+        -webkit-transform: rotateY(180deg);
+    }
+    .beeFlip:hover .back {
+        z-index: 10;
+        -webkit-transform: rotateY(0deg);
+    }
