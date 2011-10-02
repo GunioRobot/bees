@@ -1,23 +1,8 @@
-@import "dev-beestyle-colors";
-
 /* HTML5 Boilerplate Resets
 ------------------------------------ */
 
     html {
         overflow-y: visible; // default is visible not scroll
-    }
-
-    // selection declarations must be separate
-    // has to be defined unthemed
-    ::-moz-selection {
-        background: $greenHighlight;
-        color: $grayDark;
-        text-shadow: none;
-    }
-    ::selection {
-        background: $greenHighlight;
-        color: $grayDark;
-        text-shadow: none;
     }
 
 /* Form Element Resets

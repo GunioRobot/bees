@@ -1,21 +1,28 @@
-// shades of green
+// // // // // configure // // // // //
 
-    $greenHighlight: rgba(195,255,98,0.5); // day-glow green
+    // accent shades
 
-    $greenLight: #c3ff62; // light green
-    $greenDark: #619e00; // dark green
+    $colorAccentHighlight: rgba(195,255,98,0.5); // day-glo green
+    $colorAccentLight: #c3ff62; // light green
+    $colorAccentDark: #619e00; // dark green
 
-// shades of gray
+    // main shades
 
-    $grayLight: #f2f2f2; // 95% white
-    $grayDark: #0d0d0d; // 95% black
+    $colorLight: #f2f2f2; // 95% gray
+    $colorDark: #0d0d0d; // 5% gray
 
-    $gray10: #1a1a1a; // 10% gray
-    $gray15: #262626; // 15% gray
-    $gray20: #333; // 20% gray
-    $gray25: #404040; // 25% gray
-    $gray40: #666; // 40% gray
-    $gray73: #bababa; // 73% gray
-    $gray78: #c7c7c7; // 78% gray
-    $gray88: #e0e0e0; // 88% gray
-    $gray93: #eee; // 93% gray
+// // // // // auto-calcs // // // // //
+
+    // variations on main shades
+
+    $colorDark2x: lighten($colorDark, 5%); // 10% gray
+    $colorDark3x: lighten($colorDark, 10%); // 15% gray
+    $colorDark4x: lighten($colorDark, 15%); // 20% gray
+    $colorDark5x: lighten($colorDark, 20%); // 25% gray
+
+    $colorMid: lighten($colorDark, 35%); // 40% gray
+
+    $colorLight5x: darken($colorLight, 22%); // 73% gray
+    $colorLight4x: darken($colorLight, 17%); // 78% gray
+    $colorLight3x: darken($colorLight, 7%); // 88% gray
+    $colorLight2x: darken($colorLight, 2%); // 93% gray

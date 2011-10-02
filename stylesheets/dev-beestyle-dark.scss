@@ -1,32 +1,45 @@
 @import "dev-beestyle-colors";
 
+/* HTML5 Boilerplate Resets
+------------------------------------ */
+
+    // selection declarations must be separate and unthemed
+    ::-moz-selection {
+        background: $colorAccentHighlight;
+        color: $colorDark;
+    }
+    ::selection {
+        background: $colorAccentHighlight;
+        color: $colorDark;
+    }
+
 body.beeDark {
 
 /* Common Elements
 ------------------------------------ */
 
-    color: $gray93;
-    background-color: $gray20;
-    background: -webkit-gradient(linear, left top, left bottom, from($gray20), to($gray25));
-    background: -moz-linear-gradient(top center, $gray20, $gray25);
+    color: $colorLight2x;
+    background-color: $colorDark4x;
+    background: -webkit-gradient(linear, left top, left bottom, from($colorDark4x), to($colorDark5x));
+    background: -moz-linear-gradient(top center, $colorDark4x, $colorDark5x);
     text-shadow: 0 -1px 1px black; // indented look
 
     hr {
-        border-top: 1px solid $gray73;
+        border-top: 1px solid $colorLight5x;
     }
     
     // Links
     
     a, a:active, a:visited, a:hover {
-        color: $greenLight;
+        color: $colorAccentLight;
     }
     
     // Forms
     
     select, input, textarea {
-        color: $gray93;
-        background-color: $gray20;
-        border: 1px solid $gray93;
+        color: $colorLight2x;
+        background-color: $colorDark4x;
+        border: 1px solid $colorLight2x;
     }
 
 /* Shadow Module
@@ -34,9 +47,9 @@ body.beeDark {
 
     .beeShadow {
         margin: 10px; // to accommodate shadow
-        -webkit-box-shadow: 0 0 10px $gray93;
-        -moz-box-shadow: 0 0 10px $gray93;
-        box-shadow: 0 0 10px $gray93;
+        -webkit-box-shadow: 0 0 10px $colorLight2x;
+        -moz-box-shadow: 0 0 10px $colorLight2x;
+        box-shadow: 0 0 10px $colorLight2x;
     }
 
 /* Layout Elements
@@ -44,44 +57,44 @@ body.beeDark {
 
     .beeFlex {
         .panel, #header, #footer {
-            color: $gray20;
-            background-color: $gray93;
+            color: $colorDark4x;
+            background-color: $colorLight2x;
             text-shadow: 0 1px 1px white; // indented look
         }
         .panel {
             // iPhone 4 and equivalent
             @media only screen and (max-device-width: 480px) {
-                color: $gray93;
+                color: $colorLight2x;
                 background-color: transparent;
                 text-shadow: 0 -1px 1px black; // indented look
             }
         }
         #header {
-            background: -webkit-gradient(linear, left top, left bottom, from($gray88), to($gray93));
-            background: -moz-linear-gradient(top center, $gray88, $gray93);
-            -webkit-box-shadow: 0 1px 8px $gray10, 0 0 12px $gray73 inset;
-            -moz-box-shadow: 0 1px 8px $gray10, 0 0 12px $gray73 inset;
-            box-shadow: 0 1px 8px $gray10, 0 0 12px $gray73 inset;
+            background: -webkit-gradient(linear, left top, left bottom, from($colorLight3x), to($colorLight2x));
+            background: -moz-linear-gradient(top center, $colorLight3x, $colorLight2x);
+            -webkit-box-shadow: 0 1px 8px $colorDark2x, 0 0 12px $colorLight5x inset;
+            -moz-box-shadow: 0 1px 8px $colorDark2x, 0 0 12px $colorLight5x inset;
+            box-shadow: 0 1px 8px $colorDark2x, 0 0 12px $colorLight5x inset;
         }
         #footer {
-            background: -webkit-gradient(linear, left top, left bottom, from($gray93), to($gray88));
-            background: -moz-linear-gradient(top center, $gray93, $gray88);
-            -webkit-box-shadow: 0 -1px 8px $gray15, 0 0 12px $gray73 inset;
-            -moz-box-shadow: 0 -1px 8px $gray15, 0 0 12px $gray73 inset;
-            box-shadow: 0 -1px 8px $gray15, 0 0 12px $gray73 inset;
+            background: -webkit-gradient(linear, left top, left bottom, from($colorLight2x), to($colorLight3x));
+            background: -moz-linear-gradient(top center, $colorLight2x, $colorLight3x);
+            -webkit-box-shadow: 0 -1px 8px $colorDark3x, 0 0 12px $colorLight5x inset;
+            -moz-box-shadow: 0 -1px 8px $colorDark3x, 0 0 12px $colorLight5x inset;
+            box-shadow: 0 -1px 8px $colorDark3x, 0 0 12px $colorLight5x inset;
         }
         .left .panel {
-            background: -webkit-gradient(linear, left top, right top, from($gray88), to($gray93));
-            background: -moz-linear-gradient(left center, $gray88, $gray93);
+            background: -webkit-gradient(linear, left top, right top, from($colorLight3x), to($colorLight2x));
+            background: -moz-linear-gradient(left center, $colorLight3x, $colorLight2x);
         }
         .right .panel {
-            background: -webkit-gradient(linear, left top, right top, from($gray93), to($gray88));
-            background: -moz-linear-gradient(left center, $gray93, $gray88);
+            background: -webkit-gradient(linear, left top, right top, from($colorLight2x), to($colorLight3x));
+            background: -moz-linear-gradient(left center, $colorLight2x, $colorLight3x);
         }
         .left .panel, .right .panel {
-            -webkit-box-shadow: 0 0 6px $gray73 inset;
-            -moz-box-shadow: 0 0 6px $gray73 inset;
-            -box-shadow: 0 0 6px $gray73 inset;
+            -webkit-box-shadow: 0 0 6px $colorLight5x inset;
+            -moz-box-shadow: 0 0 6px $colorLight5x inset;
+            -box-shadow: 0 0 6px $colorLight5x inset;
             // iPhone 4 and equivalent
             @media only screen and (max-device-width: 480px) {
                 background-image: none;
@@ -96,12 +109,12 @@ body.beeDark {
         .panel a, .panel a:active, .panel a:visited, .panel a:hover,
         #header a, #header a:active, #header a:visited, #header a:hover,
         #footer a, #footer a:active, #footer a:visited, #footer a:hover {
-            color: $greenDark;
+            color: $colorAccentDark;
         }
         .panel a, .panel a:active, .panel a:visited, .panel a:hover {
             // iPhone 4 and equivalent
             @media only screen and (max-device-width: 480px) {
-                color: $greenLight;
+                color: $colorAccentLight;
             }
         }
     }

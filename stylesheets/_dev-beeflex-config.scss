@@ -1,0 +1,18 @@
+// // // // // configure // // // // //
+
+    // sidebars
+
+    $sidebarMinWidth: 100px;
+    $sidebarMaxWidth: 200px;
+
+    // overall margins and padding
+
+    $paddingDefault: 20px;
+    $paddingMobile: 5px;
+
+// // // // // auto-calcs // // // // //
+
+    // edge case margins and padding
+
+    $paddingDefaultHalf: $paddingDefault / 2;
+    $paddingMobileTwice: $paddingMobile * 2;
