@@ -1,202 +1,202 @@
 /* HTML5 Boilerplate Resets
 ------------------------------------ */
+html {
+  overflow-y: visible;
+}
 
-    html {
-        overflow-y: visible;
-    }
-    ::-moz-selection {
-        background: rgba(195,255,98,0.5); /* light green */
-        color: #0d0d0d;
-        text-shadow: none;
-    }
-    ::selection {
-        background: rgba(195,255,98,0.5); /* light green */
-        color: #0d0d0d;
-        text-shadow: none;
-    }
-    a:link {
-        -webkit-tap-highlight-color: rgba(195,255,98,0.5); /* light green */
-    }
-
-/* Common Elements
+/* Form Element Resets
 ------------------------------------ */
+form {
+  display: inline;
+}
 
-    form {
-        display: inline; /* default is block display */
-    }
-    input:focus, textarea:focus, select:focus, button:focus {
-        outline-width: 0; /* removes blue border in webkit */
-    }
-    select {
-        cursor: pointer;
-    }
+input:focus, textarea:focus, select:focus, button:focus {
+  outline-width: 0;
+}
+
+select {
+  cursor: pointer;
+}
 
 /* Table Module
 ------------------------------------ */
+.beeTable {
+  display: table;
+}
+.beeTable div.row {
+  display: table-row;
+}
+.beeTable div.cell {
+  display: table-cell;
+  vertical-align: top;
+}
+.beeTable div.cell.left {
+  text-align: left;
+}
+.beeTable div.cell.center {
+  text-align: center;
+}
+.beeTable div.cell.right {
+  text-align: right;
+}
+.beeTable div.cell.top {
+  vertical-align: top;
+}
+.beeTable div.cell.middle {
+  vertical-align: middle;
+}
+.beeTable div.cell.bottom {
+  vertical-align: bottom;
+}
 
-    /* css2 tables :: FF3+ SF3+ CH3+ IE8+ */
-
-    .beeTable {
-        display: table;
-    }
-    .beeTable.expand {
-        width: 100%;
-        height: 100%;
-    }
-    .beeTable div.row {
-        display: table-row;
-    }
-    .beeTable div.cell {
-        display: table-cell;
-        vertical-align: top;
-    }
-
-    /* css2 table cells :: horizontal alignment */
-
-    .beeTable div.cell.left {
-        text-align: left;
-    }
-    .beeTable div.cell.center {
-        text-align: center;
-    }
-    .beeTable div.cell.right {
-        text-align: right;
-    }
-
-    /* css2 table cells :: vertical alignment */
-
-    .beeTable div.cell.top {
-        vertical-align: top;
-    }
-    .beeTable div.cell.middle {
-        vertical-align: middle;
-    }
-    .beeTable div.cell.bottom {
-        vertical-align: bottom;
-    }
+.beeTable.expand {
+  width: 100%;
+  height: 100%;
+}
 
 /* Matrix Module
 ------------------------------------ */
+.beeMatrix > div {
+  display: inline-block;
+}
 
-    /* css2 display inline blocks :: FF3+ SF3+ CH3+ IE8+ */
+.beeMatrix.top > div {
+  vertical-align: top;
+}
 
-    .beeMatrix > div {
-        display: inline-block;
-    }
-    .beeMatrix.top > div {
-        vertical-align: top;
-    }
-    .beeMatrix.middle > div {
-        vertical-align: middle;
-    }
-    .beeMatrix.bottom > div {
-        vertical-align: bottom;
-    }
+.beeMatrix.middle > div {
+  vertical-align: middle;
+}
+
+.beeMatrix.bottom > div {
+  vertical-align: bottom;
+}
 
 /* Multiple Column Module
 ------------------------------------ */
+.beeColumn2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeColumn2 {
+    -webkit-column-count: auto;
+    -moz-column-count: auto;
+    column-count: auto;
+  }
+}
+.beeColumn2 h1, .beeColumn2 h2, .beeColumn2 h3, .beeColumn2 h4, .beeColumn2 h5, .beeColumn2 h6 {
+  -webkit-column-break-after: avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-after: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-after: avoid;
+  column-break-inside: avoid;
+}
 
-    /* css3 multi-column layout :: FF3+ SF3+ CH3+ */
+.beeColumn3 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeColumn3 {
+    -webkit-column-count: auto;
+    -moz-column-count: auto;
+    column-count: auto;
+  }
+}
+.beeColumn3 h1, .beeColumn3 h2, .beeColumn3 h3, .beeColumn3 h4, .beeColumn3 h5, .beeColumn3 h6 {
+  -webkit-column-break-after: avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-after: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-after: avoid;
+  column-break-inside: avoid;
+}
 
-    .beeColumn2 {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }
-    .beeColumn3 {
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
-    }
-    
-    /* following values not yet supported */
-    
-    .beeColumn2 h1, .beeColumn3 h1 {
-        /* -webkit-column-break-before: always; */
-        -webkit-column-break-after: avoid;
-        -webkit-column-break-inside: avoid;
-        /* -moz-column-break-before: always; */
-        -moz-column-break-after: avoid;
-        -moz-column-break-inside: avoid;
-        /* column-break-before: always; */
-        column-break-after: avoid;
-        column-break-inside: avoid;
-    }
+.beeColumn4 {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeColumn4 {
+    -webkit-column-count: auto;
+    -moz-column-count: auto;
+    column-count: auto;
+  }
+}
+.beeColumn4 h1, .beeColumn4 h2, .beeColumn4 h3, .beeColumn4 h4, .beeColumn4 h5, .beeColumn4 h6 {
+  -webkit-column-break-after: avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-after: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-after: avoid;
+  column-break-inside: avoid;
+}
 
 /* Rounded Corner Module
 ------------------------------------ */
+.beeRound5 {
+  -webkit-border-radius: 5px 5px;
+  -moz-border-radius: 5px 5px;
+  border-radius: 5px 5px;
+}
 
-    /* css3 rounded corners :: FF3+ SF3+ CH4+ IE9+ */
+.beeRound8 {
+  -webkit-border-radius: 8px 8px;
+  -moz-border-radius: 8px 8px;
+  border-radius: 8px 8px;
+}
 
-    .beeRound5 {
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-    }
-    .beeRound8 {
-        -webkit-border-radius: 8px;
-        -moz-border-radius: 8px;
-        border-radius: 8px;
-    }
-    .beeRound10 {
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-    .beeRound15 {
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        border-radius: 15px;
-    }
-    .beeRound20 {
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        border-radius: 20px;
-    }
+.beeRound10 {
+  -webkit-border-radius: 10px 10px;
+  -moz-border-radius: 10px 10px;
+  border-radius: 10px 10px;
+}
+
+.beeRound15 {
+  -webkit-border-radius: 15px 15px;
+  -moz-border-radius: 15px 15px;
+  border-radius: 15px 15px;
+}
+
+.beeRound20 {
+  -webkit-border-radius: 20px 20px;
+  -moz-border-radius: 20px 20px;
+  border-radius: 20px 20px;
+}
 
 /* Animation Module
 ------------------------------------ */
+.beeFlip {
+  position: relative;
+  -webkit-perspective: 1000;
+}
+.beeFlip .flip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: 0.75s;
+}
+.beeFlip .front {
+  z-index: 5;
+}
+.beeFlip .back {
+  z-index: 0;
+  -webkit-transform: rotateY(-180deg);
+}
 
-    /* css3 transforms :: FF3.5+ SF3+ CH3+ */
-    /* css3 transitions :: FF4+ SF3+ CH3+ */
-    /* css3 animations :: SF4+ CH4+ */
-    /* css3 3d transforms :: SF5+ */
+.beeFlip:hover .front {
+  z-index: 5;
+  -webkit-transform: rotateY(180deg);
+}
 
-    .beeFlip {
-        position: relative;
-        -webkit-perspective: 1000;
-    }
-    .beeFlip .flip {
-        position: absolute;
-        top: 0;
-        left: 0;
-        -webkit-transform-style: preserve-3d;
-        -webkit-backface-visibility: hidden;
-        -webkit-transition: 0.75s;
-    }
-    .beeFlip .front {
-        z-index: 5;
-    }
-    .beeFlip:hover .front {
-        z-index: 5;
-        -webkit-transform: rotateY(180deg);
-    }
-    .beeFlip .back {
-        z-index: 0;
-        -webkit-transform: rotateY(-180deg);
-    }
-    .beeFlip:hover .back {
-        z-index: 10;
-        -webkit-transform: rotateY(0deg);
-    }
-
-/* iPhone 4 and equivalent
------------------------------------- */
-
-@media only screen and (max-device-width: 480px) {
-    .beeColumn2, .beeColumn3 {
-        -webkit-column-count: auto;
-        -moz-column-count: auto;
-        column-count: auto;
-    }
+.beeFlip:hover .back {
+  z-index: 10;
+  -webkit-transform: rotateY(0deg);
 }

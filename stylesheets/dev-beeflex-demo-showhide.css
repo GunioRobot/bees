@@ -1,0 +1,23 @@
+/* Options :: Aside Hide/Show
+------------------------------------ */
+
+.toggleSidebars {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin: -10px -5px;
+}
+.toggleSidebars.out,
+.beeLight .toggleSidebars.out {
+    background: url(../images/options/showhide.png) no-repeat 0 0;
+}
+.toggleSidebars.in,
+.beeLight .toggleSidebars.in {
+    background: url(../images/options/showhide.png) no-repeat 0 -32px;
+}
+.beeDark .toggleSidebars.out {
+    background: url(../images/options/showhide.png) no-repeat -32px 0;
+}
+.beeDark .toggleSidebars.in {
+    background: url(../images/options/showhide.png) no-repeat -32px -32px;
+}

@@ -1,146 +1,239 @@
 /* Initial Setup
 ------------------------------------ */
-
 html, body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
+@media only screen and (max-device-width: 480px) {
+  html, body {
+    height: auto;
+  }
+}
+
 .beeFlex,
 .beeFlex .beeColumnBrowse {
-    width: 100%;
-    min-height: 100%;
+  width: 100%;
+  min-height: 100%;
 }
-
-/* iPhone 4 and equivalent
------------------------------------- */
-
 @media only screen and (max-device-width: 480px) {
-    html, body {
-        height: auto;
-    }
-    .beeFlex {
-        min-height: auto;
-    }
+  .beeFlex,
+  .beeFlex .beeColumnBrowse {
+    min-height: auto;
+  }
 }
 
-/* Layout Elements
+/* Layout Engine
 ------------------------------------ */
-
-.beeFlex,
-.beeFlex .beeColumnBrowse,
+.beeFlex {
+  display: -ms-box;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -ms-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -ms-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.beeFlex .beeColumnBrowse, .beeFlex .beeColumnBrowse section,
 .beeFlex #header, .beeFlex #header section, .beeFlex #header aside,
 .beeFlex #footer, .beeFlex #footer section, .beeFlex #footer aside,
 .beeFlex #extra, .beeFlex #extra section, .beeFlex #extra aside,
 .beeFlex #main, .beeFlex #main section, .beeFlex #main aside {
-    display: -ms-box;
-    display: -moz-box;
-    display: -webkit-box;
-    display: box;
+  display: -ms-box;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
 }
-.beeFlex,
 .beeFlex .beeColumnBrowse section,
 .beeFlex #header section, .beeFlex #header aside,
 .beeFlex #footer section, .beeFlex #footer aside,
 .beeFlex #extra section, .beeFlex #extra aside,
 .beeFlex #main section, .beeFlex #main aside {
-    -ms-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
+  -ms-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
 }
 .beeFlex .beeColumnBrowse,
 .beeFlex #header,
 .beeFlex #footer,
 .beeFlex #extra,
 .beeFlex #main {
-    -ms-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    -webkit-box-orient: horizontal;
-    box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
 }
-.beeFlex,
+@media only screen and (max-device-width: 480px) {
+  .beeFlex .beeColumnBrowse,
+  .beeFlex #header,
+  .beeFlex #footer,
+  .beeFlex #extra,
+  .beeFlex #main {
+    -ms-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+  }
+}
 .beeFlex .beeColumnBrowse,
 .beeFlex #main, .beeFlex #main aside {
-    -ms-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-box-flex: 1;
-    box-flex: 1;
+  -ms-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
 }
 .beeFlex #header section,
 .beeFlex #footer section,
 .beeFlex #extra section,
 .beeFlex #main section {
-    -ms-box-flex: 3;
-    -moz-box-flex: 3;
-    -webkit-box-flex: 3;
-    box-flex: 3;
+  -ms-box-flex: 3;
+  -moz-box-flex: 3;
+  -webkit-box-flex: 3;
+  box-flex: 3;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeFlex #header section,
+  .beeFlex #footer section,
+  .beeFlex #extra section,
+  .beeFlex #main section {
+    -ms-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+  }
 }
 .beeFlex #header section.center,
 .beeFlex #footer section.center,
 .beeFlex #extra section.center,
 .beeFlex #main section.center {
-    -ms-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -webkit-box-ordinal-group: 2;
-    box-ordinal-group: 2;
+  -ms-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -webkit-box-ordinal-group: 2;
+  box-ordinal-group: 2;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeFlex #header section.center,
+  .beeFlex #footer section.center,
+  .beeFlex #extra section.center,
+  .beeFlex #main section.center {
+    -ms-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+  }
 }
 .beeFlex #header aside.left,
 .beeFlex #footer aside.left,
 .beeFlex #extra aside.left,
 .beeFlex #main aside.left {
-    -ms-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-box-ordinal-group: 1;
-    box-ordinal-group: 1;
+  -ms-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -webkit-box-ordinal-group: 1;
+  box-ordinal-group: 1;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeFlex #header aside.left,
+  .beeFlex #footer aside.left,
+  .beeFlex #extra aside.left,
+  .beeFlex #main aside.left {
+    -ms-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+  }
 }
 .beeFlex #header aside.right,
 .beeFlex #footer aside.right,
 .beeFlex #extra aside.right,
 .beeFlex #main aside.right {
-    -ms-box-ordinal-group: 3;
-    -moz-box-ordinal-group: 3;
-    -webkit-box-ordinal-group: 3;
-    box-ordinal-group: 3;
+  -ms-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -webkit-box-ordinal-group: 3;
+  box-ordinal-group: 3;
 }
-
-/* iPhone 4 and equivalent
------------------------------------- */
-
+.beeFlex div.scroll, .beeFlex div.beeColumnBrowse section {
+  overflow-y: auto;
+}
+@media only screen and (device-width: 768px) {
+  .beeFlex div.scroll, .beeFlex div.beeColumnBrowse section {
+    overflow-y: visible;
+  }
+}
+.beeFlex div.beeColumnBrowse section {
+  min-width: 100px;
+  max-width: 1000px;
+}
+.beeFlex .aligncenter {
+  text-align: center;
+}
+.beeFlex .alignright {
+  text-align: right;
+}
+.beeFlex .alignleft {
+  text-align: left;
+}
 @media only screen and (max-device-width: 480px) {
-    .beeFlex #header,
-    .beeFlex #footer,
-    .beeFlex #extra,
-    .beeFlex #main {
-        -ms-box-orient: vertical;
-        -moz-box-orient: vertical;
-        -webkit-box-orient: vertical;
-        box-orient: vertical;
-    }
-    .beeFlex #header section,
-    .beeFlex #footer section,
-    .beeFlex #extra section,
-    .beeFlex #main section {
-        -ms-box-flex: 1;
-        -moz-box-flex: 1;
-        -webkit-box-flex: 1;
-        box-flex: 1;
-    }
-    .beeFlex #header section.center,
-    .beeFlex #footer section.center,
-    .beeFlex #extra section.center,
-    .beeFlex #main section.center {
-        -ms-box-ordinal-group: 1;
-        -moz-box-ordinal-group: 1;
-        -webkit-box-ordinal-group: 1;
-        box-ordinal-group: 1;
-    }
-    .beeFlex #header aside.left,
-    .beeFlex #footer aside.left,
-    .beeFlex #extra aside.left,
-    .beeFlex #main aside.left {
-        -ms-box-ordinal-group: 2;
-        -moz-box-ordinal-group: 2;
-        -webkit-box-ordinal-group: 2;
-        box-ordinal-group: 2;
-    }
+  .beeFlex #main section.alignright, .beeFlex #main aside.alignright {
+    text-align: left;
+  }
+}
+.beeFlex .beeFlex #extra {
+  padding: 20px 20px 0 20px;
+}
+.beeFlex .beeFlex #main {
+  margin: 0;
+}
+.beeFlex #header,
+.beeFlex #footer {
+  padding: 20px;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeFlex #header,
+  .beeFlex #footer {
+    padding: 5px;
+    margin: 10px 0 0 0;
+  }
+}
+.beeFlex #extra {
+  padding: 20px 20px 0 20px;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeFlex #extra {
+    padding: 5px 5px 0 5px;
+  }
+}
+.beeFlex #main {
+  margin: 0;
+}
+.beeFlex #main section.center,
+.beeFlex #header section.center,
+.beeFlex #footer section.center,
+.beeFlex #extra section.center {
+  margin: 0 20px;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeFlex #main section.center,
+  .beeFlex #header section.center,
+  .beeFlex #footer section.center,
+  .beeFlex #extra section.center {
+    margin: 0;
+  }
+}
+.beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
+  min-width: 180px;
+  max-width: 280px;
+}
+.beeFlex .beeColumnBrowse section {
+  padding: 0 10px;
+}
+.beeFlex .beeColumnBrowse section:first-child {
+  padding-left: 0;
+}
+.beeFlex .beeColumnBrowse section:last-child {
+  padding-right: 0;
 }

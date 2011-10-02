@@ -1,0 +1,51 @@
+/* Main Content Insert & Sidebar Panels
+------------------------------------ */
+
+    @mixin beeRoundCustom($roundTopRight,$roundBottomRight,$roundTopLeft,$roundBottomLeft) {
+        -webkit-border-top-right-radius: $roundTopRight;
+        -webkit-border-bottom-right-radius: $roundBottomRight;
+        -webkit-border-top-left-radius: $roundTopLeft;
+        -webkit-border-bottom-left-radius: $roundBottomLeft;
+        -moz-border-radius-topright: $roundTopRight;
+        -moz-border-radius-bottomright: $roundBottomRight;
+        -moz-border-radius-topleft: $roundTopLeft;
+        -moz-border-radius-bottomleft: $roundBottomLeft;
+        border-top-right-radius: $roundTopRight;
+        border-bottom-right-radius: $roundBottomRight;
+        border-top-left-radius: $roundTopLeft;
+        border-bottom-left-radius: $roundBottomLeft;
+    }
+
+.beeFlex {
+
+    .insert {
+        padding: 20px 0;
+        @media only screen and (max-device-width: 480px) {
+            padding: 10px 5px;
+        }
+    }
+    .insert p {
+        margin: 8px 0;
+    }
+    .panel {
+        margin: 20px 0;
+        padding: 15px 20px;
+        @media only screen and (max-device-width: 480px) {
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+    .left .panel {
+        @include beeRoundCustom(8px,8px,0,0);
+        @media only screen and (max-device-width: 480px) {
+            @include beeRoundCustom(0,0,0,0);
+        }
+    }
+    .right .panel {
+        @include beeRoundCustom(0,0,8px,8px);
+        @media only screen and (max-device-width: 480px) {
+            @include beeRoundCustom(0,0,0,0);
+        }
+    }
+
+}

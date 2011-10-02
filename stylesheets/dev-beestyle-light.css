@@ -1,104 +1,99 @@
-/* Common Elements
+/* HTML5 Boilerplate Resets
 ------------------------------------ */
+::-moz-selection {
+  background: rgba(195, 255, 98, 0.5);
+  color: #0d0d0d;
+}
 
-    body.beeLight {
-        color: #333; /* 20% gray */
-        background-color: #eee; /* 93% gray */
-        background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#eee)); /* 88% gray to 93% gray */
-        background: -moz-linear-gradient(top center, #e0e0e0, #eee); /* 88% gray to 93% gray */
-        text-shadow: 0 1px 1px #fff; /* indented look */
-    }
-    .beeLight hr {
-        border-top: 1px solid #666; /* 40% gray */
-    }
-    
-    /* Links */
-    
-    .beeLight a, .beeLight a:active, .beeLight a:visited, .beeLight a:hover {
-        color: #619e00; /* dark green */
-    }
-    
-    /* Forms */
-    
-    .beeLight select, .beeLight input, .beeLight textarea {
-        color: #333; /* 20% gray */
-        background-color: #eee; /* 93% gray */
-        border: 1px solid #333; /* 20% gray */
-    }
+::selection {
+  background: rgba(195, 255, 98, 0.5);
+  color: #0d0d0d;
+}
 
-/* Shadow Module
------------------------------------- */
-
-    .beeLight .beeShadow {
-        margin: 10px; /* to accommodate shadow */
-        -webkit-box-shadow: 0 0 10px #333; /* 20% gray */
-        -moz-box-shadow: 0 0 10px #333; /* 20% gray */
-        box-shadow: 0 0 10px #333; /* 20% gray */
-    }
-
-/* Layout Elements
------------------------------------- */
-
-    .beeLight .beeFlex .panel, .beeLight .beeFlex #header, .beeLight .beeFlex #footer {
-        color: #eee; /* 93% gray */
-        background-color: #333; /* 20% gray */
-        text-shadow: 0 -1px 1px #000; /* indented look */
-    }
-    .beeLight .beeFlex #header {
-        background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#404040)); /* 20% gray to 25% gray */
-        background: -moz-linear-gradient(top center, #333, #404040); /* 20% gray to 25% gray */
-        -webkit-box-shadow: 0 1px 8px #bababa, 0 0 12px #262626 inset; /* 73% gray, 15% gray */
-        -moz-box-shadow: 0 1px 8px #bababa, 0 0 12px #262626 inset; /* 73% gray, 15% gray */
-        box-shadow: 0 1px 8px #bababa, 0 0 12px #262626 inset; /* 73% gray, 15% gray */
-    }
-    .beeLight .beeFlex #footer {
-        background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#333)); /* 25% gray to 20% gray */
-        background: -moz-linear-gradient(top center, #404040, #333); /* 25% gray to 20% gray */
-        -webkit-box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #262626 inset; /* 78% gray, 15% gray */
-        -moz-box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #262626 inset; /* 78% gray, 15% gray */
-        box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #262626 inset; /* 78% gray, 15% gray */
-    }
-    .beeLight .beeFlex .left .panel {
-        background: -webkit-gradient(linear, left top, right top, from(#333), to(#404040)); /* 20% gray to 25% gray */
-        background: -moz-linear-gradient(left center, #333, #404040); /* 20% gray to 25% gray */
-    }
-    .beeLight .beeFlex .right .panel {
-        background: -webkit-gradient(linear, left top, right top, from(#404040), to(#333)); /* 25% gray to 20% gray */
-        background: -moz-linear-gradient(left center, #404040, #333); /* 25% gray to 20% gray */
-    }
-    .beeLight .beeFlex .left .panel, .beeLight .beeFlex .right .panel {
-        -webkit-box-shadow: 0 0 6px #262626 inset; /* 15% gray */
-        -moz-box-shadow: 0 0 6px #262626 inset; /* 15% gray */
-        -box-shadow: 0 0 6px #262626 inset; /* 15% gray */
-    }
-    
-    /* Links */
-    
-    .beeLight .beeFlex .panel a, .beeLight .beeFlex .panel a:active, .beeLight .beeFlex .panel a:visited, .beeLight .beeFlex .panel a:hover,
-    .beeLight .beeFlex #header a, .beeLight .beeFlex #header a:active, .beeLight .beeFlex #header a:visited, .beeLight .beeFlex #header a:hover,
-    .beeLight .beeFlex #footer a, .beeLight .beeFlex #footer a:active, .beeLight .beeFlex #footer a:visited, .beeLight .beeFlex #footer a:hover {
-        color: #c3ff62; /* light green */
-    }
-
-/* iPhone 4 and equivalent
------------------------------------- */
-
+body.beeLight {
+  /* Common Elements
+  ------------------------------------ */
+  color: #333333;
+  background-color: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#ededed));
+  background: -moz-linear-gradient(top center, #e0e0e0, #ededed);
+  text-shadow: 0 1px 1px white;
+  /* Shadow Module
+  ------------------------------------ */
+  /* Layout Elements
+  ------------------------------------ */
+}
+body.beeLight hr {
+  border-top: 1px solid #666666;
+}
+body.beeLight a, body.beeLight a:active, body.beeLight a:visited, body.beeLight a:hover {
+  color: #619e00;
+}
+body.beeLight select, body.beeLight input, body.beeLight textarea {
+  color: #333333;
+  background-color: #ededed;
+  border: 1px solid #333333;
+}
+body.beeLight .beeShadow {
+  margin: 10px;
+  -webkit-box-shadow: 0 0 10px #333333;
+  -moz-box-shadow: 0 0 10px #333333;
+  box-shadow: 0 0 10px #333333;
+}
+body.beeLight .beeFlex .panel, body.beeLight .beeFlex #header, body.beeLight .beeFlex #footer {
+  color: #ededed;
+  background-color: #333333;
+  text-shadow: 0 -1px 1px black;
+}
 @media only screen and (max-device-width: 480px) {
-    .beeLight .beeFlex .panel {
-        color: #333; /* 20% gray */
-        background-color: transparent;
-        text-shadow: 0 1px 1px #fff; /* indented look */
-    }
-    .beeLight .beeFlex .left .panel,
-    .beeLight .beeFlex .right .panel {
-        background-image: none;
-    }
-    .beeLight .beeFlex .left .panel, .beeLight .beeFlex .right .panel {
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        -box-shadow: none;
-    }
-    .beeLight .beeFlex .panel a, .beeLight .beeFlex .panel a:active, .beeLight .beeFlex .panel a:visited, .beeLight .beeFlex .panel a:hover {
-        color: #619e00; /* dark green */
-    }
+  body.beeLight .beeFlex .panel {
+    color: #333333;
+    background-color: transparent;
+    text-shadow: 0 1px 1px white;
+  }
+}
+body.beeLight .beeFlex #header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#404040));
+  background: -moz-linear-gradient(top center, #333333, #404040);
+  -webkit-box-shadow: 0 1px 8px #bababa, 0 0 12px #272727 inset;
+  -moz-box-shadow: 0 1px 8px #bababa, 0 0 12px #272727 inset;
+  box-shadow: 0 1px 8px #bababa, 0 0 12px #272727 inset;
+}
+body.beeLight .beeFlex #footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#333333));
+  background: -moz-linear-gradient(top center, #404040, #333333);
+  -webkit-box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #272727 inset;
+  -moz-box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #272727 inset;
+  box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #272727 inset;
+}
+body.beeLight .beeFlex .left .panel {
+  background: -webkit-gradient(linear, left top, right top, from(#333333), to(#404040));
+  background: -moz-linear-gradient(left center, #333333, #404040);
+}
+body.beeLight .beeFlex .right .panel {
+  background: -webkit-gradient(linear, left top, right top, from(#404040), to(#333333));
+  background: -moz-linear-gradient(left center, #404040, #333333);
+}
+body.beeLight .beeFlex .left .panel, body.beeLight .beeFlex .right .panel {
+  -webkit-box-shadow: 0 0 6px #272727 inset;
+  -moz-box-shadow: 0 0 6px #272727 inset;
+  -box-shadow: 0 0 6px #272727 inset;
+}
+@media only screen and (max-device-width: 480px) {
+  body.beeLight .beeFlex .left .panel, body.beeLight .beeFlex .right .panel {
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -box-shadow: none;
+  }
+}
+body.beeLight .beeFlex .panel a, body.beeLight .beeFlex .panel a:active, body.beeLight .beeFlex .panel a:visited, body.beeLight .beeFlex .panel a:hover,
+body.beeLight .beeFlex #header a, body.beeLight .beeFlex #header a:active, body.beeLight .beeFlex #header a:visited, body.beeLight .beeFlex #header a:hover,
+body.beeLight .beeFlex #footer a, body.beeLight .beeFlex #footer a:active, body.beeLight .beeFlex #footer a:visited, body.beeLight .beeFlex #footer a:hover {
+  color: #c3ff62;
+}
+@media only screen and (max-device-width: 480px) {
+  body.beeLight .beeFlex .panel a, body.beeLight .beeFlex .panel a:active, body.beeLight .beeFlex .panel a:visited, body.beeLight .beeFlex .panel a:hover {
+    color: #619e00;
+  }
 }
