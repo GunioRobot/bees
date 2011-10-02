@@ -1,3 +1,5 @@
+@import "dev-beeflex-config";
+
 /* Initial Setup
 ------------------------------------ */
 
@@ -19,7 +21,7 @@ html, body {
     }
 }
 
-/* Layout Elements
+/* Layout Engine
 ------------------------------------ */
 
 @mixin beeFlexSetup {
@@ -130,8 +132,7 @@ html, body {
         @include beeFlexRenderingOrder(3);
     }
 
-/* Inner Scrolling
------------------------------------- */
+    // Inner Scrolling
 
     div.scroll {
         overflow-y: auto;
@@ -141,10 +142,7 @@ html, body {
         }
     }
 
-/* Alignment Options
------------------------------------- */
-
-    // Horizontal Content Alignment
+    // Alignment Options (horizontal only, vertical defaults to top with no css control currently)
 
     .aligncenter {
         text-align: center;
@@ -162,6 +160,63 @@ html, body {
         }
     }
 
-    // Vertical Content Alignment :: defaults to top (no css control currently)
+    // Margins, Padding, Widths
+
+    #header,
+    #footer {
+        padding: $paddingDefault;
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            padding: $paddingMobile;
+        }
+    }
+    #extra {
+        padding: 0 $paddingDefault $paddingDefault $paddingDefault;
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            padding: 0 $paddingMobile $paddingMobile $paddingMobile;
+        }
+    }
+    #main, #main section.center,
+    #header section.center,
+    #footer section.center,
+    #extra section.center {
+        margin: 0 $paddingDefault;
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            margin: 0;
+        }
+    }
+    #header aside, #footer aside, #extra aside, #main aside {
+        // for fixed width sidebars set width w/o min/max
+        min-width: $sidebarMinWidth;
+        max-width: $sidebarMaxWidth;
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            min-width: inherit;
+            max-width: inherit;
+        }
+    }
+    // iPhone 4 and equivalent
+    #main {
+        @media only screen and (max-device-width: 480px) {
+            margin: 0 $paddingMobile;
+        }
+    }
+    // iPhone 4 and equivalent
+    #footer {
+        @media only screen and (max-device-width: 480px) {
+            margin: $paddingMobileTwice 0 0 0;
+        }
+    }
+    .beeColumnBrowse section {
+        padding: 0 $paddingDefaultHalf;
+    }
+    .beeColumnBrowse section:first-child {
+        padding-left: 0;
+    }
+    .beeColumnBrowse section:last-child {
+        padding-right: 0;
+    }
 
 }
