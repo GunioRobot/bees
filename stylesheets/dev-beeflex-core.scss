@@ -145,6 +145,7 @@
         min-width: $columnBrowseMinWidth;
         max-width: $columnBrowseMaxWidth;
     }
+
     // Alignment Options (horizontal only, vertical defaults to top with no css control currently)
 
     .aligncenter {
@@ -165,19 +166,16 @@
 
     // Margins, Padding, Widths
 
-    .beeFlex #extra {
-        padding: 20px 20px 0 20px;
-    }
-    .beeFlex #main {
-        margin: 0;
-    }
-
     #header,
     #footer {
         padding: $paddingDefault;
         // iPhone 4 and equivalent
         @media only screen and (max-device-width: 480px) {
             padding: $paddingMobile;
+        }
+    }
+    #footer {
+        @media only screen and (max-device-width: 480px) {
             margin: $paddingMobileTwice 0 0 0;
         }
     }
@@ -187,9 +185,6 @@
         @media only screen and (max-device-width: 480px) {
             padding: $paddingMobile $paddingMobile 0 $paddingMobile;
         }
-    }
-    #main {
-        margin: 0;
     }
     #main section.center,
     #header section.center,
@@ -205,6 +200,11 @@
         // for fixed width sidebars set width w/o min/max
         min-width: $sidebarMinWidth;
         max-width: $sidebarMaxWidth;
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            min-width: inherit;
+            max-width: inherit;
+        }
     }
     .beeColumnBrowse section {
         padding: 0 $paddingDefaultHalf;

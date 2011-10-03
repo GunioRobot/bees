@@ -182,12 +182,6 @@ html, body {
     text-align: left;
   }
 }
-.beeFlex .beeFlex #extra {
-  padding: 20px 20px 0 20px;
-}
-.beeFlex .beeFlex #main {
-  margin: 0;
-}
 .beeFlex #header,
 .beeFlex #footer {
   padding: 20px;
@@ -196,6 +190,10 @@ html, body {
   .beeFlex #header,
   .beeFlex #footer {
     padding: 5px;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .beeFlex #footer {
     margin: 10px 0 0 0;
   }
 }
@@ -206,9 +204,6 @@ html, body {
   .beeFlex #extra {
     padding: 5px 5px 0 5px;
   }
-}
-.beeFlex #main {
-  margin: 0;
 }
 .beeFlex #main section.center,
 .beeFlex #header section.center,
@@ -227,6 +222,12 @@ html, body {
 .beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
   min-width: 180px;
   max-width: 280px;
+}
+@media only screen and (max-device-width: 480px) {
+  .beeFlex #header aside, .beeFlex #footer aside, .beeFlex #extra aside, .beeFlex #main aside {
+    min-width: inherit;
+    max-width: inherit;
+  }
 }
 .beeFlex .beeColumnBrowse section {
   padding: 0 10px;
