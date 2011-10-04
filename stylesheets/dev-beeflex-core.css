@@ -1,3 +1,7 @@
+/* 15px */
+/* 10px */
+/* 10px */
+/* 8px */
 /* Initial Setup
 ------------------------------------ */
 html, body {
@@ -159,11 +163,6 @@ html, body {
 .beeFlex div.scroll, .beeFlex div.beeColumnBrowse section {
   overflow-y: auto;
 }
-@media only screen and (device-width: 768px) {
-  .beeFlex div.scroll, .beeFlex div.beeColumnBrowse section {
-    overflow-y: visible;
-  }
-}
 .beeFlex div.beeColumnBrowse section {
   min-width: 100px;
   max-width: 1000px;
@@ -190,11 +189,6 @@ html, body {
   .beeFlex #header,
   .beeFlex #footer {
     padding: 5px;
-  }
-}
-@media only screen and (max-device-width: 480px) {
-  .beeFlex #footer {
-    margin: 10px 0 0 0;
   }
 }
 .beeFlex #extra {

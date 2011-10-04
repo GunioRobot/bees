@@ -14,10 +14,16 @@
 
     $paddingDefault: 20px;
     $paddingMobile: 5px;
+    
+    // paragraph margin top & bottom
+    
+    $paragraphMargin: 8px;
 
 // // // // // auto-calcs // // // // //
 
     // edge case margins and padding
 
-    $paddingDefaultHalf: $paddingDefault / 2;
-    $paddingMobileTwice: $paddingMobile * 2;
+    $paddingDefault3Qtr: $paddingDefault * 0.75; /* 15px */
+    $paddingDefaultHalf: $paddingDefault / 2; /* 10px */
+    $paddingMobileTwice: $paddingMobile * 2; /* 10px */
+    $roundedCornerDefault: $paragraphMargin; /* 8px */

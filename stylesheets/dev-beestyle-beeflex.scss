@@ -1,3 +1,5 @@
+@import "dev-beeflex-config";
+
 /* Main Content Insert & Sidebar Panels
 ------------------------------------ */
 
@@ -19,30 +21,30 @@
 .beeFlex {
 
     .insert {
-        padding: 20px 0;
+        padding: $paddingDefault 0;
         @media only screen and (max-device-width: 480px) {
-            padding: 10px 5px;
+            padding: $paddingMobileTwice $paddingMobileTwice $paddingMobile $paddingMobileTwice;
         }
     }
     .insert p {
-        margin: 8px 0;
+        margin: $paragraphMargin 0;
     }
     .panel {
-        margin: 20px 0;
-        padding: 15px 20px;
+        margin: $paddingDefault 0;
+        padding: $paddingDefault3Qtr $paddingDefault;
         @media only screen and (max-device-width: 480px) {
             margin: 0;
-            padding: 5px 10px;
+            padding: 0 $paddingMobileTwice $paddingMobileTwice $paddingMobileTwice;
         }
     }
     .left .panel {
-        @include beeRoundCustom(8px,8px,0,0);
+        @include beeRoundCustom($roundedCornerDefault,$roundedCornerDefault,0,0);
         @media only screen and (max-device-width: 480px) {
             @include beeRoundCustom(0,0,0,0);
         }
     }
     .right .panel {
-        @include beeRoundCustom(0,0,8px,8px);
+        @include beeRoundCustom(0,0,$roundedCornerDefault,$roundedCornerDefault);
         @media only screen and (max-device-width: 480px) {
             @include beeRoundCustom(0,0,0,0);
         }

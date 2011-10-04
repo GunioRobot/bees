@@ -136,10 +136,6 @@
 
     div.scroll, div.beeColumnBrowse section {
         overflow-y: auto;
-        // iPad 2 and smaller
-        @media only screen and (device-width: 768px) {
-            overflow-y: visible;
-        }
     }
     div.beeColumnBrowse section {
         min-width: $columnBrowseMinWidth;
@@ -172,11 +168,6 @@
         // iPhone 4 and equivalent
         @media only screen and (max-device-width: 480px) {
             padding: $paddingMobile;
-        }
-    }
-    #footer {
-        @media only screen and (max-device-width: 480px) {
-            margin: $paddingMobileTwice 0 0 0;
         }
     }
     #extra {
