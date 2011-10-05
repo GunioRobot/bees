@@ -1,0 +1,93 @@
+/* Multiple Column Module
+------------------------------------ */
+
+    @mixin beeColumn($count: 2) {
+        -webkit-column-count: $count;
+        -moz-column-count: $count;
+        column-count: $count;
+        // iPhone 4 and equivalent
+        @media only screen and (max-device-width: 480px) {
+            -webkit-column-count: auto;
+            -moz-column-count: auto;
+            column-count: auto;
+        }
+    }
+    @mixin beeColumnHeader {
+        // following values not yet supported
+        // -webkit-column-break-before: always;
+        -webkit-column-break-after: avoid;
+        -webkit-column-break-inside: avoid;
+        // -moz-column-break-before: always;
+        -moz-column-break-after: avoid;
+        -moz-column-break-inside: avoid;
+        // column-break-before: always;
+        column-break-after: avoid;
+        column-break-inside: avoid;
+    }
+
+/* Rounded Corner Module
+------------------------------------ */
+
+    @mixin beeRound($rounding: 5px) {
+        -webkit-border-radius: $rounding $rounding;
+        -moz-border-radius: $rounding $rounding;
+        border-radius: $rounding $rounding;
+    }
+
+    @mixin beeRoundCustom($roundTopRight,$roundBottomRight,$roundTopLeft,$roundBottomLeft) {
+        -webkit-border-top-right-radius: $roundTopRight;
+        -webkit-border-bottom-right-radius: $roundBottomRight;
+        -webkit-border-top-left-radius: $roundTopLeft;
+        -webkit-border-bottom-left-radius: $roundBottomLeft;
+        -moz-border-radius-topright: $roundTopRight;
+        -moz-border-radius-bottomright: $roundBottomRight;
+        -moz-border-radius-topleft: $roundTopLeft;
+        -moz-border-radius-bottomleft: $roundBottomLeft;
+        border-top-right-radius: $roundTopRight;
+        border-bottom-right-radius: $roundBottomRight;
+        border-top-left-radius: $roundTopLeft;
+        border-bottom-left-radius: $roundBottomLeft;
+    }
+
+/* Shadow Module
+------------------------------------ */
+
+    @mixin beeShadow($type,$offset-x,$offset-y,$blur-radius,$spread-radius,$color) {
+        @if $type == drop {
+            -webkit-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
+            -moz-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
+            box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
+        }
+        @if $type == inset {
+            -webkit-box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color;
+            -moz-box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color;
+            box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color;
+        }
+    }
+    @mixin beeShadow2x($type,$offset-x,$offset-y,$blur-radius,$spread-radius,$color,$offset-x2,$offset-y2,$blur-radius2,$spread-radius2,$color2) {
+        @if $type == drop-drop {
+            -webkit-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color, $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+            -moz-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color, $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+            box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color, $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+        }
+        @if $type == drop-inset {
+            -webkit-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color, inset $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+            -moz-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color, inset $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+            box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color, inset $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+        }
+        @if $type == inset-drop {
+            -webkit-box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color, $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+            -moz-box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color, $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+            box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color, $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+        }
+        @if $type == inset-inset {
+            -webkit-box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color, inset $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+            -moz-box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color, inset $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+            box-shadow: inset $offset-x $offset-y $blur-radius $spread-radius $color, inset $offset-x2 $offset-y2 $blur-radius2 $spread-radius2 $color2;
+        }
+    }
+    @mixin beeShadowRemove {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -box-shadow: none;
+    }

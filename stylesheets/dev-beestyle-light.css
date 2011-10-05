@@ -1,3 +1,9 @@
+/* Multiple Column Module
+------------------------------------ */
+/* Rounded Corner Module
+------------------------------------ */
+/* Shadow Module
+------------------------------------ */
 /* HTML5 Boilerplate Resets
 ------------------------------------ */
 ::-moz-selection {
@@ -36,9 +42,9 @@ body.beeLight select, body.beeLight input, body.beeLight textarea {
 }
 body.beeLight .beeShadow {
   margin: 10px;
-  -webkit-box-shadow: 0 0 10px #333333;
-  -moz-box-shadow: 0 0 10px #333333;
-  box-shadow: 0 0 10px #333333;
+  -webkit-box-shadow: 0 0 10px 0 #333333;
+  -moz-box-shadow: 0 0 10px 0 #333333;
+  box-shadow: 0 0 10px 0 #333333;
 }
 body.beeLight .beeFlex .panel, body.beeLight .beeFlex #header, body.beeLight .beeFlex #footer {
   color: #ededed;
@@ -55,16 +61,16 @@ body.beeLight .beeFlex .panel, body.beeLight .beeFlex #header, body.beeLight .be
 body.beeLight .beeFlex #header {
   background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#404040));
   background: -moz-linear-gradient(top center, #333333, #404040);
-  -webkit-box-shadow: 0 1px 8px #bababa, 0 0 12px #272727 inset;
-  -moz-box-shadow: 0 1px 8px #bababa, 0 0 12px #272727 inset;
-  box-shadow: 0 1px 8px #bababa, 0 0 12px #272727 inset;
+  -webkit-box-shadow: 0 1px 8px 0 #bababa, inset 0 0 12px 0 #272727;
+  -moz-box-shadow: 0 1px 8px 0 #bababa, inset 0 0 12px 0 #272727;
+  box-shadow: 0 1px 8px 0 #bababa, inset 0 0 12px 0 #272727;
 }
 body.beeLight .beeFlex #footer {
   background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#333333));
   background: -moz-linear-gradient(top center, #404040, #333333);
-  -webkit-box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #272727 inset;
-  -moz-box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #272727 inset;
-  box-shadow: 0 -1px 8px #c7c7c7, 0 0 12px #272727 inset;
+  -webkit-box-shadow: 0 -1px 8px 0 #c7c7c7, inset 0 0 12px 0 #272727;
+  -moz-box-shadow: 0 -1px 8px 0 #c7c7c7, inset 0 0 12px 0 #272727;
+  box-shadow: 0 -1px 8px 0 #c7c7c7, inset 0 0 12px 0 #272727;
 }
 body.beeLight .beeFlex .left .panel {
   background: -webkit-gradient(linear, left top, right top, from(#333333), to(#404040));
@@ -75,9 +81,9 @@ body.beeLight .beeFlex .right .panel {
   background: -moz-linear-gradient(left center, #404040, #333333);
 }
 body.beeLight .beeFlex .left .panel, body.beeLight .beeFlex .right .panel {
-  -webkit-box-shadow: 0 0 6px #272727 inset;
-  -moz-box-shadow: 0 0 6px #272727 inset;
-  -box-shadow: 0 0 6px #272727 inset;
+  -webkit-box-shadow: inset 0 0 6px 0 #272727;
+  -moz-box-shadow: inset 0 0 6px 0 #272727;
+  box-shadow: inset 0 0 6px 0 #272727;
 }
 @media only screen and (max-device-width: 480px) {
   body.beeLight .beeFlex .left .panel, body.beeLight .beeFlex .right .panel {

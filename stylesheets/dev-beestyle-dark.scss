@@ -1,4 +1,5 @@
 @import "dev-beestyle-colors";
+@import "dev-beestyle-mixins";
 
 /* HTML5 Boilerplate Resets
 ------------------------------------ */
@@ -47,9 +48,7 @@ body.beeDark {
 
     .beeShadow {
         margin: 10px; // to accommodate shadow
-        -webkit-box-shadow: 0 0 10px $colorLight2x;
-        -moz-box-shadow: 0 0 10px $colorLight2x;
-        box-shadow: 0 0 10px $colorLight2x;
+        @include beeShadow(drop,0,0,10px,0,$colorLight2x);
     }
 
 /* Layout Elements
@@ -72,16 +71,12 @@ body.beeDark {
         #header {
             background: -webkit-gradient(linear, left top, left bottom, from($colorLight3x), to($colorLight2x));
             background: -moz-linear-gradient(top center, $colorLight3x, $colorLight2x);
-            -webkit-box-shadow: 0 1px 8px $colorDark2x, 0 0 12px $colorLight5x inset;
-            -moz-box-shadow: 0 1px 8px $colorDark2x, 0 0 12px $colorLight5x inset;
-            box-shadow: 0 1px 8px $colorDark2x, 0 0 12px $colorLight5x inset;
+            @include beeShadow2x(drop-inset,0,1px,8px,0,$colorDark2x,0,0,12px,0,$colorLight5x);
         }
         #footer {
             background: -webkit-gradient(linear, left top, left bottom, from($colorLight2x), to($colorLight3x));
             background: -moz-linear-gradient(top center, $colorLight2x, $colorLight3x);
-            -webkit-box-shadow: 0 -1px 8px $colorDark3x, 0 0 12px $colorLight5x inset;
-            -moz-box-shadow: 0 -1px 8px $colorDark3x, 0 0 12px $colorLight5x inset;
-            box-shadow: 0 -1px 8px $colorDark3x, 0 0 12px $colorLight5x inset;
+            @include beeShadow2x(drop-inset,0,-1px,8px,0,$colorDark3x,0,0,12px,0,$colorLight5x);
         }
         .left .panel {
             background: -webkit-gradient(linear, left top, right top, from($colorLight3x), to($colorLight2x));
@@ -92,15 +87,11 @@ body.beeDark {
             background: -moz-linear-gradient(left center, $colorLight2x, $colorLight3x);
         }
         .left .panel, .right .panel {
-            -webkit-box-shadow: 0 0 6px $colorLight5x inset;
-            -moz-box-shadow: 0 0 6px $colorLight5x inset;
-            -box-shadow: 0 0 6px $colorLight5x inset;
+            @include beeShadow(inset,0,0,6px,0,$colorLight5x);
             // iPhone 4 and equivalent
             @media only screen and (max-device-width: 480px) {
                 background-image: none;
-                -webkit-box-shadow: none;
-                -moz-box-shadow: none;
-                -box-shadow: none;
+                @include beeShadowRemove;
             }
         }
 

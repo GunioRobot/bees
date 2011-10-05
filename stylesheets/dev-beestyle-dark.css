@@ -1,3 +1,9 @@
+/* Multiple Column Module
+------------------------------------ */
+/* Rounded Corner Module
+------------------------------------ */
+/* Shadow Module
+------------------------------------ */
 /* HTML5 Boilerplate Resets
 ------------------------------------ */
 ::-moz-selection {
@@ -36,9 +42,9 @@ body.beeDark select, body.beeDark input, body.beeDark textarea {
 }
 body.beeDark .beeShadow {
   margin: 10px;
-  -webkit-box-shadow: 0 0 10px #ededed;
-  -moz-box-shadow: 0 0 10px #ededed;
-  box-shadow: 0 0 10px #ededed;
+  -webkit-box-shadow: 0 0 10px 0 #ededed;
+  -moz-box-shadow: 0 0 10px 0 #ededed;
+  box-shadow: 0 0 10px 0 #ededed;
 }
 body.beeDark .beeFlex .panel, body.beeDark .beeFlex #header, body.beeDark .beeFlex #footer {
   color: #333333;
@@ -55,16 +61,16 @@ body.beeDark .beeFlex .panel, body.beeDark .beeFlex #header, body.beeDark .beeFl
 body.beeDark .beeFlex #header {
   background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#ededed));
   background: -moz-linear-gradient(top center, #e0e0e0, #ededed);
-  -webkit-box-shadow: 0 1px 8px #1a1a1a, 0 0 12px #bababa inset;
-  -moz-box-shadow: 0 1px 8px #1a1a1a, 0 0 12px #bababa inset;
-  box-shadow: 0 1px 8px #1a1a1a, 0 0 12px #bababa inset;
+  -webkit-box-shadow: 0 1px 8px 0 #1a1a1a, inset 0 0 12px 0 #bababa;
+  -moz-box-shadow: 0 1px 8px 0 #1a1a1a, inset 0 0 12px 0 #bababa;
+  box-shadow: 0 1px 8px 0 #1a1a1a, inset 0 0 12px 0 #bababa;
 }
 body.beeDark .beeFlex #footer {
   background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#e0e0e0));
   background: -moz-linear-gradient(top center, #ededed, #e0e0e0);
-  -webkit-box-shadow: 0 -1px 8px #272727, 0 0 12px #bababa inset;
-  -moz-box-shadow: 0 -1px 8px #272727, 0 0 12px #bababa inset;
-  box-shadow: 0 -1px 8px #272727, 0 0 12px #bababa inset;
+  -webkit-box-shadow: 0 -1px 8px 0 #272727, inset 0 0 12px 0 #bababa;
+  -moz-box-shadow: 0 -1px 8px 0 #272727, inset 0 0 12px 0 #bababa;
+  box-shadow: 0 -1px 8px 0 #272727, inset 0 0 12px 0 #bababa;
 }
 body.beeDark .beeFlex .left .panel {
   background: -webkit-gradient(linear, left top, right top, from(#e0e0e0), to(#ededed));
@@ -75,9 +81,9 @@ body.beeDark .beeFlex .right .panel {
   background: -moz-linear-gradient(left center, #ededed, #e0e0e0);
 }
 body.beeDark .beeFlex .left .panel, body.beeDark .beeFlex .right .panel {
-  -webkit-box-shadow: 0 0 6px #bababa inset;
-  -moz-box-shadow: 0 0 6px #bababa inset;
-  -box-shadow: 0 0 6px #bababa inset;
+  -webkit-box-shadow: inset 0 0 6px 0 #bababa;
+  -moz-box-shadow: inset 0 0 6px 0 #bababa;
+  box-shadow: inset 0 0 6px 0 #bababa;
 }
 @media only screen and (max-device-width: 480px) {
   body.beeDark .beeFlex .left .panel, body.beeDark .beeFlex .right .panel {

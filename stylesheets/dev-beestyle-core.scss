@@ -1,3 +1,5 @@
+@import "dev-beestyle-mixins";
+
 /* HTML5 Boilerplate Resets
 ------------------------------------ */
 
@@ -78,30 +80,6 @@
 ------------------------------------ */
 // FF3+ SF3+ CH3+
 
-    @mixin beeColumn($count: 2) {
-        -webkit-column-count: $count;
-        -moz-column-count: $count;
-        column-count: $count;
-        // iPhone 4 and equivalent
-        @media only screen and (max-device-width: 480px) {
-            -webkit-column-count: auto;
-            -moz-column-count: auto;
-            column-count: auto;
-        }
-    }
-    @mixin beeColumnHeader {
-        // following values not yet supported
-        // -webkit-column-break-before: always;
-        -webkit-column-break-after: avoid;
-        -webkit-column-break-inside: avoid;
-        // -moz-column-break-before: always;
-        -moz-column-break-after: avoid;
-        -moz-column-break-inside: avoid;
-        // column-break-before: always;
-        column-break-after: avoid;
-        column-break-inside: avoid;
-    }
-
     .beeColumn2 {
         @include beeColumn;
         h1, h2, h3, h4, h5, h6 {
@@ -124,12 +102,6 @@
 /* Rounded Corner Module
 ------------------------------------ */
 // FF3+ SF3+ CH4+ IE9+
-
-    @mixin beeRound($rounding: 5px) {
-        -webkit-border-radius: $rounding $rounding;
-        -moz-border-radius: $rounding $rounding;
-        border-radius: $rounding $rounding;
-    }
 
     .beeRound5 {
         @include beeRound;

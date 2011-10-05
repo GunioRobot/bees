@@ -1,4 +1,5 @@
 @import "dev-beeflex-config";
+@import "dev-beeflex-mixins";
 
 /* Initial Setup
 ------------------------------------ */
@@ -23,31 +24,6 @@
 
 /* Layout Engine
 ------------------------------------ */
-
-    @mixin beeFlexSetup {
-        display: -ms-box;
-        display: -moz-box;
-        display: -webkit-box;
-        display: box;
-    }
-    @mixin beeFlexOrientation($orient: vertical) {
-        -ms-box-orient: $orient;
-        -moz-box-orient: $orient;
-        -webkit-box-orient: $orient;
-        box-orient: $orient;
-    }
-    @mixin beeFlexRelativeFlex($flex: 1) {
-        -ms-box-flex: $flex;
-        -moz-box-flex: $flex;
-        -webkit-box-flex: $flex;
-        box-flex: $flex;
-    }
-    @mixin beeFlexRenderingOrder($ordinal) {
-        -ms-box-ordinal-group: $ordinal;
-        -moz-box-ordinal-group: $ordinal;
-        -webkit-box-ordinal-group: $ordinal;
-        box-ordinal-group: $ordinal;
-    }
 
 .beeFlex {
 
