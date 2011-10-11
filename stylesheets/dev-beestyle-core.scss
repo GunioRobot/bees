@@ -13,8 +13,10 @@
     form {
         display: inline; // default is block display
     }
-    input:focus, textarea:focus, select:focus, button:focus {
-        outline-width: 0; // default is browser-specific
+    input, textarea, select, button {
+        &:focus {
+            outline-width: 0; // default is browser-specific
+        }
     }
     select {
         cursor: pointer; // default is arrow pointer
@@ -22,7 +24,6 @@
 
 /* Table Module
 ------------------------------------ */
-// FF3+ SF3+ CH3+ IE8+
 
     .beeTable {
         display: table;
@@ -61,7 +62,6 @@
 
 /* Matrix Module
 ------------------------------------ */
-// FF3+ SF3+ CH3+ IE8+
 
     .beeMatrix > div {
         display: inline-block;
@@ -78,7 +78,6 @@
 
 /* Multiple Column Module
 ------------------------------------ */
-// FF3+ SF3+ CH3+
 
     .beeColumn2 {
         @include beeColumn;
@@ -101,7 +100,6 @@
 
 /* Rounded Corner Module
 ------------------------------------ */
-// FF3+ SF3+ CH4+ IE9+
 
     .beeRound5 {
         @include beeRound;
@@ -121,10 +119,6 @@
 
 /* Animation Module
 ------------------------------------ */
-// css3 transforms :: FF3.5+ SF3+ CH3+ */
-// css3 transitions :: FF4+ SF3+ CH3+ */
-// css3 animations :: SF4+ CH4+ */
-// css3 3d transforms :: SF5+ */
 
     .beeFlip {
         position: relative;

@@ -1,9 +1,3 @@
-/* Multiple Column Module
------------------------------------- */
-/* Rounded Corner Module
------------------------------------- */
-/* Shadow Module
------------------------------------- */
 /* HTML5 Boilerplate Resets
 ------------------------------------ */
 html {
@@ -146,33 +140,33 @@ select {
 /* Rounded Corner Module
 ------------------------------------ */
 .beeRound5 {
-  -webkit-border-radius: 5px 5px;
-  -moz-border-radius: 5px 5px;
-  border-radius: 5px 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .beeRound8 {
-  -webkit-border-radius: 8px 8px;
-  -moz-border-radius: 8px 8px;
-  border-radius: 8px 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
 
 .beeRound10 {
-  -webkit-border-radius: 10px 10px;
-  -moz-border-radius: 10px 10px;
-  border-radius: 10px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .beeRound15 {
-  -webkit-border-radius: 15px 15px;
-  -moz-border-radius: 15px 15px;
-  border-radius: 15px 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 .beeRound20 {
-  -webkit-border-radius: 20px 20px;
-  -moz-border-radius: 20px 20px;
-  border-radius: 20px 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
 }
 
 /* Animation Module

@@ -24,15 +24,15 @@
         }
     }
     .left .panel {
-        @include beeRoundCustom($roundedCornerDefault,$roundedCornerDefault,0,0);
+        @include beeRoundAsymmetric(0,$roundedCornerDefault,$roundedCornerDefault,0);
         @media only screen and (max-device-width: 480px) {
-            @include beeRoundCustom(0,0,0,0);
+            @include beeRoundRemove;
         }
     }
     .right .panel {
-        @include beeRoundCustom(0,0,$roundedCornerDefault,$roundedCornerDefault);
+        @include beeRoundAsymmetric($roundedCornerDefault,0,0,$roundedCornerDefault);
         @media only screen and (max-device-width: 480px) {
-            @include beeRoundCustom(0,0,0,0);
+            @include beeRoundRemove;
         }
     }
 

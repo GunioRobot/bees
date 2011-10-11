@@ -1,5 +1,5 @@
-/* Multiple Column Module
------------------------------------- */
+// Multiple Column Module
+// SF 3+ FF 3.5+ CH 1+ OP 11+
 
     @mixin beeColumn($count: 2) {
         -webkit-column-count: $count;
@@ -25,32 +25,42 @@
         column-break-inside: avoid;
     }
 
-/* Rounded Corner Module
------------------------------------- */
+// Rounded Corner Module
+// SF 3+ FF 1+ CH 1+ OP 10.5+ IE9+
 
     @mixin beeRound($rounding: 5px) {
-        -webkit-border-radius: $rounding $rounding;
-        -moz-border-radius: $rounding $rounding;
-        border-radius: $rounding $rounding;
+        -webkit-border-radius: $rounding;
+        -moz-border-radius: $rounding;
+        border-radius: $rounding;
     }
-
-    @mixin beeRoundCustom($roundTopRight,$roundBottomRight,$roundTopLeft,$roundBottomLeft) {
+    @mixin beeRoundEllipse($roundingWidth,$roundingHeight) {
+        -webkit-border-radius: $roundingWidth / $roundingHeight;
+        -moz-border-radius: $roundingWidth / $roundingHeight;
+        border-radius: $roundingWidth / $roundingHeight;
+    }
+    @mixin beeRoundAsymmetric($roundTopLeft,$roundTopRight,$roundBottomRight,$roundBottomLeft) {
+        -webkit-border-top-left-radius: $roundTopLeft;
         -webkit-border-top-right-radius: $roundTopRight;
         -webkit-border-bottom-right-radius: $roundBottomRight;
-        -webkit-border-top-left-radius: $roundTopLeft;
         -webkit-border-bottom-left-radius: $roundBottomLeft;
+        -moz-border-radius-topleft: $roundTopLeft;
         -moz-border-radius-topright: $roundTopRight;
         -moz-border-radius-bottomright: $roundBottomRight;
-        -moz-border-radius-topleft: $roundTopLeft;
         -moz-border-radius-bottomleft: $roundBottomLeft;
+        border-top-left-radius: $roundTopLeft;
         border-top-right-radius: $roundTopRight;
         border-bottom-right-radius: $roundBottomRight;
-        border-top-left-radius: $roundTopLeft;
         border-bottom-left-radius: $roundBottomLeft;
     }
+    @mixin beeRoundRemove {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
 
-/* Shadow Module
------------------------------------- */
+// Shadow Module
+// SF 3+ FF 3.5+ CH 10+ OP 10.5+ IE9+ (box shadows)
+// SF 1+ FF 3.5+ CH 1+ OP 9+ IE10+ (text shadows)
 
     @mixin beeShadow($type,$offset-x,$offset-y,$blur-radius,$spread-radius,$color) {
         @if $type == drop {
@@ -90,4 +100,34 @@
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         -box-shadow: none;
+    }
+    @mixin beeTextShadow($offset-x,$offset-y,$blur-radius,$color) {
+        text-shadow: $offset-x $offset-y $blur-radius $color;
+    }
+    @mixin beeTextShadow2x($offset-x,$offset-y,$blur-radius,$color,$offset-x2,$offset-y2,$blur-radius2,$color2) {
+        text-shadow: $offset-x $offset-y $blur-radius $color, $offset-x2 $offset-y2 $blur-radius2 $color2;
+    }
+
+// Animation Module
+// SF 3+ FF 4+ CH 1+ OP 10.5+ IE10? (transitions not animations)
+
+    @mixin beeTransition($property,$duration,$easing,$delay) {
+        -webkit-transition: $property $duration $easing $delay;
+        -moz-transition: $property $duration $easing $delay;
+        transition: $property $duration $easing $delay;
+    }
+    @mixin beeTransition2x($property,$duration,$easing,$delay,$property2,$duration2,$easing2,$delay2) {
+        -webkit-transition: $property $duration $easing $delay, $property2 $duration2 $easing2 $delay2;
+        -moz-transition: $property $duration $easing $delay, $property2 $duration2 $easing2 $delay2;
+        transition: $property $duration $easing $delay, $property2 $duration2 $easing2 $delay2;
+    }
+    @mixin beeAnimation($name,$duration,$easing,$delay,$iterations,$direction) {
+        -webkit-animation: $name $duration $easing $delay $iterations $direction;
+        -moz-animation: $name $duration $easing $delay $iterations $direction;
+        animation: $name $duration $easing $delay $iterations $direction;
+    }
+    @mixin beeAnimationRemove {
+        -webkit-animation: none;
+        -moz-animation: none;
+        animation: none;
     }
