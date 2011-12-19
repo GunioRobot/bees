@@ -28,15 +28,15 @@ body.beeDark {
     hr {
         border-top: 1px solid $colorLight5x;
     }
-    
+
     // Links
-    
+
     a, a:active, a:visited, a:hover {
         color: $colorAccentLight;
     }
-    
+
     // Forms
-    
+
     select, input, textarea {
         color: $colorLight2x;
         background-color: $colorDark4x;

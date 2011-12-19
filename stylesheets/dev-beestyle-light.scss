@@ -24,19 +24,19 @@ body.beeLight {
     background: -webkit-gradient(linear, left top, left bottom, from($colorLight3x), to($colorLight2x));
     background: -moz-linear-gradient(top center, $colorLight3x, $colorLight2x);
     text-shadow: 0 1px 1px white; // indented look
-    
+
     hr {
         border-top: 1px solid $colorMid;
     }
-    
+
     // Links
-    
+
     a, a:active, a:visited, a:hover {
         color: $colorAccentDark;
     }
-    
+
     // Forms
-    
+
     select, input, textarea {
         color: $colorDark4x;
         background-color: $colorLight2x;
